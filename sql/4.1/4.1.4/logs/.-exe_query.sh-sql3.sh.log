@@ -1,0 +1,14 @@
+begin .-exe_query.sh-sql3.sh at Wed Aug  9 09:41:13 CST 2017 ...
+Timing is on.
+ COUNT |   CPL_DT   | LAN_SPEED  
+-------+------------+------------
+   627 | 2017-04-18 | 102400Kbps
+   681 | 2017-04-16 | 102400Kbps
+   639 | 2017-04-15 | 102400Kbps
+   695 | 2017-04-17 | 102400Kbps
+   667 | 2017-04-19 | 102400Kbps
+(5 rows)
+
+Time: First fetch (5 rows): 175.288 ms. All rows formatted: 175.353 ms
+end .-exe_query.sh-sql3.sh at Wed Aug  9 09:41:13 CST 2017
+.-exe_query.sh-sql3.sh total time=.187 s

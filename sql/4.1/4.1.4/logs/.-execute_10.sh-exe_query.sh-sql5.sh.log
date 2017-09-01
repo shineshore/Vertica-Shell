@@ -1,0 +1,184 @@
+begin .-execute_10.sh-exe_query.sh-sql5.sh at Wed Aug  9 09:47:51 CST 2017 ...
+begin .-execute_10.sh-exe_query.sh-sql5.sh at Wed Aug  9 09:47:51 CST 2017 ...
+SET
+Timing is on.
+SET
+Timing is on.
+SET
+Timing is on.
+SET
+Timing is on.
+SET
+Timing is on.
+SET
+Timing is on.
+ CNT |   CPL_DT   | AGENT_POINT_ID 
+-----+------------+----------------
+ 100 | 2017-04-15 | az71000246715
+  42 | 2017-04-15 | az71000247916
+  41 | 2017-04-15 | ap71000280126
+  31 | 2017-04-15 | ap71000239042
+  31 | 2017-04-15 | ap71000241643
+  28 | 2017-04-15 | ap71000275268
+  25 | 2017-04-15 | az71000245661
+  23 | 2017-04-15 | az71000248000
+  19 | 2017-04-15 | ap71000241623
+  15 | 2017-04-15 | ap71000274027
+(10 rows)
+
+Time: First fetch (10 rows): 2437.950 ms. All rows formatted: 2438.017 ms
+end .-execute_10.sh-exe_query.sh-sql5.sh at Wed Aug  9 09:47:53 CST 2017
+.-execute_10.sh-exe_query.sh-sql5.sh total time=2.656 s
+ CNT |   CPL_DT   | AGENT_POINT_ID 
+-----+------------+----------------
+ 100 | 2017-04-15 | az71000246715
+  42 | 2017-04-15 | az71000247916
+  41 | 2017-04-15 | ap71000280126
+  31 | 2017-04-15 | ap71000239042
+  31 | 2017-04-15 | ap71000241643
+  28 | 2017-04-15 | ap71000275268
+  25 | 2017-04-15 | az71000245661
+  23 | 2017-04-15 | az71000248000
+  19 | 2017-04-15 | ap71000241623
+  15 | 2017-04-15 | ap71000274027
+(10 rows)
+
+Time: First fetch (10 rows): 3177.678 ms. All rows formatted: 3177.740 ms
+end .-execute_10.sh-exe_query.sh-sql5.sh at Wed Aug  9 09:47:54 CST 2017
+.-execute_10.sh-exe_query.sh-sql5.sh total time=3.258 s
+ CNT |   CPL_DT   | AGENT_POINT_ID 
+-----+------------+----------------
+ 100 | 2017-04-15 | az71000246715
+  42 | 2017-04-15 | az71000247916
+  41 | 2017-04-15 | ap71000280126
+  31 | 2017-04-15 | ap71000239042
+  31 | 2017-04-15 | ap71000241643
+  28 | 2017-04-15 | ap71000275268
+  25 | 2017-04-15 | az71000245661
+  23 | 2017-04-15 | az71000248000
+  19 | 2017-04-15 | ap71000241623
+  15 | 2017-04-15 | ap71000274027
+(10 rows)
+
+Time: First fetch (10 rows): 3471.170 ms. All rows formatted: 3471.269 ms
+ CNT |   CPL_DT   | AGENT_POINT_ID 
+-----+------------+----------------
+ 100 | 2017-04-15 | az71000246715
+  42 | 2017-04-15 | az71000247916
+  41 | 2017-04-15 | ap71000280126
+  31 | 2017-04-15 | ap71000239042
+  31 | 2017-04-15 | ap71000241643
+  28 | 2017-04-15 | ap71000275268
+  25 | 2017-04-15 | az71000245661
+  23 | 2017-04-15 | az71000248000
+  19 | 2017-04-15 | ap71000241623
+  15 | 2017-04-15 | ap71000274027
+(10 rows)
+
+Time: First fetch (10 rows): 2938.386 ms. All rows formatted: 2938.461 ms
+end .-execute_10.sh-exe_query.sh-sql5.sh at Wed Aug  9 09:47:54 CST 2017
+.-execute_10.sh-exe_query.sh-sql5.sh total time=3.257 s
+end .-execute_10.sh-exe_query.sh-sql5.sh at Wed Aug  9 09:47:54 CST 2017
+.-execute_10.sh-exe_query.sh-sql5.sh total time=3.542 s
+ CNT |   CPL_DT   | AGENT_POINT_ID 
+-----+------------+----------------
+ 100 | 2017-04-15 | az71000246715
+  42 | 2017-04-15 | az71000247916
+  41 | 2017-04-15 | ap71000280126
+  31 | 2017-04-15 | ap71000239042
+  31 | 2017-04-15 | ap71000241643
+  28 | 2017-04-15 | ap71000275268
+  25 | 2017-04-15 | az71000245661
+  23 | 2017-04-15 | az71000248000
+  19 | 2017-04-15 | ap71000241623
+  15 | 2017-04-15 | ap71000274027
+(10 rows)
+
+Time: First fetch (10 rows): 2959.219 ms. All rows formatted: 2959.282 ms
+end .-execute_10.sh-exe_query.sh-sql5.sh at Wed Aug  9 09:47:54 CST 2017
+.-execute_10.sh-exe_query.sh-sql5.sh total time=3.236 s
+ CNT |   CPL_DT   | AGENT_POINT_ID 
+-----+------------+----------------
+ 100 | 2017-04-15 | az71000246715
+  42 | 2017-04-15 | az71000247916
+  41 | 2017-04-15 | ap71000280126
+  31 | 2017-04-15 | ap71000239042
+  31 | 2017-04-15 | ap71000241643
+  28 | 2017-04-15 | ap71000275268
+  25 | 2017-04-15 | az71000245661
+  23 | 2017-04-15 | az71000248000
+  19 | 2017-04-15 | ap71000241623
+  15 | 2017-04-15 | ap71000274027
+(10 rows)
+
+Time: First fetch (10 rows): 3376.964 ms. All rows formatted: 3377.083 ms
+end .-execute_10.sh-exe_query.sh-sql5.sh at Wed Aug  9 09:47:55 CST 2017
+.-execute_10.sh-exe_query.sh-sql5.sh total time=3.622 s
+ CNT |   CPL_DT   | AGENT_POINT_ID 
+-----+------------+----------------
+ 100 | 2017-04-15 | az71000246715
+  42 | 2017-04-15 | az71000247916
+  41 | 2017-04-15 | ap71000280126
+  31 | 2017-04-15 | ap71000239042
+  31 | 2017-04-15 | ap71000241643
+  28 | 2017-04-15 | ap71000275268
+  25 | 2017-04-15 | az71000245661
+  23 | 2017-04-15 | az71000248000
+  19 | 2017-04-15 | ap71000241623
+  15 | 2017-04-15 | ap71000274027
+(10 rows)
+
+Time: First fetch (10 rows): 3779.441 ms. All rows formatted: 3779.516 ms
+ CNT |   CPL_DT   | AGENT_POINT_ID 
+-----+------------+----------------
+ 100 | 2017-04-15 | az71000246715
+  42 | 2017-04-15 | az71000247916
+  41 | 2017-04-15 | ap71000280126
+  31 | 2017-04-15 | ap71000239042
+  31 | 2017-04-15 | ap71000241643
+  28 | 2017-04-15 | ap71000275268
+  25 | 2017-04-15 | az71000245661
+  23 | 2017-04-15 | az71000248000
+  19 | 2017-04-15 | ap71000241623
+  15 | 2017-04-15 | ap71000274027
+(10 rows)
+
+Time: First fetch (10 rows): 3541.866 ms. All rows formatted: 3542.015 ms
+end .-execute_10.sh-exe_query.sh-sql5.sh at Wed Aug  9 09:47:55 CST 2017
+.-execute_10.sh-exe_query.sh-sql5.sh total time=3.818 s
+end .-execute_10.sh-exe_query.sh-sql5.sh at Wed Aug  9 09:47:55 CST 2017
+.-execute_10.sh-exe_query.sh-sql5.sh total time=3.837 s
+ CNT |   CPL_DT   | AGENT_POINT_ID 
+-----+------------+----------------
+ 100 | 2017-04-15 | az71000246715
+  42 | 2017-04-15 | az71000247916
+  41 | 2017-04-15 | ap71000280126
+  31 | 2017-04-15 | ap71000239042
+  31 | 2017-04-15 | ap71000241643
+  28 | 2017-04-15 | ap71000275268
+  25 | 2017-04-15 | az71000245661
+  23 | 2017-04-15 | az71000248000
+  19 | 2017-04-15 | ap71000241623
+  15 | 2017-04-15 | ap71000274027
+(10 rows)
+
+Time: First fetch (10 rows): 3462.502 ms. All rows formatted: 3462.572 ms
+end .-execute_10.sh-exe_query.sh-sql5.sh at Wed Aug  9 09:47:55 CST 2017
+.-execute_10.sh-exe_query.sh-sql5.sh total time=3.705 s
+ CNT |   CPL_DT   | AGENT_POINT_ID 
+-----+------------+----------------
+ 100 | 2017-04-15 | az71000246715
+  42 | 2017-04-15 | az71000247916
+  41 | 2017-04-15 | ap71000280126
+  31 | 2017-04-15 | ap71000239042
+  31 | 2017-04-15 | ap71000241643
+  28 | 2017-04-15 | ap71000275268
+  25 | 2017-04-15 | az71000245661
+  23 | 2017-04-15 | az71000248000
+  19 | 2017-04-15 | ap71000241623
+  15 | 2017-04-15 | ap71000274027
+(10 rows)
+
+Time: First fetch (10 rows): 3589.877 ms. All rows formatted: 3589.956 ms
+end .-execute_10.sh-exe_query.sh-sql5.sh at Wed Aug  9 09:47:55 CST 2017
+.-execute_10.sh-exe_query.sh-sql5.sh total time=3.864 s

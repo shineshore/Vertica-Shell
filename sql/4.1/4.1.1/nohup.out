@@ -1,0 +1,240 @@
+Mon Aug  7 18:38:51 CST 2017
+start loading OFR_MAIN_ASSET_CUR
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_1;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 16.170 ms. All rows formatted: 16.191 ms
+invoke OFR_MAIN_ASSET_CUR_1
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_2;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 124.011 ms. All rows formatted: 124.042 ms
+invoke OFR_MAIN_ASSET_CUR_2
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_3;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 101.630 ms. All rows formatted: 101.647 ms
+invoke OFR_MAIN_ASSET_CUR_3
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_4;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 131.838 ms. All rows formatted: 131.855 ms
+invoke OFR_MAIN_ASSET_CUR_4
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_5;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 109.787 ms. All rows formatted: 109.805 ms
+invoke OFR_MAIN_ASSET_CUR_5
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_6;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 110.637 ms. All rows formatted: 110.660 ms
+invoke OFR_MAIN_ASSET_CUR_6
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_7;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 179.866 ms. All rows formatted: 179.902 ms
+invoke OFR_MAIN_ASSET_CUR_7
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_8;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 19.505 ms. All rows formatted: 19.523 ms
+invoke OFR_MAIN_ASSET_CUR_8
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_9;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 21.665 ms. All rows formatted: 21.688 ms
+invoke OFR_MAIN_ASSET_CUR_9
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_10;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 20.600 ms. All rows formatted: 20.620 ms
+invoke OFR_MAIN_ASSET_CUR_10
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_11;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 18.665 ms. All rows formatted: 18.681 ms
+invoke OFR_MAIN_ASSET_CUR_11
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_12;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 20.862 ms. All rows formatted: 20.884 ms
+invoke OFR_MAIN_ASSET_CUR_12
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_13;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 19.959 ms. All rows formatted: 19.978 ms
+invoke OFR_MAIN_ASSET_CUR_13
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_14;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 19.904 ms. All rows formatted: 19.926 ms
+invoke OFR_MAIN_ASSET_CUR_14
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_15;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 19.502 ms. All rows formatted: 19.522 ms
+invoke OFR_MAIN_ASSET_CUR_15
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_16;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 21.181 ms. All rows formatted: 21.201 ms
+invoke OFR_MAIN_ASSET_CUR_16
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_17;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 19.552 ms. All rows formatted: 19.573 ms
+invoke OFR_MAIN_ASSET_CUR_17
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_18;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 20.532 ms. All rows formatted: 20.559 ms
+invoke OFR_MAIN_ASSET_CUR_18
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_19;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 20.842 ms. All rows formatted: 20.864 ms
+invoke OFR_MAIN_ASSET_CUR_19
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_20;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 19.882 ms. All rows formatted: 19.906 ms
+invoke OFR_MAIN_ASSET_CUR_20
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_21;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 20.646 ms. All rows formatted: 20.668 ms
+invoke OFR_MAIN_ASSET_CUR_21
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_22;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 20.459 ms. All rows formatted: 20.478 ms
+invoke OFR_MAIN_ASSET_CUR_22
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_23;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 21.256 ms. All rows formatted: 21.277 ms
+invoke OFR_MAIN_ASSET_CUR_23
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_24;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 20.405 ms. All rows formatted: 20.424 ms
+invoke OFR_MAIN_ASSET_CUR_24
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_25;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 18.490 ms. All rows formatted: 18.523 ms
+invoke OFR_MAIN_ASSET_CUR_25
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_26;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 20.459 ms. All rows formatted: 20.481 ms
+invoke OFR_MAIN_ASSET_CUR_26
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_27;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 19.754 ms. All rows formatted: 19.787 ms
+invoke OFR_MAIN_ASSET_CUR_27
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_28;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 19.706 ms. All rows formatted: 19.724 ms
+invoke OFR_MAIN_ASSET_CUR_28
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_29;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 20.238 ms. All rows formatted: 20.257 ms
+invoke OFR_MAIN_ASSET_CUR_29
+Mon Aug  7 20:34:38 CST 2017
+load OFR_MAIN_ASSET_CUR completed
+Mon Aug  7 20:34:38 CST 2017
+start loading CATALOG_SALES
+truncate table TPCDS.CATALOG_SALES_1;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 20.439 ms. All rows formatted: 20.459 ms
+invoke CATALOG_SALES_1
+truncate table TPCDS.CATALOG_SALES_2;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 107.319 ms. All rows formatted: 107.342 ms
+invoke CATALOG_SALES_2
+truncate table TPCDS.CATALOG_SALES_3;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 24.930 ms. All rows formatted: 24.959 ms
+invoke CATALOG_SALES_3
+truncate table TPCDS.CATALOG_SALES_4;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 25.309 ms. All rows formatted: 25.328 ms
+invoke CATALOG_SALES_4
+truncate table TPCDS.CATALOG_SALES_5;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 24.369 ms. All rows formatted: 24.390 ms
+invoke CATALOG_SALES_5
+truncate table TPCDS.CATALOG_SALES_6;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 23.749 ms. All rows formatted: 23.772 ms
+invoke CATALOG_SALES_6
+truncate table TPCDS.CATALOG_SALES_7;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 22.981 ms. All rows formatted: 23.005 ms
+invoke CATALOG_SALES_7
+truncate table TPCDS.CATALOG_SALES_8;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 23.177 ms. All rows formatted: 23.196 ms
+invoke CATALOG_SALES_8
+truncate table TPCDS.CATALOG_SALES_9;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 507.640 ms. All rows formatted: 507.662 ms
+invoke CATALOG_SALES_9
+truncate table TPCDS.CATALOG_SALES_10;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 65.832 ms. All rows formatted: 65.855 ms
+invoke CATALOG_SALES_10
+truncate table TPCDS.CATALOG_SALES_11;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 13.157 ms. All rows formatted: 13.176 ms
+invoke CATALOG_SALES_11
+truncate table TPCDS.CATALOG_SALES_12;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 24.989 ms. All rows formatted: 25.011 ms
+invoke CATALOG_SALES_12
+truncate table TPCDS.CATALOG_SALES_13;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 24.464 ms. All rows formatted: 24.501 ms
+invoke CATALOG_SALES_13
+truncate table TPCDS.CATALOG_SALES_14;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 22.404 ms. All rows formatted: 22.426 ms
+invoke CATALOG_SALES_14
+truncate table TPCDS.CATALOG_SALES_15;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 23.221 ms. All rows formatted: 23.239 ms
+invoke CATALOG_SALES_15
+truncate table TPCDS.CATALOG_SALES_16;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 26.103 ms. All rows formatted: 26.125 ms
+invoke CATALOG_SALES_16
+truncate table TPCDS.CATALOG_SALES_17;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 24.218 ms. All rows formatted: 24.242 ms
+invoke CATALOG_SALES_17
+truncate table TPCDS.CATALOG_SALES_18;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 25.350 ms. All rows formatted: 25.375 ms
+invoke CATALOG_SALES_18
+truncate table TPCDS.CATALOG_SALES_19;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 23.900 ms. All rows formatted: 23.919 ms
+invoke CATALOG_SALES_19
+truncate table TPCDS.CATALOG_SALES_20;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 87.976 ms. All rows formatted: 88.003 ms
+invoke CATALOG_SALES_20
+truncate table TPCDS.CATALOG_SALES_21;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 24.610 ms. All rows formatted: 24.630 ms
+invoke CATALOG_SALES_21
+truncate table TPCDS.CATALOG_SALES_22;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 24.222 ms. All rows formatted: 24.241 ms
+invoke CATALOG_SALES_22
+truncate table TPCDS.CATALOG_SALES_23;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 24.295 ms. All rows formatted: 24.314 ms
+invoke CATALOG_SALES_23
+truncate table TPCDS.CATALOG_SALES_24;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 24.823 ms. All rows formatted: 24.856 ms
+invoke CATALOG_SALES_24
+truncate table TPCDS.CATALOG_SALES_25;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 25.033 ms. All rows formatted: 25.055 ms
+invoke CATALOG_SALES_25
+truncate table TPCDS.CATALOG_SALES_26;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 25.494 ms. All rows formatted: 25.515 ms
+invoke CATALOG_SALES_26
+truncate table TPCDS.CATALOG_SALES_27;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 24.320 ms. All rows formatted: 24.340 ms
+invoke CATALOG_SALES_27
+truncate table TPCDS.CATALOG_SALES_28;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 22.706 ms. All rows formatted: 22.723 ms
+invoke CATALOG_SALES_28
+truncate table TPCDS.CATALOG_SALES_29;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 23.473 ms. All rows formatted: 23.492 ms
+invoke CATALOG_SALES_29
+Mon Aug  7 23:09:25 CST 2017
+load CATALOG_SALES completed

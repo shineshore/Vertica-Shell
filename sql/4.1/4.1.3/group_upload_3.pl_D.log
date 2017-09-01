@@ -1,0 +1,331 @@
+SQL Begin time : 2017-08-11 17:45:40
+Timing is on.
+CREATE LOCAL TEMP TABLE OFR_PROM_BSI_HIST_Z ON COMMIT PRESERVE ROWS
+AS(
+	SELECT  P1.PROM_ROW_ID
+		 ,P1.PROM_TYPE_NAME
+							,P1.PROM_EFF_DT
+							,P1.PROM_EXP_DT
+							,P1.PROM_INTEG_ID
+							,P1.PROM_ASSET_INTEG_ID
+							,P1.STAT_NAME
+							,P1.LATN_ID
+							,P1.PROM_INSTANT_ROW_ID
+							,P1.START_DT
+							,P1.HQ_OFFER_INST_ID                           
+ 		  FROM    STAGE_2.OFR_PROM_BSI_HIST_Z  P1
+ 		
+ 		 
+		  WHERE    P1.START_DT = DATE('2016-06-08')
+ 	           AND    P1.END_DT=DATE('3000-12-31')
+ 		   
+		   
+		   AND    P1.LATN_ID = 13
+ 		   AND  2=1    
+)
+SEGMENTED BY  HASH(PROM_INTEG_ID) ALL NODES KSAFE 0
+;
+CREATE TABLE
+Time: First fetch (0 rows): 102.518 ms. All rows formatted: 102.550 ms
+INSERT INTO OFR_PROM_BSI_HIST_Z
+SELECT  P1.PROM_ROW_ID
+							,P1.PROM_TYPE_NAME
+							,P1.PROM_EFF_DT
+							,P1.PROM_EXP_DT
+							,P1.PROM_INTEG_ID
+							,P1.PROM_ASSET_INTEG_ID
+							,P1.STAT_NAME
+							,P1.LATN_ID
+							,P1.PROM_INSTANT_ROW_ID
+							,P1.START_DT
+							,P1.HQ_OFFER_INST_ID                         
+ 			FROM    STAGE_2.OFR_PROM_BSI_HIST_Z  P1
+ 		
+ 		      
+			  WHERE    P1.START_DT = DATE('2016-06-08')
+ 			and P1.END_DT=DATE('3000-12-31')
+ 		  
+ 		        
+				AND    P1.LATN_ID = 13
+;
+ OUTPUT 
+--------
+  37038
+(1 row)
+
+Time: First fetch (1 row): 17471.457 ms. All rows formatted: 17471.532 ms
+CREATE LOCAL TEMP TABLE PROM_ORDER_INFO_D  ON COMMIT PRESERVE ROWS
+AS ( SELECT
+	    *
+        FROM
+        (
+        SELECT   COALESCE(P2.ORDER_PROM_ROW_ID,'-1') AS ORDER_PROM_ROW_ID
+                  ,P1.PROM_ROW_ID
+                            ,P1.PROM_TYPE_NAME
+                            ,P1.PROM_EFF_DT
+                            ,P1.PROM_EXP_DT
+                            ,P1.PROM_INTEG_ID
+                            ,P1.PROM_ASSET_INTEG_ID
+                            ,P1.STAT_NAME
+                            ,P1.LATN_ID
+                            ,P1.PROM_INSTANT_ROW_ID
+                            ,P1.HQ_OFFER_INST_ID                                                    
+                            ,row_number () OVER( PARTITION BY P1.PROM_INSTANT_ROW_ID ORDER BY P2.Apply_Time  DESC )  ROW_NUM
+                            
+             FROM    OFR_PROM_BSI_HIST_Z  P1
+INNER JOIN    STAGE_2.EVT_ORDER_PROM_HIST_Z P2
+        ON    P1.PROM_INTEG_ID = P2.PROM_INTEG_ID
+       
+       
+	   AND    P2.LATN_ID = 13
+       
+       
+	   AND    P2.ETL_DT >= (DATE('2016-06-08') - 7)
+       AND    P2.STAT_NAME = '添加'
+         ) AS T1
+          WHERE ROW_NUM = 1
+          AND 2=1  /* ADD BY HAOYF */       
+)
+ORDER BY PROM_INTEG_ID, ORDER_PROM_ROW_ID
+SEGMENTED BY HASH(ORDER_PROM_ROW_ID) ALL NODES KSAFE 0
+;
+CREATE TABLE
+Time: First fetch (0 rows): 184.756 ms. All rows formatted: 184.773 ms
+INSERT INTO PROM_ORDER_INFO_D
+                SELECT
+                            *
+        FROM
+        (
+        SELECT
+                            COALESCE(P2.ORDER_PROM_ROW_ID,'-1') AS ORDER_PROM_ROW_ID
+                            ,P1.PROM_ROW_ID
+                            ,P1.PROM_TYPE_NAME
+                            ,P1.PROM_EFF_DT
+                            ,P1.PROM_EXP_DT
+                            ,P1.PROM_INTEG_ID
+                            ,P1.PROM_ASSET_INTEG_ID
+                            ,P1.STAT_NAME
+                            ,P1.LATN_ID
+                            ,P1.PROM_INSTANT_ROW_ID
+                            ,P1.HQ_OFFER_INST_ID                                                           
+                            ,ROW_NUMBER() OVER(PARTITION BY P1.PROM_INSTANT_ROW_ID ORDER BY P2.Apply_Time  DESC    )  ROW_NUM
+             FROM    OFR_PROM_BSI_HIST_Z  P1
+INNER JOIN    STAGE_2.EVT_ORDER_PROM_HIST_Z P2
+        ON    P1.PROM_INTEG_ID = P2.PROM_INTEG_ID
+       
+	   
+	   AND    P2.LATN_ID = 13
+       
+	   AND    P2.ETL_DT >= (DATE('2016-06-08') - 7)
+       AND    P2.STAT_NAME = '添加'
+         ) AS T1
+          WHERE ROW_NUM = 1  
+;
+ OUTPUT 
+--------
+  21431
+(1 row)
+
+Time: First fetch (1 row): 7842.210 ms. All rows formatted: 7842.253 ms
+CREATE LOCAL TEMP TABLE EVT_ORDI_HIST_D  ON COMMIT PRESERVE ROWS
+AS(
+    SELECT  P2.ORDER_ITEM_ROW_ID
+                            ,P2.ASSET_INTEG_ID
+                            ,P2.ORDER_ROW_ID
+                            ,P2.STAT_NAME AS ORDI_STAT_NAME
+                            ,P2.ETL_DT
+                            ,P2.CPL_DT
+                            ,P2.Sales_Emp_Id
+                            ,P2.Prom_Flg
+                       ,P2.action_name
+       
+	   FROM    STAGE_2.EVT_ORDI_HIST_D  P2
+         WHERE     P2.STAT_NAME = '完成'
+       
+	   AND    P2.LATN_ID = 13
+	   AND 2=1 /* ADD BY HAOYF */
+)
+ORDER BY ORDER_ITEM_ROW_ID, ASSET_INTEG_ID
+SEGMENTED BY HASH (ORDER_ITEM_ROW_ID) ALL NODES KSAFE 0
+;
+CREATE TABLE
+Time: First fetch (0 rows): 193.026 ms. All rows formatted: 193.053 ms
+INSERT intO EVT_ORDI_HIST_D
+SELECT  P2.ORDER_ITEM_ROW_ID
+                            ,P2.ASSET_INTEG_ID
+                            ,P2.ORDER_ROW_ID
+                            ,P2.STAT_NAME AS ORDI_STAT_NAME
+                            ,P2.ETL_DT
+                            ,P2.CPL_DT
+                            ,P2.Sales_Emp_Id
+                            ,P2.Prom_Flg
+                       ,P2.action_name
+        
+		FROM    STAGE_2.EVT_ORDI_HIST_D  P2
+         WHERE     P2.STAT_NAME = '完成'
+       
+	   
+	   AND    P2.LATN_ID = 13
+;
+  OUTPUT   
+-----------
+ 411967512
+(1 row)
+
+Time: First fetch (1 row): 342605.245 ms. All rows formatted: 342605.277 ms
+CREATE LOCAL TEMP TABLE PROM_TYPE_MAIN  ON COMMIT PRESERVE ROWS
+AS(
+        SELECT
+                            P1.ORDER_PROM_ROW_ID
+                            ,P1.PROM_ROW_ID
+                            ,P1.PROM_TYPE_NAME
+                            ,P1.PROM_EFF_DT
+                            ,P1.PROM_EXP_DT
+                            ,P1.PROM_INTEG_ID
+                            ,P1.PROM_ASSET_INTEG_ID
+                            ,P1.STAT_NAME
+                            ,P1.LATN_ID
+                            ,P1.PROM_INSTANT_ROW_ID
+                            ,P1.HQ_OFFER_INST_ID                                    
+                            ,P2.ORDER_ITEM_ROW_ID
+                            ,P2.ORDER_ROW_ID
+                            ,P2.ORDI_STAT_NAME
+                            ,P2.ETL_DT
+                            ,P2.CPL_DT
+                            ,P2.Sales_Emp_Id
+ 
+       FROM        PROM_ORDER_INFO_D                P1
+ 
+ LEFT JOIN    EVT_ORDI_HIST_D         P2
+        ON        P1.PROM_ASSET_INTEG_ID = P2.ASSET_INTEG_ID
+       AND    P2.Prom_Flg = 'Y'
+       and    p2.action_name = '添加'
+     WHERE    P1.PROM_TYPE_NAME IN ('组合套餐','帐户级销售品','单一套餐')
+	   AND    2=1 /* ADD BY HAOYF*/
+)
+ORDER BY ORDER_PROM_ROW_ID,PROM_ROW_ID,PROM_TYPE_NAME
+SEGMENTED BY HASH(ORDER_PROM_ROW_ID) ALL NODES KSAFE 0
+;
+CREATE TABLE
+Time: First fetch (0 rows): 220.272 ms. All rows formatted: 220.293 ms
+INSERT INTO PROM_TYPE_MAIN
+        SELECT
+                            P1.ORDER_PROM_ROW_ID
+                            ,P1.PROM_ROW_ID
+                            ,P1.PROM_TYPE_NAME
+                            ,P1.PROM_EFF_DT
+                            ,P1.PROM_EXP_DT
+                            ,P1.PROM_INTEG_ID
+                            ,P1.PROM_ASSET_INTEG_ID
+                            ,P1.STAT_NAME
+                            ,P1.LATN_ID
+                            ,P1.PROM_INSTANT_ROW_ID
+                            ,P1.HQ_OFFER_INST_ID                                    
+                            ,P2.ORDER_ITEM_ROW_ID
+                            ,P2.ORDER_ROW_ID
+                            ,P2.ORDI_STAT_NAME
+                            ,P2.ETL_DT
+                            ,P2.CPL_DT
+                            ,P2.Sales_Emp_Id
+           
+		   FROM        PROM_ORDER_INFO_D                 P1
+  
+  LEFT JOIN    EVT_ORDI_HIST_D         P2
+        ON        P1.PROM_ASSET_INTEG_ID = P2.ASSET_INTEG_ID
+       AND    P2.Prom_Flg = 'Y'
+       and    p2.action_name = '添加'
+     WHERE    P1.PROM_TYPE_NAME IN ('组合套餐','帐户级销售品','单一套餐')
+;
+ OUTPUT 
+--------
+   3783
+(1 row)
+
+Time: First fetch (1 row): 34294.523 ms. All rows formatted: 34294.561 ms
+CREATE LOCAL TEMP TABLE PROM_TYPE_OTHER ON COMMIT PRESERVE ROWS
+AS(
+        SELECT
+        *
+        FROM
+        (
+        SELECT 
+        
+        P1.ORDER_PROM_ROW_ID
+                            ,P1.PROM_ROW_ID
+                            ,P1.PROM_TYPE_NAME
+                            ,P1.PROM_EFF_DT
+                            ,P1.PROM_EXP_DT
+                            ,P1.PROM_INTEG_ID
+                            ,P1.PROM_ASSET_INTEG_ID
+                            ,P1.STAT_NAME
+                            ,P1.LATN_ID
+                            ,P1.PROM_INSTANT_ROW_ID
+                            ,P1.HQ_OFFER_INST_ID                                    
+                            ,P2.ROOT_ORDER_ITEM_ROW_ID AS ORDER_ITEM_ROW_ID
+                            ,P3.ORDER_ROW_ID
+                            ,P3.ORDI_STAT_NAME
+                            ,P3.CPL_DT
+                            ,P3.Sales_Emp_Id
+                            ,ROW_NUMBER() OVER(PARTITION BY P1.PROM_INSTANT_ROW_ID ORDER BY P2.ETL_DT  DESC    )  ROW_NUM
+              
+			  FROM        PROM_ORDER_INFO_D            P1
+ LEFT JOIN    STAGE_2.EVT_ORDER_PROM_ITEM_HIST_Z P2
+        ON    P1.ORDER_PROM_ROW_ID = P2.ORDER_PROM_ROW_ID
+         
+		 AND    P2.LATN_ID = 13
+       AND    P2.PROM_ITEM_TYPE_NAME = '优惠'
+ 
+ LEFT JOIN    EVT_ORDI_HIST_D  P3
+        ON    P2.ROOT_ORDER_ITEM_ROW_ID = P3.ORDER_ITEM_ROW_ID
+     WHERE    P1.PROM_TYPE_NAME  NOT IN ('组合套餐','帐户级销售品','单一套餐')
+     ) AS T1
+          WHERE ROW_NUM = 1
+            AND 2=1		  
+)
+ORDER BY ORDER_PROM_ROW_ID,PROM_ROW_ID,PROM_TYPE_NAME
+SEGMENTED BY HASH(ORDER_PROM_ROW_ID) ALL NODES KSAFE 0
+;
+CREATE TABLE
+Time: First fetch (0 rows): 230.696 ms. All rows formatted: 230.715 ms
+INSERT INTO PROM_TYPE_OTHER
+        
+        SELECT
+        *
+        FROM
+        (
+        SELECT 
+        
+        P1.ORDER_PROM_ROW_ID
+                            ,P1.PROM_ROW_ID
+                            ,P1.PROM_TYPE_NAME
+                            ,P1.PROM_EFF_DT
+                            ,P1.PROM_EXP_DT
+                            ,P1.PROM_INTEG_ID
+                            ,P1.PROM_ASSET_INTEG_ID
+                            ,P1.STAT_NAME
+                            ,P1.LATN_ID
+                            ,P1.PROM_INSTANT_ROW_ID
+                            ,P1.HQ_OFFER_INST_ID                                    
+                            ,P2.ROOT_ORDER_ITEM_ROW_ID AS ORDER_ITEM_ROW_ID
+                            ,P3.ORDER_ROW_ID
+                            ,P3.ORDI_STAT_NAME
+                            ,P3.CPL_DT
+                            ,P3.Sales_Emp_Id
+                            ,ROW_NUMBER() OVER(PARTITION BY P1.PROM_INSTANT_ROW_ID ORDER BY P2.ETL_DT  DESC    )  ROW_NUM
+            
+			FROM        PROM_ORDER_INFO_D           P1
+ LEFT JOIN    STAGE_2.EVT_ORDER_PROM_ITEM_HIST_Z P2
+        ON    P1.ORDER_PROM_ROW_ID = P2.ORDER_PROM_ROW_ID
+       
+	   AND    P2.LATN_ID = 13
+       AND    P2.PROM_ITEM_TYPE_NAME = '优惠'
+ 
+ LEFT JOIN    EVT_ORDI_HIST_D P3
+        ON    P2.ROOT_ORDER_ITEM_ROW_ID = P3.ORDER_ITEM_ROW_ID
+     WHERE    P1.PROM_TYPE_NAME  NOT IN ('组合套餐','帐户级销售品','单一套餐')
+     ) AS T1
+          WHERE ROW_NUM = 1 
+;
+ERROR 3815:  Join inner did not fit in memory [(STAGE_2.EVT_ORDER_PROM_ITEM_HIST_Z x v_temp_schema.EVT_ORDI_HIST_D) using previous join and EVT_ORDI_HIST_D_super (PATH ID: 5)]
+HINT:  ENABLE_JOIN_SPILL may allow this query to run, with reduced performance
+ERROR 4534:  Receive on v_poc_node0002: Message receipt from v_poc_node0005 failed []

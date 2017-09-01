@@ -1,0 +1,129 @@
+begin .-execute_10.sh-exe_query.sh-sql2.sh at Wed Aug  9 09:47:43 CST 2017 ...
+SET
+Timing is on.
+SET
+Timing is on.
+SET
+Timing is on.
+SET
+Timing is on.
+ COUNT  |  DATE_CD   |   SPEED    
+--------+------------+------------
+ 829531 | 2017-04-16 | 102400Kbps
+ 834286 | 2017-04-18 | 102400Kbps
+ 832275 | 2017-04-17 | 102400Kbps
+ 836239 | 2017-04-19 | 102400Kbps
+ 828674 | 2017-04-15 | 102400Kbps
+(5 rows)
+
+Time: First fetch (5 rows): 3725.897 ms. All rows formatted: 3725.965 ms
+end .-execute_10.sh-exe_query.sh-sql2.sh at Wed Aug  9 09:47:46 CST 2017
+ COUNT  |  DATE_CD   |   SPEED    
+--------+------------+------------
+ 834286 | 2017-04-18 | 102400Kbps
+ 832275 | 2017-04-17 | 102400Kbps
+ 828674 | 2017-04-15 | 102400Kbps
+ 836239 | 2017-04-19 | 102400Kbps
+ 829531 | 2017-04-16 | 102400Kbps
+(5 rows)
+
+Time: First fetch (5 rows): 3780.411 ms. All rows formatted: 3780.510 ms
+.-execute_10.sh-exe_query.sh-sql2.sh total time=3.788 s
+end .-execute_10.sh-exe_query.sh-sql2.sh at Wed Aug  9 09:47:46 CST 2017
+.-execute_10.sh-exe_query.sh-sql2.sh total time=3.829 s
+ COUNT  |  DATE_CD   |   SPEED    
+--------+------------+------------
+ 834286 | 2017-04-18 | 102400Kbps
+ 829531 | 2017-04-16 | 102400Kbps
+ 836239 | 2017-04-19 | 102400Kbps
+ 832275 | 2017-04-17 | 102400Kbps
+ 828674 | 2017-04-15 | 102400Kbps
+(5 rows)
+
+Time: First fetch (5 rows): 3841.442 ms. All rows formatted: 3841.516 ms
+end .-execute_10.sh-exe_query.sh-sql2.sh at Wed Aug  9 09:47:46 CST 2017
+.-execute_10.sh-exe_query.sh-sql2.sh total time=3.909 s
+ COUNT  |  DATE_CD   |   SPEED    
+--------+------------+------------
+ 834286 | 2017-04-18 | 102400Kbps
+ 836239 | 2017-04-19 | 102400Kbps
+ 832275 | 2017-04-17 | 102400Kbps
+ 828674 | 2017-04-15 | 102400Kbps
+ 829531 | 2017-04-16 | 102400Kbps
+(5 rows)
+
+Time: First fetch (5 rows): 4123.181 ms. All rows formatted: 4123.249 ms
+ COUNT  |  DATE_CD   |   SPEED    
+--------+------------+------------
+ 834286 | 2017-04-18 | 102400Kbps
+ 836239 | 2017-04-19 | 102400Kbps
+ 828674 | 2017-04-15 | 102400Kbps
+ 832275 | 2017-04-17 | 102400Kbps
+ 829531 | 2017-04-16 | 102400Kbps
+(5 rows)
+
+Time: First fetch (5 rows): 3545.855 ms. All rows formatted: 3545.912 ms
+end .-execute_10.sh-exe_query.sh-sql2.sh at Wed Aug  9 09:47:47 CST 2017
+.-execute_10.sh-exe_query.sh-sql2.sh total time=4.178 s
+end .-execute_10.sh-exe_query.sh-sql2.sh at Wed Aug  9 09:47:47 CST 2017
+.-execute_10.sh-exe_query.sh-sql2.sh total time=3.590 s
+ COUNT  |  DATE_CD   |   SPEED    
+--------+------------+------------
+ 834286 | 2017-04-18 | 102400Kbps
+ 832275 | 2017-04-17 | 102400Kbps
+ 828674 | 2017-04-15 | 102400Kbps
+ 836239 | 2017-04-19 | 102400Kbps
+ 829531 | 2017-04-16 | 102400Kbps
+(5 rows)
+
+Time: First fetch (5 rows): 3609.747 ms. All rows formatted: 3609.810 ms
+ COUNT  |  DATE_CD   |   SPEED    
+--------+------------+------------
+ 834286 | 2017-04-18 | 102400Kbps
+ 836239 | 2017-04-19 | 102400Kbps
+ 832275 | 2017-04-17 | 102400Kbps
+ 828674 | 2017-04-15 | 102400Kbps
+ 829531 | 2017-04-16 | 102400Kbps
+(5 rows)
+
+Time: First fetch (5 rows): 3621.076 ms. All rows formatted: 3621.127 ms
+ COUNT  |  DATE_CD   |   SPEED    
+--------+------------+------------
+ 834286 | 2017-04-18 | 102400Kbps
+ 836239 | 2017-04-19 | 102400Kbps
+ 832275 | 2017-04-17 | 102400Kbps
+ 828674 | 2017-04-15 | 102400Kbps
+ 829531 | 2017-04-16 | 102400Kbps
+(5 rows)
+
+Time: First fetch (5 rows): 3887.895 ms. All rows formatted: 3887.945 ms
+end .-execute_10.sh-exe_query.sh-sql2.sh at Wed Aug  9 09:47:47 CST 2017
+end .-execute_10.sh-exe_query.sh-sql2.sh at Wed Aug  9 09:47:47 CST 2017
+.-execute_10.sh-exe_query.sh-sql2.sh total time=3.647 s
+.-execute_10.sh-exe_query.sh-sql2.sh total time=3.660 s
+end .-execute_10.sh-exe_query.sh-sql2.sh at Wed Aug  9 09:47:47 CST 2017
+ COUNT  |  DATE_CD   |   SPEED    
+--------+------------+------------
+ 834286 | 2017-04-18 | 102400Kbps
+ 829531 | 2017-04-16 | 102400Kbps
+ 828674 | 2017-04-15 | 102400Kbps
+ 832275 | 2017-04-17 | 102400Kbps
+ 836239 | 2017-04-19 | 102400Kbps
+(5 rows)
+
+Time: First fetch (5 rows): 4210.396 ms. All rows formatted: 4210.448 ms
+.-execute_10.sh-exe_query.sh-sql2.sh total time=3.938 s
+ COUNT  |  DATE_CD   |   SPEED    
+--------+------------+------------
+ 832275 | 2017-04-17 | 102400Kbps
+ 836239 | 2017-04-19 | 102400Kbps
+ 828674 | 2017-04-15 | 102400Kbps
+ 834286 | 2017-04-18 | 102400Kbps
+ 829531 | 2017-04-16 | 102400Kbps
+(5 rows)
+
+Time: First fetch (5 rows): 3655.180 ms. All rows formatted: 3655.233 ms
+end .-execute_10.sh-exe_query.sh-sql2.sh at Wed Aug  9 09:47:47 CST 2017
+.-execute_10.sh-exe_query.sh-sql2.sh total time=5.249 s
+end .-execute_10.sh-exe_query.sh-sql2.sh at Wed Aug  9 09:47:47 CST 2017
+.-execute_10.sh-exe_query.sh-sql2.sh total time=3.691 s

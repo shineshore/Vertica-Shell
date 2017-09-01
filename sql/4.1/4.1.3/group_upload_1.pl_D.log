@@ -1,0 +1,898 @@
+SQL Begin time : 2017-08-11 17:45:36
+Timing is on.
+CREATE LOCAL TEMP TABLE OFR_PROM_BSI_HIST_Z ON COMMIT PRESERVE ROWS
+AS(
+	SELECT  P1.PROM_ROW_ID
+		 ,P1.PROM_TYPE_NAME
+							,P1.PROM_EFF_DT
+							,P1.PROM_EXP_DT
+							,P1.PROM_INTEG_ID
+							,P1.PROM_ASSET_INTEG_ID
+							,P1.STAT_NAME
+							,P1.LATN_ID
+							,P1.PROM_INSTANT_ROW_ID
+							,P1.START_DT
+							,P1.HQ_OFFER_INST_ID                           
+ 		  FROM    STAGE_1.OFR_PROM_BSI_HIST_Z  P1
+ 		
+ 		 
+		  WHERE    P1.START_DT = DATE('2016-06-08')
+ 	           AND    P1.END_DT=DATE('3000-12-31')
+ 		   
+		   
+		   AND    P1.LATN_ID = 13
+ 		   AND  2=1    
+)
+SEGMENTED BY  HASH(PROM_INTEG_ID) ALL NODES KSAFE 0
+;
+CREATE TABLE
+Time: First fetch (0 rows): 98.391 ms. All rows formatted: 98.432 ms
+INSERT INTO OFR_PROM_BSI_HIST_Z
+SELECT  P1.PROM_ROW_ID
+							,P1.PROM_TYPE_NAME
+							,P1.PROM_EFF_DT
+							,P1.PROM_EXP_DT
+							,P1.PROM_INTEG_ID
+							,P1.PROM_ASSET_INTEG_ID
+							,P1.STAT_NAME
+							,P1.LATN_ID
+							,P1.PROM_INSTANT_ROW_ID
+							,P1.START_DT
+							,P1.HQ_OFFER_INST_ID                         
+ 			FROM    STAGE_1.OFR_PROM_BSI_HIST_Z  P1
+ 		
+ 		      
+			  WHERE    P1.START_DT = DATE('2016-06-08')
+ 			and P1.END_DT=DATE('3000-12-31')
+ 		  
+ 		        
+				AND    P1.LATN_ID = 13
+;
+ OUTPUT 
+--------
+  37038
+(1 row)
+
+Time: First fetch (1 row): 14076.127 ms. All rows formatted: 14076.180 ms
+CREATE LOCAL TEMP TABLE PROM_ORDER_INFO_D  ON COMMIT PRESERVE ROWS
+AS ( SELECT
+	    *
+        FROM
+        (
+        SELECT   COALESCE(P2.ORDER_PROM_ROW_ID,'-1') AS ORDER_PROM_ROW_ID
+                  ,P1.PROM_ROW_ID
+                            ,P1.PROM_TYPE_NAME
+                            ,P1.PROM_EFF_DT
+                            ,P1.PROM_EXP_DT
+                            ,P1.PROM_INTEG_ID
+                            ,P1.PROM_ASSET_INTEG_ID
+                            ,P1.STAT_NAME
+                            ,P1.LATN_ID
+                            ,P1.PROM_INSTANT_ROW_ID
+                            ,P1.HQ_OFFER_INST_ID                                                    
+                            ,row_number () OVER( PARTITION BY P1.PROM_INSTANT_ROW_ID ORDER BY P2.Apply_Time  DESC )  ROW_NUM
+                            
+             FROM    OFR_PROM_BSI_HIST_Z  P1
+INNER JOIN    STAGE_1.EVT_ORDER_PROM_HIST_Z P2
+        ON    P1.PROM_INTEG_ID = P2.PROM_INTEG_ID
+       
+       
+	   AND    P2.LATN_ID = 13
+       
+       
+	   AND    P2.ETL_DT >= (DATE('2016-06-08') - 7)
+       AND    P2.STAT_NAME = '添加'
+         ) AS T1
+          WHERE ROW_NUM = 1
+          AND 2=1  /* ADD BY HAOYF */       
+)
+ORDER BY PROM_INTEG_ID, ORDER_PROM_ROW_ID
+SEGMENTED BY HASH(ORDER_PROM_ROW_ID) ALL NODES KSAFE 0
+;
+CREATE TABLE
+Time: First fetch (0 rows): 187.657 ms. All rows formatted: 187.677 ms
+INSERT INTO PROM_ORDER_INFO_D
+                SELECT
+                            *
+        FROM
+        (
+        SELECT
+                            COALESCE(P2.ORDER_PROM_ROW_ID,'-1') AS ORDER_PROM_ROW_ID
+                            ,P1.PROM_ROW_ID
+                            ,P1.PROM_TYPE_NAME
+                            ,P1.PROM_EFF_DT
+                            ,P1.PROM_EXP_DT
+                            ,P1.PROM_INTEG_ID
+                            ,P1.PROM_ASSET_INTEG_ID
+                            ,P1.STAT_NAME
+                            ,P1.LATN_ID
+                            ,P1.PROM_INSTANT_ROW_ID
+                            ,P1.HQ_OFFER_INST_ID                                                           
+                            ,ROW_NUMBER() OVER(PARTITION BY P1.PROM_INSTANT_ROW_ID ORDER BY P2.Apply_Time  DESC    )  ROW_NUM
+             FROM    OFR_PROM_BSI_HIST_Z  P1
+INNER JOIN    STAGE_1.EVT_ORDER_PROM_HIST_Z P2
+        ON    P1.PROM_INTEG_ID = P2.PROM_INTEG_ID
+       
+	   
+	   AND    P2.LATN_ID = 13
+       
+	   AND    P2.ETL_DT >= (DATE('2016-06-08') - 7)
+       AND    P2.STAT_NAME = '添加'
+         ) AS T1
+          WHERE ROW_NUM = 1  
+;
+ OUTPUT 
+--------
+  21431
+(1 row)
+
+Time: First fetch (1 row): 11067.849 ms. All rows formatted: 11067.896 ms
+CREATE LOCAL TEMP TABLE EVT_ORDI_HIST_D  ON COMMIT PRESERVE ROWS
+AS(
+    SELECT  P2.ORDER_ITEM_ROW_ID
+                            ,P2.ASSET_INTEG_ID
+                            ,P2.ORDER_ROW_ID
+                            ,P2.STAT_NAME AS ORDI_STAT_NAME
+                            ,P2.ETL_DT
+                            ,P2.CPL_DT
+                            ,P2.Sales_Emp_Id
+                            ,P2.Prom_Flg
+                       ,P2.action_name
+       
+	   FROM    STAGE_1.EVT_ORDI_HIST_D  P2
+         WHERE     P2.STAT_NAME = '完成'
+       
+	   AND    P2.LATN_ID = 13
+	   AND 2=1 /* ADD BY HAOYF */
+)
+ORDER BY ORDER_ITEM_ROW_ID, ASSET_INTEG_ID
+SEGMENTED BY HASH (ORDER_ITEM_ROW_ID) ALL NODES KSAFE 0
+;
+CREATE TABLE
+Time: First fetch (0 rows): 197.974 ms. All rows formatted: 197.995 ms
+INSERT intO EVT_ORDI_HIST_D
+SELECT  P2.ORDER_ITEM_ROW_ID
+                            ,P2.ASSET_INTEG_ID
+                            ,P2.ORDER_ROW_ID
+                            ,P2.STAT_NAME AS ORDI_STAT_NAME
+                            ,P2.ETL_DT
+                            ,P2.CPL_DT
+                            ,P2.Sales_Emp_Id
+                            ,P2.Prom_Flg
+                       ,P2.action_name
+        
+		FROM    STAGE_1.EVT_ORDI_HIST_D  P2
+         WHERE     P2.STAT_NAME = '完成'
+       
+	   
+	   AND    P2.LATN_ID = 13
+;
+  OUTPUT   
+-----------
+ 411967512
+(1 row)
+
+Time: First fetch (1 row): 345114.474 ms. All rows formatted: 345114.510 ms
+CREATE LOCAL TEMP TABLE PROM_TYPE_MAIN  ON COMMIT PRESERVE ROWS
+AS(
+        SELECT
+                            P1.ORDER_PROM_ROW_ID
+                            ,P1.PROM_ROW_ID
+                            ,P1.PROM_TYPE_NAME
+                            ,P1.PROM_EFF_DT
+                            ,P1.PROM_EXP_DT
+                            ,P1.PROM_INTEG_ID
+                            ,P1.PROM_ASSET_INTEG_ID
+                            ,P1.STAT_NAME
+                            ,P1.LATN_ID
+                            ,P1.PROM_INSTANT_ROW_ID
+                            ,P1.HQ_OFFER_INST_ID                                    
+                            ,P2.ORDER_ITEM_ROW_ID
+                            ,P2.ORDER_ROW_ID
+                            ,P2.ORDI_STAT_NAME
+                            ,P2.ETL_DT
+                            ,P2.CPL_DT
+                            ,P2.Sales_Emp_Id
+ 
+       FROM        PROM_ORDER_INFO_D                P1
+ 
+ LEFT JOIN    EVT_ORDI_HIST_D         P2
+        ON        P1.PROM_ASSET_INTEG_ID = P2.ASSET_INTEG_ID
+       AND    P2.Prom_Flg = 'Y'
+       and    p2.action_name = '添加'
+     WHERE    P1.PROM_TYPE_NAME IN ('组合套餐','帐户级销售品','单一套餐')
+	   AND    2=1 /* ADD BY HAOYF*/
+)
+ORDER BY ORDER_PROM_ROW_ID,PROM_ROW_ID,PROM_TYPE_NAME
+SEGMENTED BY HASH(ORDER_PROM_ROW_ID) ALL NODES KSAFE 0
+;
+CREATE TABLE
+Time: First fetch (0 rows): 414.374 ms. All rows formatted: 414.392 ms
+INSERT INTO PROM_TYPE_MAIN
+        SELECT
+                            P1.ORDER_PROM_ROW_ID
+                            ,P1.PROM_ROW_ID
+                            ,P1.PROM_TYPE_NAME
+                            ,P1.PROM_EFF_DT
+                            ,P1.PROM_EXP_DT
+                            ,P1.PROM_INTEG_ID
+                            ,P1.PROM_ASSET_INTEG_ID
+                            ,P1.STAT_NAME
+                            ,P1.LATN_ID
+                            ,P1.PROM_INSTANT_ROW_ID
+                            ,P1.HQ_OFFER_INST_ID                                    
+                            ,P2.ORDER_ITEM_ROW_ID
+                            ,P2.ORDER_ROW_ID
+                            ,P2.ORDI_STAT_NAME
+                            ,P2.ETL_DT
+                            ,P2.CPL_DT
+                            ,P2.Sales_Emp_Id
+           
+		   FROM        PROM_ORDER_INFO_D                 P1
+  
+  LEFT JOIN    EVT_ORDI_HIST_D         P2
+        ON        P1.PROM_ASSET_INTEG_ID = P2.ASSET_INTEG_ID
+       AND    P2.Prom_Flg = 'Y'
+       and    p2.action_name = '添加'
+     WHERE    P1.PROM_TYPE_NAME IN ('组合套餐','帐户级销售品','单一套餐')
+;
+ OUTPUT 
+--------
+   3783
+(1 row)
+
+Time: First fetch (1 row): 33680.703 ms. All rows formatted: 33680.760 ms
+CREATE LOCAL TEMP TABLE PROM_TYPE_OTHER ON COMMIT PRESERVE ROWS
+AS(
+        SELECT
+        *
+        FROM
+        (
+        SELECT 
+        
+        P1.ORDER_PROM_ROW_ID
+                            ,P1.PROM_ROW_ID
+                            ,P1.PROM_TYPE_NAME
+                            ,P1.PROM_EFF_DT
+                            ,P1.PROM_EXP_DT
+                            ,P1.PROM_INTEG_ID
+                            ,P1.PROM_ASSET_INTEG_ID
+                            ,P1.STAT_NAME
+                            ,P1.LATN_ID
+                            ,P1.PROM_INSTANT_ROW_ID
+                            ,P1.HQ_OFFER_INST_ID                                    
+                            ,P2.ROOT_ORDER_ITEM_ROW_ID AS ORDER_ITEM_ROW_ID
+                            ,P3.ORDER_ROW_ID
+                            ,P3.ORDI_STAT_NAME
+                            ,P3.CPL_DT
+                            ,P3.Sales_Emp_Id
+                            ,ROW_NUMBER() OVER(PARTITION BY P1.PROM_INSTANT_ROW_ID ORDER BY P2.ETL_DT  DESC    )  ROW_NUM
+              
+			  FROM        PROM_ORDER_INFO_D            P1
+ LEFT JOIN    STAGE_1.EVT_ORDER_PROM_ITEM_HIST_Z P2
+        ON    P1.ORDER_PROM_ROW_ID = P2.ORDER_PROM_ROW_ID
+         
+		 AND    P2.LATN_ID = 13
+       AND    P2.PROM_ITEM_TYPE_NAME = '优惠'
+ 
+ LEFT JOIN    EVT_ORDI_HIST_D  P3
+        ON    P2.ROOT_ORDER_ITEM_ROW_ID = P3.ORDER_ITEM_ROW_ID
+     WHERE    P1.PROM_TYPE_NAME  NOT IN ('组合套餐','帐户级销售品','单一套餐')
+     ) AS T1
+          WHERE ROW_NUM = 1
+            AND 2=1		  
+)
+ORDER BY ORDER_PROM_ROW_ID,PROM_ROW_ID,PROM_TYPE_NAME
+SEGMENTED BY HASH(ORDER_PROM_ROW_ID) ALL NODES KSAFE 0
+;
+CREATE TABLE
+Time: First fetch (0 rows): 239.015 ms. All rows formatted: 239.032 ms
+INSERT INTO PROM_TYPE_OTHER
+        
+        SELECT
+        *
+        FROM
+        (
+        SELECT 
+        
+        P1.ORDER_PROM_ROW_ID
+                            ,P1.PROM_ROW_ID
+                            ,P1.PROM_TYPE_NAME
+                            ,P1.PROM_EFF_DT
+                            ,P1.PROM_EXP_DT
+                            ,P1.PROM_INTEG_ID
+                            ,P1.PROM_ASSET_INTEG_ID
+                            ,P1.STAT_NAME
+                            ,P1.LATN_ID
+                            ,P1.PROM_INSTANT_ROW_ID
+                            ,P1.HQ_OFFER_INST_ID                                    
+                            ,P2.ROOT_ORDER_ITEM_ROW_ID AS ORDER_ITEM_ROW_ID
+                            ,P3.ORDER_ROW_ID
+                            ,P3.ORDI_STAT_NAME
+                            ,P3.CPL_DT
+                            ,P3.Sales_Emp_Id
+                            ,ROW_NUMBER() OVER(PARTITION BY P1.PROM_INSTANT_ROW_ID ORDER BY P2.ETL_DT  DESC    )  ROW_NUM
+            
+			FROM        PROM_ORDER_INFO_D           P1
+ LEFT JOIN    STAGE_1.EVT_ORDER_PROM_ITEM_HIST_Z P2
+        ON    P1.ORDER_PROM_ROW_ID = P2.ORDER_PROM_ROW_ID
+       
+	   AND    P2.LATN_ID = 13
+       AND    P2.PROM_ITEM_TYPE_NAME = '优惠'
+ 
+ LEFT JOIN    EVT_ORDI_HIST_D P3
+        ON    P2.ROOT_ORDER_ITEM_ROW_ID = P3.ORDER_ITEM_ROW_ID
+     WHERE    P1.PROM_TYPE_NAME  NOT IN ('组合套餐','帐户级销售品','单一套餐')
+     ) AS T1
+          WHERE ROW_NUM = 1 
+;
+ OUTPUT 
+--------
+  17648
+(1 row)
+
+Time: First fetch (1 row): 924541.649 ms. All rows formatted: 924541.695 ms
+CREATE LOCAL TEMP TABLE PROM_HUIZONG_1 ON COMMIT PRESERVE ROWS
+AS(
+        SELECT         * 
+          FROM 
+                            (
+                            SELECT
+        
+                                                ORDER_PROM_ROW_ID
+                                                ,PROM_ROW_ID
+                                                ,PROM_TYPE_NAME
+                                                ,PROM_EFF_DT
+                                                ,PROM_EXP_DT
+                                                ,PROM_INTEG_ID
+                                                ,PROM_ASSET_INTEG_ID
+                                                ,STAT_NAME
+                                                ,LATN_ID
+                                                ,PROM_INSTANT_ROW_ID
+                                                ,ORDER_ITEM_ROW_ID
+                                                ,ORDER_ROW_ID
+                                                ,ORDI_STAT_NAME
+                                                ,CPL_DT
+                                                ,Sales_Emp_Id
+                                                ,HQ_OFFER_INST_ID                                    
+                                FROM    PROM_TYPE_MAIN
+                      UNION ALL
+                             SELECT
+                                                ORDER_PROM_ROW_ID
+                                                ,PROM_ROW_ID
+                                                ,PROM_TYPE_NAME
+                                                ,PROM_EFF_DT
+                                                ,PROM_EXP_DT
+                                                ,PROM_INTEG_ID
+                                                ,PROM_ASSET_INTEG_ID
+                                                ,STAT_NAME
+                                                ,LATN_ID
+                                                ,PROM_INSTANT_ROW_ID
+                                                ,ORDER_ITEM_ROW_ID
+                                                ,ORDER_ROW_ID
+                                                ,ORDI_STAT_NAME
+                                                ,CPL_DT
+                                                ,Sales_Emp_Id
+                                                ,HQ_OFFER_INST_ID                                    
+                                FROM    PROM_TYPE_OTHER							
+) X
+WHERE 2=1
+GROUP BY ORDER_PROM_ROW_ID,PROM_ROW_ID,PROM_TYPE_NAME,PROM_EFF_DT,PROM_EXP_DT,PROM_INTEG_ID,PROM_ASSET_INTEG_ID,STAT_NAME,LATN_ID,PROM_INSTANT_ROW_ID,ORDER_ITEM_ROW_ID,ORDER_ROW_ID,ORDI_STAT_NAME,CPL_DT,Sales_Emp_Id,HQ_OFFER_INST_ID
+)
+ORDER BY ORDER_PROM_ROW_ID,PROM_ROW_ID,PROM_TYPE_NAME
+SEGMENTED BY HASH(ORDER_PROM_ROW_ID) ALL NODES KSAFE 0
+;
+CREATE TABLE
+Time: First fetch (0 rows): 269.505 ms. All rows formatted: 269.527 ms
+INSERT INTO PROM_HUIZONG_1
+        SELECT         * 
+          FROM 
+                            (
+                            SELECT
+        
+                                                ORDER_PROM_ROW_ID
+                                                ,PROM_ROW_ID
+                                                ,PROM_TYPE_NAME
+                                                ,PROM_EFF_DT
+                                                ,PROM_EXP_DT
+                                                ,PROM_INTEG_ID
+                                                ,PROM_ASSET_INTEG_ID
+                                                ,STAT_NAME
+                                                ,LATN_ID
+                                                ,PROM_INSTANT_ROW_ID
+                                                ,ORDER_ITEM_ROW_ID
+                                                ,ORDER_ROW_ID
+                                                ,ORDI_STAT_NAME
+                                                ,CPL_DT
+                                                ,Sales_Emp_Id
+                                                ,HQ_OFFER_INST_ID                                    
+                                FROM    PROM_TYPE_MAIN
+                      UNION ALL
+                             SELECT
+                                                ORDER_PROM_ROW_ID
+                                                ,PROM_ROW_ID
+                                                ,PROM_TYPE_NAME
+                                                ,PROM_EFF_DT
+                                                ,PROM_EXP_DT
+                                                ,PROM_INTEG_ID
+                                                ,PROM_ASSET_INTEG_ID
+                                                ,STAT_NAME
+                                                ,LATN_ID
+                                                ,PROM_INSTANT_ROW_ID
+                                                ,ORDER_ITEM_ROW_ID
+                                                ,ORDER_ROW_ID
+                                                ,ORDI_STAT_NAME
+                                                ,CPL_DT
+                                                ,Sales_Emp_Id
+                                                ,HQ_OFFER_INST_ID                                    
+                                FROM    PROM_TYPE_OTHER    
+) X
+GROUP BY ORDER_PROM_ROW_ID,PROM_ROW_ID,PROM_TYPE_NAME,PROM_EFF_DT,PROM_EXP_DT,PROM_INTEG_ID,PROM_ASSET_INTEG_ID,STAT_NAME,LATN_ID,PROM_INSTANT_ROW_ID,ORDER_ITEM_ROW_ID,ORDER_ROW_ID,ORDI_STAT_NAME,CPL_DT,Sales_Emp_Id,HQ_OFFER_INST_ID
+;
+ OUTPUT 
+--------
+  21431
+(1 row)
+
+Time: First fetch (1 row): 681.217 ms. All rows formatted: 681.251 ms
+CREATE LOCAL TEMP TABLE PROM_HUIZONG_2 ON COMMIT PRESERVE ROWS
+AS(
+        SELECT
+                            P1.ORDER_PROM_ROW_ID
+                            ,P1.ORDER_ROW_ID
+                            ,P1.PROM_ROW_ID
+                            ,P1.PROM_TYPE_NAME
+                            ,P1.PROM_EFF_DT
+                            ,P1.PROM_EXP_DT
+                            ,P1.PROM_INTEG_ID
+                            ,P1.PROM_ASSET_INTEG_ID
+                            ,P1.STAT_NAME
+                            ,P1.LATN_ID
+                            ,P1.PROM_INSTANT_ROW_ID
+                            ,P1.ORDER_ITEM_ROW_ID
+                            ,P1.ORDI_STAT_NAME
+                            ,P1.CPL_DT
+                            ,cast (NULL as varchar(40)) as Sales_Emp_Id                 
+                            ,cast (NULL as varchar(40)) as CEmployee_Row_Id             
+                            ,cast (NULL as varchar(30)) as Sales_Telecom_Area_ID    
+                            ,cast (NULL as varchar(30)) as Sales_Dept_Id            
+                            ,P2.CHANNEL_INNER_CODE   
+                            ,P2.CHANNEL_CODE                 
+                            ,P2.EMPLOYEE_CODE                 
+                            ,P2.SALES_EMP_CODE             
+                            ,P2.OPERATOR_CODE                 
+                            ,P1.HQ_OFFER_INST_ID                                    
+            FROM        PROM_HUIZONG_1   P1
+ LEFT JOIN    STAGE_1.EVT_ORDER_HIST_Z  P2
+        ON    P1.ORDER_ROW_ID = P2.ORDER_ROW_ID
+       
+	   AND    P2.LATN_ID = 13
+	 WHERE    2=1
+
+
+
+
+
+
+
+
+
+
+)
+ORDER BY ORDER_PROM_ROW_ID,PROM_ROW_ID,PROM_TYPE_NAME
+SEGMENTED BY HASH(PROM_INSTANT_ROW_ID) ALL NODES KSAFE 0
+;
+CREATE TABLE
+Time: First fetch (0 rows): 165.080 ms. All rows formatted: 165.098 ms
+INSERT INTO PROM_HUIZONG_2
+        SELECT
+                            P1.ORDER_PROM_ROW_ID
+                            ,P1.ORDER_ROW_ID
+                            ,P1.PROM_ROW_ID
+                            ,P1.PROM_TYPE_NAME
+                            ,P1.PROM_EFF_DT
+                            ,P1.PROM_EXP_DT
+                            ,P1.PROM_INTEG_ID
+                            ,P1.PROM_ASSET_INTEG_ID
+                            ,P1.STAT_NAME
+                            ,P1.LATN_ID
+                            ,P1.PROM_INSTANT_ROW_ID
+                            ,P1.ORDER_ITEM_ROW_ID
+                            ,P1.ORDI_STAT_NAME
+                            ,P1.CPL_DT
+                            ,cast (NULL as varchar(40)) as Sales_Emp_Id                 
+                            ,cast (NULL as varchar(40)) as CEmployee_Row_Id             
+                            ,cast (NULL as varchar(30)) as Sales_Telecom_Area_ID    
+                            ,cast (NULL as varchar(30)) as Sales_Dept_Id            
+                            ,P2.CHANNEL_INNER_CODE   
+                            ,P2.CHANNEL_CODE                 
+                            ,P2.EMPLOYEE_CODE                 
+                            ,P2.SALES_EMP_CODE             
+                            ,P2.OPERATOR_CODE                 
+                          ,P1.HQ_OFFER_INST_ID                                    
+            FROM        PROM_HUIZONG_1   P1
+ LEFT JOIN    STAGE_1.EVT_ORDER_HIST_Z  P2
+        ON    P1.ORDER_ROW_ID = P2.ORDER_ROW_ID
+       
+	   AND    P2.LATN_ID = 13
+
+
+
+
+
+
+
+
+
+
+;
+ OUTPUT 
+--------
+  21431
+(1 row)
+
+Time: First fetch (1 row): 1597.726 ms. All rows formatted: 1597.761 ms
+CREATE LOCAL TEMP TABLE PROM_HUIZONG_3 ON COMMIT PRESERVE ROWS
+AS(
+        SELECT
+                           
+						  '20160608' AS DAY_ID
+                          ,CASE WHEN p1.LATN_ID = 10 THEN '83301'
+                                  WHEN p1.LATN_ID = 11 THEN '83305'
+                                  WHEN p1.LATN_ID = 12 THEN '83304'
+                                  WHEN p1.LATN_ID = 13 THEN '83302'
+                                  WHEN p1.LATN_ID = 14 THEN '83306'
+                                  WHEN p1.LATN_ID = 15 THEN '83310'
+                                  WHEN p1.LATN_ID = 16 THEN '83303'
+                                  WHEN p1.LATN_ID = 17 THEN '83311'
+                                  WHEN p1.LATN_ID = 18 THEN '83307'
+                                  WHEN p1.LATN_ID = 19 THEN '83309'
+                                  WHEN p1.LATN_ID = 20 THEN '83308'
+                                  ELSE NULL
+                            END                                                                        AS LATN_ID                                                    
+                            ,P1.PROM_INSTANT_ROW_ID                                                    AS OFFER_INST_ID                                        
+                            ,P1.PROM_ROW_ID                                                            AS OFFER_NBR
+                            ,CASE WHEN P1.STAT_NAME = '有效' then '1000'
+                                        WHEN P1.STAT_NAME IN ('无效','失效') THEN '1100'
+                                        else '9999'
+                                        END PO_INST_STATE_CD                 
+                            ,P2.Sales_Emp_Id                                                           AS DVLP_STAFF_ID                                        
+                            ,P2.Sales_Dept_Id                                                          AS DVLP_CHNL_ID                                            
+                            ,P2.CEmployee_Row_Id                                                       AS ACCEPT_STAFF_ID                                    
+                            ,P2.Sales_Telecom_Area_ID                                                  AS ACCEPT_CHNL_ID                                        
+                            ,TRIM (REPLACE ( TO_CHAR(P2.CPL_DT),'-','' )||'000000')                                    AS COMPLETE_DT                                            
+                            ,TRIM (REPLACE ( TO_CHAR(P1.PROM_EFF_DT),'-','' )||'000000')                            AS EFF_DATE                                                    
+                            ,TRIM (REPLACE ( TO_CHAR(P1.PROM_EXP_DT),'-','' )||'000000')             AS EXP_DATE                                                    
+                            ,COALESCE(P2.SALES_EMP_CODE,'-1')                             AS ACCEPT_STAFF_CD                                        
+                            ,COALESCE(P2.EMPLOYEE_CODE,'-1')                                AS DVLP_STAFF_CD    
+                            ,COALESCE(P2.CHANNEL_CODE,'-1')                                    AS SALE_OUTLETS_CD                                    
+                            ,COALESCE(P2.CHANNEL_INNER_CODE,'-1')              AS SALE_OUTLETS_SUB_CD              
+                            ,COALESCE(P2.OPERATOR_CODE,'-1')                                AS OPERATORS_CD                                            
+                            ,P1.HQ_OFFER_INST_ID                                    
+            FROM        OFR_PROM_BSI_HIST_Z      P1
+ LEFT JOIN    PROM_HUIZONG_2     P2
+        ON        P1.PROM_INSTANT_ROW_ID = P2.PROM_INSTANT_ROW_ID
+       AND    P2.CPL_DT IS NOT NULL
+    
+       WHERE    P1.START_DT = '2016-06-08'    
+         AND    2=1	   
+)
+SEGMENTED BY HASH (OFFER_INST_ID) ALL NODES KSAFE 0
+;
+CREATE TABLE
+Time: First fetch (0 rows): 138.429 ms. All rows formatted: 138.449 ms
+INSERT INTO  PROM_HUIZONG_3
+        SELECT
+                           
+						   '20160608' AS DAY_ID
+                          ,CASE WHEN p1.LATN_ID = 10 THEN '83301'
+                                  WHEN p1.LATN_ID = 11 THEN '83305'
+                                  WHEN p1.LATN_ID = 12 THEN '83304'
+                                  WHEN p1.LATN_ID = 13 THEN '83302'
+                                  WHEN p1.LATN_ID = 14 THEN '83306'
+                                  WHEN p1.LATN_ID = 15 THEN '83310'
+                                  WHEN p1.LATN_ID = 16 THEN '83303'
+                                  WHEN p1.LATN_ID = 17 THEN '83311'
+                                  WHEN p1.LATN_ID = 18 THEN '83307'
+                                  WHEN p1.LATN_ID = 19 THEN '83309'
+                                  WHEN p1.LATN_ID = 20 THEN '83308'
+                                  ELSE NULL
+                            END                                                                                                                               AS LATN_ID                                                    
+                            ,P1.PROM_INSTANT_ROW_ID                                                                                          AS OFFER_INST_ID                                        
+                            ,P1.PROM_ROW_ID                                                                                                  AS OFFER_NBR
+                            ,CASE WHEN P1.STAT_NAME = '有效' then '1000'
+                                        WHEN P1.STAT_NAME IN ('无效','失效') THEN '1100'
+                                        else '9999'
+                                        END PO_INST_STATE_CD                 
+                            ,P2.Sales_Emp_Id                                                                                                         AS DVLP_STAFF_ID                                        
+                            ,P2.Sales_Dept_Id                                                                                                AS DVLP_CHNL_ID                                            
+                            ,P2.CEmployee_Row_Id                                                                                                    AS ACCEPT_STAFF_ID                                    
+                            ,P2.Sales_Telecom_Area_ID                                                                                    AS ACCEPT_CHNL_ID                                        
+                            ,TRIM (REPLACE ( TO_CHAR(P2.CPL_DT),'-','' )||'000000')                                    AS COMPLETE_DT                                            
+                            ,TRIM (REPLACE ( TO_CHAR(P1.PROM_EFF_DT),'-','' )||'000000')                            AS EFF_DATE                                                    
+                            ,TRIM (REPLACE ( TO_CHAR(P1.PROM_EXP_DT),'-','' )||'000000')             AS EXP_DATE                                                    
+                            ,COALESCE(P2.SALES_EMP_CODE,'-1')                             AS ACCEPT_STAFF_CD  
+                            ,COALESCE(P2.EMPLOYEE_CODE,'-1')                                AS DVLP_STAFF_CD                                     
+                            ,COALESCE(P2.CHANNEL_CODE,'-1')                                    AS SALE_OUTLETS_CD                                    
+                            ,COALESCE(P2.CHANNEL_INNER_CODE,'-1')              AS SALE_OUTLETS_SUB_CD              
+                            ,COALESCE(P2.OPERATOR_CODE,'-1')                                AS OPERATORS_CD                                            
+                        ,P1.HQ_OFFER_INST_ID                                    
+            FROM        OFR_PROM_BSI_HIST_Z      P1
+ LEFT JOIN    PROM_HUIZONG_2     P2
+        ON        P1.PROM_INSTANT_ROW_ID = P2.PROM_INSTANT_ROW_ID
+       AND    P2.CPL_DT IS NOT NULL
+   
+     WHERE    P1.START_DT = '2016-06-08'  
+;
+ OUTPUT 
+--------
+  37038
+(1 row)
+
+Time: First fetch (1 row): 301.194 ms. All rows formatted: 301.231 ms
+CREATE LOCAL TEMP TABLE PROM_HUIZONG_4 ON COMMIT PRESERVE ROWS
+AS(
+        SELECT
+                            P1.DAY_ID        
+                            ,P1.LATN_ID
+                            ,P1.OFFER_INST_ID
+                            ,P1.OFFER_NBR
+                            ,P1.PO_INST_STATE_CD
+                            ,P1.DVLP_STAFF_ID
+                            ,P1.DVLP_CHNL_ID
+                            ,P1.ACCEPT_STAFF_ID
+                            ,P1.ACCEPT_CHNL_ID
+                            ,P1.COMPLETE_DT
+                            ,P1.EFF_DATE
+                            ,P1.EXP_DATE
+                            ,P1.DVLP_STAFF_CD
+                            ,P1.ACCEPT_STAFF_CD
+                            ,P1.SALE_OUTLETS_CD
+                            ,P1.SALE_OUTLETS_SUB_CD
+                            ,P1.OPERATORS_CD
+                            ,P1.HQ_OFFER_INST_ID  AS  EXT_PROD_OFFER_INST_ID                                  
+                            
+            FROM        PROM_HUIZONG_3 P1
+			WHERE       2=1
+ 
+ 
+ 
+ 
+)
+SEGMENTED BY HASH (OFFER_INST_ID) ALL NODES KSAFE 0
+;
+CREATE TABLE
+Time: First fetch (0 rows): 134.518 ms. All rows formatted: 134.536 ms
+INSERT INTO PROM_HUIZONG_4
+        SELECT
+                            P1.DAY_ID        
+                            ,P1.LATN_ID
+                            ,P1.OFFER_INST_ID
+                            ,P1.OFFER_NBR
+                            ,P1.PO_INST_STATE_CD
+                            ,P1.DVLP_STAFF_ID
+                            ,P1.DVLP_CHNL_ID
+                            ,P1.ACCEPT_STAFF_ID
+                            ,P1.ACCEPT_CHNL_ID
+                            ,P1.COMPLETE_DT
+                            ,P1.EFF_DATE
+                            ,P1.EXP_DATE
+                            ,P1.DVLP_STAFF_CD
+                            ,P1.ACCEPT_STAFF_CD
+                            ,P1.SALE_OUTLETS_CD
+                            ,P1.SALE_OUTLETS_SUB_CD
+                            ,P1.OPERATORS_CD
+                            ,P1.HQ_OFFER_INST_ID  AS  EXT_PROD_OFFER_INST_ID                                     
+                            
+            FROM        PROM_HUIZONG_3 P1
+ 
+ 
+ 
+ 
+;
+ OUTPUT 
+--------
+  37038
+(1 row)
+
+Time: First fetch (1 row): 172.689 ms. All rows formatted: 172.720 ms
+DELETE FROM ITFJYFX_1.DAPD_PRD_PO_INST_D_1
+WHERE  DAY_ID =  '20160608' or DAY_ID = '20160606'
+;
+ OUTPUT 
+--------
+      0
+(1 row)
+
+Time: First fetch (1 row): 106.602 ms. All rows formatted: 106.628 ms
+INSERT INTO ITFJYFX_1.DAPD_PRD_PO_INST_D_1
+(
+DAY_ID                                                
+,LATN_ID                      
+,OFFER_INST_ID                
+,OFFER_NBR                    
+,PO_INST_STATE_CD             
+,DVLP_STAFF_ID                
+,DVLP_CHNL_ID                 
+,ACCEPT_STAFF_ID              
+,ACCEPT_CHNL_ID               
+,COMPLETE_DT                  
+,EFF_DATE                     
+,EXP_DATE                     
+,DVLP_STAFF_CD                
+,ACCEPT_STAFF_CD              
+,SALE_OUTLETS_CD              
+,SALE_OUTLETS_SUB_CD          
+,OPERATORS_CD      
+,TRMNL_SHOULD_FEE
+,EXT_PROD_OFFER_INST_ID                                     
+ )
+        SELECT 
+                            
+							'20160608'
+                            ,LATN_ID                      
+                            ,OFFER_INST_ID                
+                            ,OFFER_NBR                    
+                            ,PO_INST_STATE_CD             
+                            ,DVLP_STAFF_ID                
+                            ,DVLP_CHNL_ID                 
+                            ,ACCEPT_STAFF_ID              
+                            ,ACCEPT_CHNL_ID               
+                            ,COMPLETE_DT                  
+                            ,EFF_DATE                     
+                            ,EXP_DATE                     
+                            ,DVLP_STAFF_CD                
+                            ,ACCEPT_STAFF_CD              
+                            ,SALE_OUTLETS_CD              
+                            ,SALE_OUTLETS_SUB_CD          
+                            ,OPERATORS_CD  
+                            ,CAST ( 0 AS DECIMAL (16,2)) AS TRMNL_SHOULD_FEE  
+                            ,EXT_PROD_OFFER_INST_ID                                     
+          
+		    from        ITFJYFX_1.DAPD_PRD_PO_INST_D_1
+         
+		 WHERE    DAY_ID = '20160607'
+;
+ OUTPUT 
+--------
+      0
+(1 row)
+
+Time: First fetch (1 row): 207.377 ms. All rows formatted: 207.407 ms
+MERGE INTO ITFJYFX_1.DAPD_PRD_PO_INST_D_1 AS P1
+USING 
+(
+SELECT                            
+DAY_ID                                                
+,LATN_ID                      
+,OFFER_INST_ID                
+,OFFER_NBR                    
+,PO_INST_STATE_CD             
+,DVLP_STAFF_ID                
+,DVLP_CHNL_ID                 
+,ACCEPT_STAFF_ID              
+,ACCEPT_CHNL_ID               
+,COMPLETE_DT                  
+,EFF_DATE                     
+,EXP_DATE                     
+,DVLP_STAFF_CD                
+,ACCEPT_STAFF_CD              
+,SALE_OUTLETS_CD              
+,SALE_OUTLETS_SUB_CD          
+,OPERATORS_CD          
+,CAST ( 0 AS DECIMAL (16,2)) AS TRMNL_SHOULD_FEE
+,EXT_PROD_OFFER_INST_ID                                     
+FROM PROM_HUIZONG_4
+)AS P2
+ON P1.OFFER_INST_ID=P2.OFFER_INST_ID
+
+AND P1.DAY_ID = '20160608'
+WHEN MATCHED THEN UPDATE
+SET 
+                            EFF_DATE = p2.EFF_DATE
+                            ,EXP_DATE = p2.EXP_DATE
+                            ,PO_INST_STATE_CD = p2.PO_INST_STATE_CD
+WHEN NOT MATCHED THEN
+INSERT VALUES 
+(
+                            P2.DAY_ID
+                            ,P2.LATN_ID                      
+                            ,P2.OFFER_INST_ID                
+                            ,P2.OFFER_NBR                    
+                            ,P2.PO_INST_STATE_CD             
+                            ,P2.DVLP_STAFF_ID                
+                            ,P2.DVLP_CHNL_ID                 
+                            ,P2.ACCEPT_STAFF_ID              
+                            ,P2.ACCEPT_CHNL_ID               
+                            ,P2.COMPLETE_DT                  
+                            ,P2.EFF_DATE                     
+                            ,P2.EXP_DATE                     
+                            ,P2.DVLP_STAFF_CD                
+                            ,P2.ACCEPT_STAFF_CD              
+                            ,P2.SALE_OUTLETS_CD              
+                            ,P2.SALE_OUTLETS_SUB_CD          
+                            ,P2.OPERATORS_CD 
+                            ,p2.TRMNL_SHOULD_FEE
+                            ,p2.EXT_PROD_OFFER_INST_ID                                     
+)
+;
+ OUTPUT 
+--------
+  37038
+(1 row)
+
+Time: First fetch (1 row): 218724.511 ms. All rows formatted: 218724.550 ms
+UPDATE ITFJYFX_1.DAPD_PRD_PO_INST_D_1
+SET EXP_DATE = EFF_DATE
+WHERE EFF_DATE > EXP_DATE
+
+and DAY_ID = '20160608'
+;
+ OUTPUT 
+--------
+    255
+(1 row)
+
+Time: First fetch (1 row): 381.350 ms. All rows formatted: 381.380 ms
+UPDATE ITFJYFX_1.DAPD_PRD_PO_INST_D_1
+SET EXP_DATE = COMPLETE_DT
+WHERE COMPLETE_DT > EXP_DATE
+
+and DAY_ID = '20160608'
+;
+ OUTPUT 
+--------
+      1
+(1 row)
+
+Time: First fetch (1 row): 1331.145 ms. All rows formatted: 1331.181 ms
+DELETE FROM ITFJYFX_1.DAPD_PRD_PO_INST_D_1
+
+WHERE EXP_DATE <= '2016'||'0101000000'
+;
+ OUTPUT 
+--------
+    371
+(1 row)
+
+Time: First fetch (1 row): 710.888 ms. All rows formatted: 710.921 ms
+MERGE INTO 
+
+ITFJYFX_1.DAPD_PRD_PO_INST_D_1 AS P1 
+USING 
+(
+SELECT 
+ALLWNC_PO_INST_ID,COUPON_AMT
+FROM 
+ITFJYFX_1.DAPD_FIN_ALWANC_Z 
+
+WHERE LATN_ID = ''
+and   ALLWNC_PO_INST_ID <> '-1'
+)
+AS P2
+                ON        P1.OFFER_INST_ID = P2.ALLWNC_PO_INST_ID  
+             
+			 AND    P1.day_id = '20160608'
+WHEN MATCHED THEN UPDATE
+SET 
+TRMNL_SHOULD_FEE = COALESCE(P2.COUPON_AMT,0)
+
+;
+ OUTPUT 
+--------
+      0
+(1 row)
+
+Time: First fetch (1 row): 181675.831 ms. All rows formatted: 181675.870 ms
+UPDATE ITFJYFX_1.DAPD_PRD_PO_INST_D_1
+SET TRMNL_SHOULD_FEE = 0
+WHERE TRMNL_SHOULD_FEE < 0   
+
+and day_id = '20160608'
+;
+ OUTPUT 
+--------
+      0
+(1 row)
+
+Time: First fetch (1 row): 178.737 ms. All rows formatted: 178.767 ms

@@ -1,0 +1,83 @@
+dbadmin=> \timing
+Timing is on.
+dbadmin=> copy tpc.store_sales from '/data/ds/400g' on any node delimiter '|' direct;
+ERROR 5634:  Path [/data/ds/400g] is a directory
+dbadmin=> copy tpc.store_sales from '/data/ds/400g/store_sales.dat' on any node delimiter '|' direct;
+ Rows Loaded 
+-------------
+  1151988104
+(1 row)
+
+Time: First fetch (1 row): 563871.778 ms. All rows formatted: 563871.830 ms
+
+Welcome to vsql, the Vertica Analytic Database interactive terminal.
+
+Type:  \h or \? for help with vsql commands
+       \g or terminate with semicolon to execute query
+       \q to quit
+
+dbadmin=> \timing
+Timing is on.
+dbadmin=> copy tpc.item from '/data/ds/400g/item.dat' on any node delimiter '|' direct;
+ Rows Loaded 
+-------------
+       22000
+(1 row)
+
+Time: First fetch (1 row): 1920.878 ms. All rows formatted: 1920.922 ms
+dbadmin=> copy tpc.date_dim from '/data/ds/400g/date_dim.dat' on any node delimiter '|' direct;
+ Rows Loaded 
+-------------
+       73049
+(1 row)
+
+Time: First fetch (1 row): 1282.158 ms. All rows formatted: 1282.209 ms
+------------------------------------------------------------------------------------------------------------------------------
+--add nodes
+------------------------------------------------------------------------------------------------------------------------------
+
+Tue Jul 18 16:28:56 CST 2017
+		Verifying database connectivity...134.96.238.231
+	Generating new configuration information and reloading spread
+	Replicating configuration to all nodes
+	Starting nodes
+	Starting nodes: 
+		v_usecase301_node0005 (134.96.238.235)
+		v_usecase301_node0006 (134.96.238.236)
+	Starting Vertica on all nodes. Please wait, databases with a large catalog may take a while to initialize.
+	Checking database state
+	Node Status: v_usecase301_node0005: (DOWN) v_usecase301_node0006: (DOWN) 
+	Node Status: v_usecase301_node0005: (DOWN) v_usecase301_node0006: (DOWN) 
+	Node Status: v_usecase301_node0005: (DOWN) v_usecase301_node0006: (DOWN) 
+	Node Status: v_usecase301_node0005: (DOWN) v_usecase301_node0006: (DOWN) 
+	Node Status: v_usecase301_node0005: (UP) v_usecase301_node0006: (UP) 
+	Multi-node DB add completed
+Nodes added to USECASE301 successfully.
+You will need to redesign your schema to take advantage of the new nodes.
+Tue Jul 18 16:29:52 CST 2017
+
+------------------------------------------------------------------------------------------------------------------------------
+-- reblance data
+------------------------------------------------------------------------------------------------------------------------------
+
+[dbadmin@edatest01 4.3]$ sh reblance_data.sh 
+Tue Jul 18 16:33:02 CST 2017
+Current database k-safety: 1, requested k-safety: 1
+Running rebalance operation
+Running rebalance cluster
+
+
+Starting Data Rebalancing tasks.  Please wait....
+This process could take a long time; allow it to complete uninterrupted.
+Use Ctrl+C if you must cancel the session.
+
+
+
+	Data Rebalance completed successfully.
+Tue Jul 18 16:38:27 CST 2017
+
+
+
+------------------------------------------------------------------------------------------------------------------------------
+-- query
+------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,420 @@
+000 A 000
+A
+BILL_MONTH  = 201705  
+CUR_MONTH   = 201706   
+NEXT_MONTH1 = 201707 
+NEXT_MONTH2 = 201708 
+Timing is on.
+CREATE LOCAL TEMP table OFR_MAIN_ASSET_A ON COMMIT PRESERVE ROWS
+AS(
+SELECT     P1.Asset_Row_Id 
+           ,TO_DATE('20170608' ,  'YYYYMMDD') AS Start_Dt
+           ,P1.Start_Dt AS Real_Start_Dt
+           ,P1.Serv_Start_Dt
+           ,P1.Serv_End_Dt
+           ,P12.Std_Prd_Lvl4_Name
+           ,P12.Std_Prd_Lvl3_Id
+           ,P1.STD_PRD_LVL4_ID
+           ,(CASE WHEN P1.Stat_Name IN ('现行','不活动','已暂停')
+                   THEN P1.Stat_Name
+                   ELSE 'err'
+               END) AS  Stat_Name        
+            ,(CASE WHEN P1.ODS_Stat_Name IN ('F0K','F0P') THEN '双向'       
+									 WHEN P1.ODS_Stat_Name ='F0M' THEN '单向'
+                   else 'err'
+                    END  ) AS Owe_Suspend_Name             
+            ,(CASE WHEN P1.Pre_Active_Status='预开户1' THEN '预开户'
+                  WHEN P1.Pre_Active_Status='正常' THEN '正常开户'
+                  ELSE P1.Pre_Active_Status
+              END) AS Pre_Active_Status  
+            ,P1.LATN_ID        
+            ,P1.STAT_CHANGE_DT     
+      FROM  BSSDATA_1.OFR_MAIN_ASSET_HIST_A   P1
+INNER JOIN  DMN_1.CAG_COM_STD_PRD_LVL4                  P12
+        ON  P1.Std_Prd_Lvl4_Id=P12.Std_Prd_Lvl4_Id
+     WHERE  P1.Start_Dt<=TO_DATE('20170608' ,  'YYYYMMDD')
+	     AND  P1.End_Dt  >TO_DATE('20170608' ,  'YYYYMMDD')
+	     AND  P12.PRD_ID IN('40','60','50','10','70')   
+	     
+)
+ORDER BY Asset_Row_Id, P1.STD_PRD_LVL4_ID
+SEGMENTED BY HASH (Asset_Row_Id) ALL NODES KSAFE 0
+;
+CREATE TABLE
+Time: First fetch (0 rows): 19111.908 ms. All rows formatted: 19111.986 ms
+CREATE LOCAL TEMP table MAIN_FREE_CORP_PAY_A ON COMMIT PRESERVE ROWS
+AS(
+select   Asset_Row_Id
+            ,MAX(CASE WHEN P.Cdsc_Row_Id='1-19849-1' THEN 1 ELSE 0 END) AS Test_Flg
+      FROM  BSSDATA_1.OFR_ASSET_CDSC_HIST_A       P  
+     WHERE  P.Stat_Name ='使用中'
+       AND  P.Start_Dt<=TO_DATE('20170608' ,  'YYYYMMDD')
+       AND  P.End_Dt>TO_DATE('20170608' ,  'YYYYMMDD')
+       AND  P.Asset_Row_Id IN (SELECT Asset_Row_Id FROM OFR_MAIN_ASSET_A)
+      GROUP BY Asset_Row_Id 
+)
+ORDER BY (Asset_Row_Id)
+SEGMENTED BY HASH (Asset_Row_Id) ALL NODES KSAFE 0
+;
+CREATE TABLE
+Time: First fetch (0 rows): 13272.432 ms. All rows formatted: 13272.474 ms
+CREATE LOCAL TEMP table STOP_ASSET_A ON COMMIT PRESERVE ROWS
+AS(
+    SELECT  Asset_Row_Id
+        		,MAX(CASE WHEN Call_Limit_Stat IN('F0K','F0P') THEN 1 else 0 END) AS Twoway_Stop_Flg   
+    		    ,MAX(CASE WHEN Call_Limit_Stat='F0M' THEN 1 else 0 END) AS Oneway_Stop_Flg   
+            ,MAX(CASE WHEN Call_Limit_Stat IN('F0K','F0P')                                         
+                      THEN TO_DATE('19990101' ,  'YYYYMMDD')
+                      ELSE TO_DATE(TO_CHAR(Deal_Time)  ,  'YYYYMMDD')
+                  END ) AS Oneway_Stop_Dt
+            ,MAX(CASE WHEN Call_Limit_Stat='F0M'                                         
+                      THEN TO_DATE('19990101' ,  'YYYYMMDD')
+                      ELSE TO_DATE(TO_CHAR(Deal_Time) ,  'YYYYMMDD')
+                  END ) AS Twoway_Stop_Dt
+      FROM  BSSDATA_1.OFR_ASSET_CALL_LIMIT_LOG_A
+     WHERE  TO_DATE(TO_CHAR(Deal_Time)  ,  'YYYYMMDD')<=TO_DATE('20170608' ,  'YYYYMMDD')
+       AND  Call_Limit_Stat IN('F0M','F0K','F0P')                                        
+     GROUP BY Asset_Row_Id
+)
+ORDER BY (Asset_Row_Id)
+SEGMENTED BY HASH (Asset_Row_Id) ALL NODES KSAFE 0
+;
+CREATE TABLE
+Time: First fetch (0 rows): 4682.010 ms. All rows formatted: 4682.028 ms
+CREATE LOCAL TEMP table STOP_ASSET_1_A ON COMMIT PRESERVE ROWS
+AS(
+    SELECT  Asset_Row_Id
+        		,MAX(CASE WHEN Call_Limit_Stat IN('F0K','F0P') THEN 1 else 0 END) AS Twoway_Stop_Flg1      
+    		    ,MAX(CASE WHEN Call_Limit_Stat='F0M' THEN 1 else 0 END) AS Oneway_Stop_Flg1                
+            ,MAX(CASE WHEN Call_Limit_Stat IN('F0K','F0P')                                             
+                      THEN TO_DATE('19990101' ,  'YYYYMMDD')
+                      ELSE TO_DATE(TO_CHAR(Stat_Upd_Time) ,  'YYYYMMDD')
+                  END ) AS Oneway_Stop_Dt1
+            ,MAX(CASE WHEN Call_Limit_Stat='F0M' 
+                      THEN TO_DATE('19990101' ,  'YYYYMMDD')
+                      ELSE TO_DATE(TO_CHAR(Stat_Upd_Time) ,  'YYYYMMDD')
+                  END ) AS Twoway_Stop_Dt1
+      FROM  BSSDATA_1.OFR_ASSET_CALL_LIMIT_LOG_A
+     WHERE  TO_DATE(TO_CHAR(Stat_Upd_Time) ,  'YYYYMMDD')<=TO_DATE('20170608' ,  'YYYYMMDD')
+       AND  Deal_Time IS NULL
+       AND  Call_Limit_Stat IN('F0M','F0K','F0P')
+     GROUP BY Asset_Row_Id
+)
+ORDER BY (Asset_Row_Id)
+SEGMENTED BY HASH (Asset_Row_Id) ALL NODES KSAFE 0
+;
+CREATE TABLE
+Time: First fetch (0 rows): 376.539 ms. All rows formatted: 376.566 ms
+CREATE LOCAL TEMP table OWE_92_A ON COMMIT PRESERVE ROWS
+AS(
+SELECT  p.Asset_Integ_Id            
+            ,p1.ASSET_ROW_ID
+            ,SUM(Amt)   Amt
+     FROM  BSSDATA_1.FIN_PG_OWE_STMT_ITEM_D_A p
+LEFT JOIN  BSSDATA_1.OFR_MAIN_ASSET_HIST_A P1
+       ON  P.Asset_Integ_Id=P1.Asset_Integ_Id
+      AND  P1.END_DT=DATE'3000-12-31'
+    WHERE  Stmt_Dt <= TO_DATE('20170608' ,  'YYYYMMDD')- 91 
+      AND  FLG='1'
+  GROUP BY  p.Asset_Integ_Id
+            ,p1.ASSET_ROW_ID
+)
+ORDER BY p.Asset_Integ_Id, Asset_Row_Id
+SEGMENTED BY HASH (Asset_Row_Id) ALL NODES KSAFE 0
+;
+CREATE TABLE
+Time: First fetch (0 rows): 8756.684 ms. All rows formatted: 8756.710 ms
+CREATE LOCAL TEMP table MAIN_PRE_1_A ON COMMIT PRESERVE ROWS
+AS(
+SELECT       P1.Asset_Row_Id
+              ,P1.Start_Dt
+              ,P1.Stat_Name     
+              ,P1.Serv_Start_Dt
+              ,P1.Serv_End_Dt       
+              ,P1.Owe_Suspend_Name
+              ,P1.Pre_Active_Status
+              ,P1.Std_Prd_Lvl4_Id
+              ,P1.Std_Prd_Lvl4_Name
+              ,P1.Std_Prd_Lvl3_Id 
+              ,COALESCE(P18.Test_Flg,0) AS Test_Flg                   
+             ,(CASE WHEN P1.Stat_Name='已暂停' AND P1.Owe_Suspend_Name='单向' 
+                          THEN (CASE WHEN P34.Oneway_Stop_Flg = 1 AND P34.Oneway_Stop_Dt IS NOT NULL
+                                    THEN P34.Oneway_Stop_Dt
+                                    WHEN P33.Oneway_Stop_Dt1 IS NOT NULL AND P34.Oneway_Stop_Dt IS  NULL
+                                    THEN P33.Oneway_Stop_Dt1
+                                    ELSE P1.Real_Start_Dt
+                                END)
+                          ELSE NULL
+                      END) AS Oneway_Stop_Dt                  
+              ,(CASE WHEN P1.Stat_Name='已暂停' AND P1.Owe_Suspend_Name='双向' 
+                          THEN (CASE WHEN P34.Twoway_Stop_Flg = 1 AND P34.Twoway_Stop_Dt IS NOT NULL
+                                     THEN P34.Twoway_Stop_Dt
+                                     WHEN P33.Twoway_Stop_Dt1 IS NOT NULL  AND P34.Twoway_Stop_Dt IS NULL
+                                     THEN P33.Twoway_Stop_Dt1
+                                     ELSE P1.Real_Start_Dt
+                                END)
+                          ELSE NULL
+                      END) AS Twoway_Stop_Dt                    
+             ,(CASE WHEN P34.Twoway_Stop_Flg = 1 AND P34.Twoway_Stop_Dt IS NOT NULL
+                                     THEN P34.Twoway_Stop_Dt
+                                     WHEN P33.Twoway_Stop_Dt1 IS NOT NULL  AND P34.Twoway_Stop_Dt IS NULL
+                                     THEN P33.Twoway_Stop_Dt1
+                                     ELSE NULL
+                                END) AS Twoway_Stop_Dt1       
+              ,(CASE WHEN P2.Asset_Row_Id IS NOT NULL AND P1.Std_Prd_Lvl4_Id IN (11010501) THEN 1 ELSE 0 END) AS Own_Flg
+              ,P1.LATN_ID
+        FROM  OFR_MAIN_ASSET_A                            P1
+   LEFT JOIN  STOP_ASSET_A                           P34
+          ON  P1.Asset_Row_Id=P34.Asset_Row_Id
+   LEFT JOIN  STOP_ASSET_1_A                         P33
+          ON  P1.Asset_Row_Id=P33.Asset_Row_Id       
+   LEFT JOIN  MAIN_FREE_CORP_PAY_A                   P18
+          ON  P1.Asset_Row_Id=P18.Asset_Row_Id
+   LEFT JOIN  OWE_92_A              P2
+          ON  P1.Asset_Row_Id = P2.Asset_Row_Id
+         AND  P2.Amt > 0
+)
+ORDER BY (Asset_Row_Id)
+SEGMENTED BY HASH (Asset_Row_Id) ALL NODES KSAFE 0
+;
+CREATE TABLE
+Time: First fetch (0 rows): 26094.116 ms. All rows formatted: 26094.147 ms
+CREATE LOCAL TEMP table MAIN_PRE_2_A ON COMMIT PRESERVE ROWS
+AS(
+SELECT  P1.*
+                 ,(CASE WHEN P1.Std_Prd_Lvl4_Id IN (11010200,11010201,11010202,11010307) AND P20.Stat_Name IS NOT NULL AND P20.Stat_Name IN ('IPAS激活','CRM预占')     THEN '正常开户'
+                        WHEN P1.Std_Prd_Lvl4_Id IN (11010200,11010201,11010202,11010307) AND P20.Stat_Name IS NOT NULL AND P20.Stat_Name NOT IN ('IPAS激活','CRM预占') THEN '预开户'
+                        ELSE P1.Pre_Active_Status
+                   END) AS Pre_Active_Status1
+           FROM    MAIN_PRE_1_A                                 P1     
+      LEFT JOIN   (SELECT  Asset_Row_Id
+                          ,MIN(Stat_Name) AS Stat_Name
+                    FROM  BSSDATA_1.OFR_ASSET_INST_STAT_HIST_A
+                   WHERE  Asset_Row_Id IS NOT NULL
+                     AND  Asset_Row_Id <> '-1'
+                     AND  Start_Dt<=TO_DATE('20170608' ,  'YYYYMMDD')
+                     AND  End_Dt>TO_DATE('20170608' ,  'YYYYMMDD')
+                 GROUP BY Asset_Row_Id)                                              P20
+             ON  	 P1.Asset_Row_Id=P20.Asset_Row_Id   
+)
+ORDER BY (Asset_Row_Id)
+SEGMENTED BY HASH (Asset_Row_Id) ALL NODES KSAFE 0
+;
+CREATE TABLE
+Time: First fetch (0 rows): 18671.333 ms. All rows formatted: 18671.361 ms
+CREATE LOCAL TEMP table TMP_SPEED_A ON COMMIT PRESERVE ROWS
+AS(
+SELECT ASSET_ROW_ID,VAL FROM (							  
+SELECT
+						ROW_NUMBER() OVER (PARTITION BY P1.ASSET_ROW_ID ORDER BY CASE WHEN (P2.VAL IS NOT NULL AND P2.VAL <> '-1') THEN P2.Etl_Dt ELSE P1.Etl_Dt END DESC) AS Q_RANK
+						,P1.ASSET_ROW_ID
+						,CASE WHEN (P2.VAL IS NOT NULL AND P2.VAL <> '-1') THEN P2.VAL
+									ELSE P1.VAL
+						END VAL
+FROM 				BSSDATA_1.OFR_ASSET_EXI_HIST_A P1
+LEFT JOIN   BSSDATA_1.OFR_ASSET_EXI_HIST_A P2
+ON					P1.ASSET_ROW_ID = P2.ASSET_ROW_ID
+AND         P2.Start_Dt<=TO_DATE('20170608' ,  'YYYYMMDD')
+AND         P2.End_Dt>TO_DATE('20170608' ,  'YYYYMMDD') 
+AND         P2.VAL_TYPE_NAME = '使用速率'
+WHERE				P1.Start_Dt<=TO_DATE('20170608' ,  'YYYYMMDD')
+AND         P1.End_Dt>TO_DATE('20170608' ,  'YYYYMMDD') 
+AND 				P1.VAL_TYPE_NAME = '下载速率'
+) T WHERE Q_RANK   = 1
+)
+ORDER BY (Asset_Row_Id)
+SEGMENTED BY HASH (Asset_Row_Id) ALL NODES KSAFE 0
+;
+CREATE TABLE
+Time: First fetch (0 rows): 76893.894 ms. All rows formatted: 76893.917 ms
+INSERT INTO TMP_SPEED_A
+SELECT ASSET_ROW_ID,VAL FROM (							  
+SELECT
+						ROW_NUMBER() OVER (PARTITION BY P1.ASSET_ROW_ID ORDER BY CASE WHEN P1.VAL_TYPE_NAME = '速率' THEN 2
+                                                                         WHEN P1.VAL_TYPE_NAME = '端口速率' THEN 1
+                                                                    else 0 END DESC) AS Q_RANK
+						,P1.ASSET_ROW_ID
+						,CASE WHEN P1.VAL_TYPE_NAME = '速率' THEN P1.VAL
+                  WHEN P1.VAL_TYPE_NAME = '端口速率' THEN P1.VAL
+                ELSE 'ERR'
+            END VAL
+FROM 				BSSDATA_1.OFR_ASSET_EXI_HIST_A P1
+INNER JOIN  MAIN_PRE_2_A P2
+        ON  P1.ASSET_ROW_ID = P2.ASSET_ROW_ID
+     WHERE	P1.Start_Dt<=TO_DATE('20170608' ,  'YYYYMMDD')
+       AND  P1.End_Dt>TO_DATE('20170608' ,  'YYYYMMDD') 
+       AND 	P1.VAL_TYPE_NAME IN ('速率','端口速率')
+       AND  P2.STD_PRD_LVL4_ID IN(14030501,14030500)
+) T WHERE Q_RANK     = 1       
+;
+ OUTPUT  
+---------
+ 1786897
+(1 row)
+
+Time: First fetch (1 row): 21367.652 ms. All rows formatted: 21367.742 ms
+CREATE LOCAL TEMP TABLE OWE_STMT_1_A  ON COMMIT PRESERVE ROWS
+AS 
+(select   					P1.ASSET_ROW_ID
+                    ,P1.Owe_Stmt_Dt
+                    ,P1.Stmt_Dt
+                    ,SUM(P1.AMT) AS OWE_AMT      
+             FROM   BSSDATA_1.FIN_PG_OWE_STMT_ITEM_D_A   P1
+       INNER JOIN		OFR_MAIN_ASSET_A P2
+       				 ON		P1.ASSET_ROW_ID = P2.ASSET_ROW_ID
+       				AND   P2.STAT_NAME <> '不活动'
+            WHERE   P1.FLG IN ('1','2')
+              AND   P1.Bad_Debt_Flg = 'N'
+   GROUP BY 1,2,3
+)
+ORDER BY (ASSET_ROW_ID)
+SEGMENTED BY HASH (ASSET_ROW_ID) ALL NODES KSAFE 0;
+CREATE TABLE
+Time: First fetch (0 rows): 6591.977 ms. All rows formatted: 6592.013 ms
+CREATE LOCAL TEMP table OWE_STMT_2_A ON COMMIT PRESERVE ROWS
+AS 
+(select             ASSET_ROW_ID
+                    ,MAX(CAST(EXTRACT(YEAR FROM Owe_Stmt_Dt) - EXTRACT(YEAR FROM Stmt_Dt) AS INTEGER)*12+CAST(EXTRACT(MONTH FROM Owe_Stmt_Dt)-(EXTRACT(MONTH FROM Stmt_Dt)+1) AS INTEGER)) NBR
+            FROM    OWE_STMT_1_A 
+           WHERE    OWE_AMT > 0
+           GROUP BY 1
+)
+ORDER BY (ASSET_ROW_ID)
+SEGMENTED BY HASH (ASSET_ROW_ID) ALL NODES KSAFE 0;
+CREATE TABLE
+Time: First fetch (0 rows): 472.944 ms. All rows formatted: 472.985 ms
+CREATE LOCAL TEMP TABLE NEW_BIL_FLG_A_2 ON COMMIT PRESERVE ROWS
+AS
+(
+		SELECT
+							P1.ASSET_ROW_ID
+							,CASE WHEN P1.STAT_NAME = '不活动' THEN 0
+										WHEN P1.Pre_Active_Status ='预开户' THEN 0
+										WHEN P1.STD_PRD_LVL4_ID IN ('11020413','11020419') AND P1.STAT_NAME = '已暂停' AND P1.STAT_CHANGE_DT < TO_DATE ('20170608' ,  'YYYYMMDD')-31 THEN 0
+										WHEN P1.STD_PRD_LVL4_ID NOT IN ('11020413','11020419') AND P2.ASSET_ROW_ID IS NOT NULL AND P2.NBR >= 3 THEN 0
+										ELSE 1
+							END AS BIL_FLG
+			FROM		OFR_MAIN_ASSET_A P1
+ LEFT JOIN		OWE_STMT_2_A P2
+ 				ON		P1.ASSET_ROW_ID = P2.ASSET_ROW_ID
+)
+ORDER BY (ASSET_ROW_ID)
+SEGMENTED BY HASH (ASSET_ROW_ID) ALL NODES KSAFE 0
+;
+CREATE TABLE
+Time: First fetch (0 rows): 18822.358 ms. All rows formatted: 18822.389 ms
+CREATE LOCAL TEMP TABLE NEW_BIL_FLG_A ON COMMIT PRESERVE ROWS
+AS
+(
+SELECT ASSET_ROW_ID,BIL_FLG FROM (								  
+		SELECT
+							ROW_NUMBER () OVER (PARTITION BY P1.ASSET_ROW_ID ORDER BY BIL_FLG) AS Q_RANK
+							,P1.ASSET_ROW_ID					   
+							,CASE WHEN P2.ASSET_ROW_ID IS NOT NULL THEN 0 ELSE P1.BIL_FLG END BIL_FLG
+			FROM		NEW_BIL_FLG_A_2 P1
+ LEFT JOIN    BSSDATA_1.OFR_CHILD_ASSET_HIST_A P2
+        ON    P1.ASSET_ROW_ID = P2.ROOT_ASSET_ROW_ID
+       AND    P2.START_DT <= TO_DATE('20170608' ,  'YYYYMMDD')
+       AND    P2.End_Dt > TO_DATE('20170608' ,  'YYYYMMDD')
+       AND    P2.CPRD_ROW_ID = '1-HKOIMR0'
+       AND    P2.STAT_NAME <> '不活动'
+) T WHERE Q_RANK = 1
+)
+ORDER BY (ASSET_ROW_ID)
+SEGMENTED BY HASH (ASSET_ROW_ID) ALL NODES KSAFE 0
+;
+CREATE TABLE
+Time: First fetch (0 rows): 46847.923 ms. All rows formatted: 46847.966 ms
+CREATE LOCAL TEMP table MAIN_PRE_A ON COMMIT PRESERVE ROWS
+AS(
+SELECT            P1.Asset_Row_Id
+                 ,P1.Start_Dt AS Date_Cd
+                 ,P1.Std_Prd_Lvl4_Name
+                 ,P1.Stat_Name
+                 ,P1.Serv_End_Dt
+                 ,P1.Std_Prd_Lvl4_Id
+                 ,P1.Owe_Suspend_Name
+                 ,Pre_Active_Status1
+                 ,P1.Oneway_Stop_Dt
+                 ,P1.Twoway_Stop_Dt
+                 ,(CASE WHEN P1.Std_Prd_Lvl4_Id IN (11010502,11020601,11010200,11010201,11010202,11010307)    
+                        THEN ( CASE WHEN P1.Stat_Name = '不活动' THEN 0          
+                   WHEN (Pre_Active_Status1 NOT IN ('预开户','移动即买即通') OR Pre_Active_Status1 IS NULL)     
+                                         AND P1.Stat_Name <> '不活动'
+                                         AND P1.Test_Flg = 0
+                                         AND P1.Own_Flg = 0         
+                                         AND NOT (COALESCE(P1.Owe_Suspend_Name,'-1') IN ('双向') 
+                                                  AND P1.TwoWay_stop_Dt IS NOT NULL
+                                                  AND P1.TwoWay_stop_Dt <= TO_DATE('20170608' ,  'YYYYMMDD')-62  
+                                                  )
+                                                 THEN 1                             
+                                    ELSE 0
+                                    END )
+                         WHEN P1.Std_Prd_Lvl4_Id IN (11010501) 
+                         THEN ( CASE WHEN P1.Stat_Name = '不活动' THEN 0          
+                                 
+                                   WHEN (Pre_Active_Status1 NOT IN ('预开户','移动即买即通') OR Pre_Active_Status1 IS NULL)
+                                         AND P1.Stat_Name <> '不活动'
+                                         AND P1.Test_Flg = 0
+                                         AND NOT (P1.Own_Flg = 1 
+                                                  AND COALESCE(P1.Owe_Suspend_Name,'-1') IN ('双向') 
+                                                  AND P1.TwoWay_stop_Dt IS NOT NULL
+                                                  AND P1.TwoWay_stop_Dt <= TO_DATE('20170608' ,  'YYYYMMDD')-62  
+                                                  )
+                                                 THEN 1                             
+                                    ELSE 0
+                                    END )
+                             ELSE NULL
+                   END) AS On_Serv_Flg      
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 ,CASE WHEN P2.ASSET_ROW_ID IS NOT NULL THEN P2.BIL_FLG
+                 ELSE 0
+                 END AS BIL_FLG  
+                   ,(CASE WHEN P1.Stat_Name = '不活动' THEN 0          
+                        WHEN Pre_Active_Status1 = '预开户' THEN 0
+                        WHEN Pre_Active_Status1 = '移动即买即通' THEN 0   
+                        WHEN P16.On_Net_Flg='Y' THEN 1
+                        WHEN P1.Std_Prd_Lvl3_Id IN (110202,110204) AND P16.On_Net_Flg IS NULL THEN 1
+                        WHEN P16.On_Net_Flg='N' THEN 0 
+                        WHEN CAST(TO_DATE(TO_CHAR(P1.Serv_Start_Dt) ,  'YYYYMMDD') AS CHAR(6))=CAST(TO_DATE('20170608' ,  'YYYYMMDD') AS CHAR(6)) THEN 1
+                        ELSE 0
+                        END)  AS On_Net_Flg				
+                   ,P1.Twoway_Stop_Dt1  
+                   ,P1.LATN_ID
+                   ,P28.Last_Display_Area_Id
+                   ,(CASE when SUBSTR(P17.VAL,LEGNTH(P17.VAL)-3, 4)='Kbps' then P17.VAL
+											 when SUBSTR(P17.VAL,LENGTH(P17.VAL)-3, 4)='Mbps' then CAST(CAST(SUBSTR(P17.VAL,1,LENGTH(P17.VAL)-4) AS INTEGER)*1024 AS VARCHAR(200))||'Kbps'
+											 when SUBSTR(P17.VAL,LENGTH(P17.VAL),1)='M'       then CAST(CAST(SUBSTR(P17.VAL,1,LENGTH(P17.VAL)-1) AS INTEGER)*1024 AS VARCHAR(200))||'Kbps'
+											 ELSE 'err'
+											 END)  AS Speed
+           FROM    MAIN_PRE_2_A                                 P1     
+      LEFT JOIN  	 ZJBIC_1.OFR_MAIN_ASSET_FLG_A             			 P16           
+             ON  	 P1.Asset_Row_Id=P16.Asset_Row_Id
+            AND 	 P16.Bil_Month='201705'                    
+      LEFT JOIN    TMP_SPEED_A P17
+             ON    P1.ASSET_ROW_ID = P17.ASSET_ROW_ID     
+      LEFT JOIN    ZJBIC_1.NEW_MARKET_AREA_NAME_A  P28
+             ON    P1.Asset_Row_Id=P28.Asset_Row_Id  
+      LEFT JOIN    NEW_BIL_FLG_A P2                 
+      			 ON		 P1.ASSET_ROW_ID = P2.ASSET_ROW_ID
+)
+ORDER BY (Asset_Row_Id)
+SEGMENTED BY HASH (Asset_Row_Id) ALL NODES KSAFE 0
+;
+ERROR 3457:  Function LEGNTH(varchar) does not exist, or permission is denied for LEGNTH(varchar)
+HINT:  No function matches the given name and argument types. You may need to add explicit type casts
+run_bteq_command() = 0

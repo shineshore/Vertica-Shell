@@ -1,0 +1,14 @@
+begin .-sql2.sh at Wed Aug  9 09:37:42 CST 2017 ...
+Timing is on.
+ COUNT  |  DATE_CD   |   SPEED    
+--------+------------+------------
+ 836239 | 2017-04-19 | 102400Kbps
+ 832275 | 2017-04-17 | 102400Kbps
+ 828674 | 2017-04-15 | 102400Kbps
+ 829531 | 2017-04-16 | 102400Kbps
+ 834286 | 2017-04-18 | 102400Kbps
+(5 rows)
+
+Time: First fetch (5 rows): 416.264 ms. All rows formatted: 416.333 ms
+end .-sql2.sh at Wed Aug  9 09:37:43 CST 2017
+.-sql2.sh total time=.437 s

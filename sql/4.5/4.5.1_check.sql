@@ -1,0 +1,1 @@
+select distinct ra.pool_name,(rps.running_query_count * ra.MEMORY_INUSE_KB) /132046068 from RESOURCE_ACQUISITIONS ra,resource_pool_status rps where ra.is_executing is true and ra.pool_name=rps.pool_name and ra.pool_name='pool_5_1_1' ;

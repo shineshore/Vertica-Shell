@@ -1,0 +1,3 @@
+perl ./app_test_1.pl APP_APP_TEST_1_A_20170608.dir
+
+perl ./group_upload_1.pl GROUP_GROUP_UPLOAD_1_A_20170608.dir

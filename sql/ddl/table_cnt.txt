@@ -1,0 +1,5868 @@
+select count(1) from TPCDS.CATALOG_SALES_1;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_2;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_3;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_4;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_5;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_6;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_7;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_8;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_9;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_10;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_11;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_12;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_13;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_14;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_15;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_16;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_17;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_18;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_19;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_20;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_21;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_22;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_23;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_24;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_25;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_26;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_27;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_28;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_29;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS.CATALOG_SALES_30;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from DMN.CAG_COM_STD_PRD_LVL4_bak;
+ count 
+-------
+   561
+(1 row)
+
+select count(1) from BSSDATA.MKT_AGENT_POINT_Z_bak;
+  count  
+---------
+ 4692119
+(1 row)
+
+select count(1) from TPCDS_1T.customer_address;
+ count  
+--------
+ 158000
+(1 row)
+
+select count(1) from TPCDS_1T.customer_demographics;
+  count  
+---------
+ 1920800
+(1 row)
+
+select count(1) from TPCDS_1T.date_dim;
+ count 
+-------
+ 73049
+(1 row)
+
+select count(1) from TPCDS_1T.warehouse;
+ count 
+-------
+     5
+(1 row)
+
+select count(1) from TPCDS_1T.ship_mode;
+ count 
+-------
+    20
+(1 row)
+
+select count(1) from TPCDS_1T.time_dim;
+ count 
+-------
+ 86400
+(1 row)
+
+select count(1) from TPCDS_1T.reason;
+ count 
+-------
+    35
+(1 row)
+
+select count(1) from TPCDS_1T.income_band;
+ count 
+-------
+    20
+(1 row)
+
+select count(1) from TPCDS_1T.item;
+ count 
+-------
+ 18000
+(1 row)
+
+select count(1) from TPCDS_1T.store;
+ count 
+-------
+    16
+(1 row)
+
+select count(1) from TPCDS_1T.call_center;
+ count 
+-------
+     6
+(1 row)
+
+select count(1) from TPCDS_1T.customer;
+ count  
+--------
+ 316000
+(1 row)
+
+select count(1) from TPCDS_1T.web_site;
+ count 
+-------
+    30
+(1 row)
+
+select count(1) from TPCDS_1T.store_returns;
+   count   
+-----------
+ 294913915
+(1 row)
+
+select count(1) from TPCDS_1T.household_demographics;
+ count 
+-------
+  7200
+(1 row)
+
+select count(1) from TPCDS_1T.web_page;
+ count 
+-------
+    66
+(1 row)
+
+select count(1) from TPCDS_1T.promotion;
+ count 
+-------
+   303
+(1 row)
+
+select count(1) from TPCDS_1T.catalog_page;
+ count 
+-------
+ 11718
+(1 row)
+
+select count(1) from TPCDS_1T.inventory;
+  count   
+----------
+ 11745000
+(1 row)
+
+select count(1) from TPCDS_1T.catalog_returns;
+   count   
+-----------
+ 147451834
+(1 row)
+
+select count(1) from TPCDS_1T.web_returns;
+  count   
+----------
+ 73725193
+(1 row)
+
+select count(1) from TPCDS_1T.web_sales;
+   count   
+-----------
+ 737276239
+(1 row)
+
+select count(1) from TPCDS_1T.catalog_sales;
+   count    
+------------
+ 1474536578
+(1 row)
+
+select count(1) from TPCDS_1T.store_sales;
+   count    
+------------
+ 2949109737
+(1 row)
+
+select count(1) from TPCDS_5T.customer_address;
+  count  
+---------
+ 5350000
+(1 row)
+
+select count(1) from TPCDS_5T.customer_demographics;
+  count  
+---------
+ 1920800
+(1 row)
+
+select count(1) from TPCDS_5T.date_dim;
+ count 
+-------
+ 73049
+(1 row)
+
+select count(1) from TPCDS_5T.warehouse;
+ count 
+-------
+     5
+(1 row)
+
+select count(1) from TPCDS_5T.ship_mode;
+ count 
+-------
+    20
+(1 row)
+
+select count(1) from TPCDS_5T.time_dim;
+ count 
+-------
+ 86400
+(1 row)
+
+select count(1) from TPCDS_5T.reason;
+ count 
+-------
+    35
+(1 row)
+
+select count(1) from TPCDS_5T.income_band;
+ count 
+-------
+    20
+(1 row)
+
+select count(1) from TPCDS_5T.item;
+ count 
+-------
+ 30000
+(1 row)
+
+select count(1) from TPCDS_5T.store;
+ count 
+-------
+    56
+(1 row)
+
+select count(1) from TPCDS_5T.call_center;
+ count 
+-------
+     6
+(1 row)
+
+select count(1) from TPCDS_5T.customer;
+  count   
+----------
+ 10700000
+(1 row)
+
+select count(1) from TPCDS_5T.web_site;
+ count 
+-------
+    32
+(1 row)
+
+select count(1) from TPCDS_5T.store_returns;
+   count    
+------------
+ 1474557063
+(1 row)
+
+select count(1) from TPCDS_5T.household_demographics;
+ count 
+-------
+  7200
+(1 row)
+
+select count(1) from TPCDS_5T.web_page;
+ count 
+-------
+   180
+(1 row)
+
+select count(1) from TPCDS_5T.promotion;
+ count 
+-------
+   360
+(1 row)
+
+select count(1) from TPCDS_5T.catalog_page;
+ count 
+-------
+ 11718
+(1 row)
+
+select count(1) from TPCDS_5T.inventory;
+  count   
+----------
+ 19575000
+(1 row)
+
+select count(1) from TPCDS_5T.catalog_returns;
+   count   
+-----------
+ 737299670
+(1 row)
+
+select count(1) from TPCDS_5T.web_returns;
+   count   
+-----------
+ 368651916
+(1 row)
+
+select count(1) from TPCDS_5T.web_sales;
+   count    
+------------
+ 3686363941
+(1 row)
+
+select count(1) from TPCDS_5T.catalog_sales;
+   count    
+------------
+ 7372872161
+(1 row)
+
+select count(1) from TPCDS_5T.store_sales;
+    count    
+-------------
+ 14745444557
+(1 row)
+
+select count(1) from TPCDS_5T.dbgen_version;
+ count 
+-------
+     1
+(1 row)
+
+select count(1) from TPCDS_1T.dbgen_version;
+ count 
+-------
+     1
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_TER_A;
+  count   
+----------
+ 76922803
+(1 row)
+
+select count(1) from DMN.CAG_COM_STD_PRD_LVL4;
+ count 
+-------
+   561
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_FLG_A;
+   count   
+-----------
+ 620032635
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_IO_A;
+  count   
+----------
+ 13180324
+(1 row)
+
+select count(1) from DMN_1.CAG_COM_STD_PRD_LVL4;
+ count 
+-------
+   561
+(1 row)
+
+select count(1) from BSSDATA.OFR_MAIN_ASSET_HIST_A;
+   count   
+-----------
+ 225738715
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_CDSC_HIST_A;
+   count   
+-----------
+ 346637398
+(1 row)
+
+select count(1) from BSSDATA.FIN_PG_OWE_STMT_ITEM_D_A;
+   count   
+-----------
+ 105281565
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_CALL_LIMIT_LOG_A;
+  count   
+----------
+ 12938449
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_EXI_HIST_A;
+   count   
+-----------
+ 903556981
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_MAIN_ASSET_HIST_B;
+  count   
+----------
+ 51707806
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_MAIN_ASSET_HIST_C;
+  count   
+----------
+ 83540704
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_MAIN_ASSET_HIST_D;
+   count   
+-----------
+ 161077895
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_MAIN_ASSET_HIST_E;
+  count   
+----------
+ 85124958
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_MAIN_ASSET_HIST_F;
+   count   
+-----------
+ 105223239
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_MAIN_ASSET_HIST_G;
+   count   
+-----------
+ 168228870
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_MAIN_ASSET_HIST_H;
+  count   
+----------
+ 32192068
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_MAIN_ASSET_HIST_I;
+   count   
+-----------
+ 107893368
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_MAIN_ASSET_HIST_K;
+  count   
+----------
+ 35502526
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_CDSC_HIST_B;
+  count   
+----------
+ 70278423
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_CDSC_HIST_C;
+   count   
+-----------
+ 122731317
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_CDSC_HIST_D;
+   count   
+-----------
+ 233161089
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_CDSC_HIST_E;
+   count   
+-----------
+ 112355802
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_CDSC_HIST_F;
+   count   
+-----------
+ 141987238
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_CDSC_HIST_G;
+   count   
+-----------
+ 246003107
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_CDSC_HIST_H;
+  count   
+----------
+ 44979620
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_CDSC_HIST_I;
+   count   
+-----------
+ 159991139
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_CDSC_HIST_K;
+  count   
+----------
+ 46520313
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_CALL_LIMIT_LOG_B;
+  count  
+---------
+ 2504764
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_CALL_LIMIT_LOG_C;
+  count  
+---------
+ 3715953
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_CALL_LIMIT_LOG_D;
+  count  
+---------
+ 5948303
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_CALL_LIMIT_LOG_E;
+  count  
+---------
+ 3937067
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_CALL_LIMIT_LOG_F;
+  count  
+---------
+ 5834131
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_CALL_LIMIT_LOG_G;
+  count  
+---------
+ 9628317
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_CALL_LIMIT_LOG_H;
+  count  
+---------
+ 1610130
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_CALL_LIMIT_LOG_I;
+  count  
+---------
+ 7278081
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_CALL_LIMIT_LOG_K;
+  count  
+---------
+ 1696529
+(1 row)
+
+select count(1) from BSSDATA_1.FIN_PG_OWE_STMT_ITEM_D_B;
+  count   
+----------
+ 38236996
+(1 row)
+
+select count(1) from BSSDATA_1.FIN_PG_OWE_STMT_ITEM_D_C;
+  count   
+----------
+ 42112883
+(1 row)
+
+select count(1) from BSSDATA_1.FIN_PG_OWE_STMT_ITEM_D_D;
+  count   
+----------
+ 91569863
+(1 row)
+
+select count(1) from BSSDATA_1.FIN_PG_OWE_STMT_ITEM_D_E;
+  count   
+----------
+ 25448070
+(1 row)
+
+select count(1) from BSSDATA_1.FIN_PG_OWE_STMT_ITEM_D_F;
+  count   
+----------
+ 40215900
+(1 row)
+
+select count(1) from BSSDATA_1.FIN_PG_OWE_STMT_ITEM_D_G;
+   count   
+-----------
+ 104835033
+(1 row)
+
+select count(1) from BSSDATA_1.FIN_PG_OWE_STMT_ITEM_D_H;
+  count   
+----------
+ 17037457
+(1 row)
+
+select count(1) from BSSDATA_1.FIN_PG_OWE_STMT_ITEM_D_I;
+  count   
+----------
+ 48498272
+(1 row)
+
+select count(1) from BSSDATA_1.FIN_PG_OWE_STMT_ITEM_D_K;
+  count   
+----------
+ 16015256
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_EXI_HIST_B;
+   count   
+-----------
+ 196834849
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_EXI_HIST_C;
+   count   
+-----------
+ 331836271
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_EXI_HIST_D;
+   count   
+-----------
+ 657104557
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_EXI_HIST_E;
+   count   
+-----------
+ 341710780
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_EXI_HIST_F;
+   count   
+-----------
+ 389731820
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_EXI_HIST_G;
+   count   
+-----------
+ 652208816
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_EXI_HIST_H;
+   count   
+-----------
+ 124617385
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_EXI_HIST_I;
+   count   
+-----------
+ 414948344
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_EXI_HIST_K;
+   count   
+-----------
+ 136822636
+(1 row)
+
+select count(1) from BSSDATA_1.EVT_ORDI_HIST_B;
+   count   
+-----------
+ 329821694
+(1 row)
+
+select count(1) from BSSDATA_1.EVT_ORDI_HIST_C;
+   count   
+-----------
+ 590053094
+(1 row)
+
+select count(1) from BSSDATA_1.EVT_ORDI_HIST_D;
+   count    
+------------
+ 1307482580
+(1 row)
+
+select count(1) from BSSDATA_1.EVT_ORDI_HIST_E;
+   count   
+-----------
+ 626331670
+(1 row)
+
+select count(1) from BSSDATA_1.EVT_ORDI_HIST_F;
+   count   
+-----------
+ 740831447
+(1 row)
+
+select count(1) from BSSDATA_1.EVT_ORDI_HIST_G;
+   count    
+------------
+ 1203840451
+(1 row)
+
+select count(1) from BSSDATA_1.EVT_ORDI_HIST_H;
+   count   
+-----------
+ 221928883
+(1 row)
+
+select count(1) from BSSDATA_1.EVT_ORDI_HIST_I;
+   count   
+-----------
+ 739553165
+(1 row)
+
+select count(1) from BSSDATA_1.EVT_ORDI_HIST_K;
+   count   
+-----------
+ 245923367
+(1 row)
+
+select count(1) from BSSDATA_1.MKT_ASSET_CLAIM_B;
+   count   
+-----------
+ 188149604
+(1 row)
+
+select count(1) from BSSDATA_1.MKT_ASSET_CLAIM_C;
+   count   
+-----------
+ 157773467
+(1 row)
+
+select count(1) from BSSDATA_1.MKT_ASSET_CLAIM_D;
+   count   
+-----------
+ 461916956
+(1 row)
+
+select count(1) from BSSDATA_1.MKT_ASSET_CLAIM_E;
+   count   
+-----------
+ 452878726
+(1 row)
+
+select count(1) from BSSDATA_1.MKT_ASSET_CLAIM_F;
+   count   
+-----------
+ 300458575
+(1 row)
+
+select count(1) from BSSDATA_1.MKT_ASSET_CLAIM_G;
+   count   
+-----------
+ 501875703
+(1 row)
+
+select count(1) from BSSDATA_1.MKT_ASSET_CLAIM_H;
+  count   
+----------
+ 90645434
+(1 row)
+
+select count(1) from BSSDATA_1.MKT_ASSET_CLAIM_I;
+   count   
+-----------
+ 260204440
+(1 row)
+
+select count(1) from BSSDATA_1.MKT_ASSET_CLAIM_K;
+   count   
+-----------
+ 208686568
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_FLG_A_bak;
+   count   
+-----------
+ 644622803
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_FLG_B;
+   count   
+-----------
+ 148562921
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_FLG_C;
+   count   
+-----------
+ 246864468
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_FLG_D;
+   count   
+-----------
+ 481776398
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_FLG_E;
+   count   
+-----------
+ 257485463
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_FLG_F;
+   count   
+-----------
+ 289014194
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_FLG_G;
+   count   
+-----------
+ 514584318
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_FLG_H;
+  count   
+----------
+ 99568951
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_FLG_I;
+   count   
+-----------
+ 313256179
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_FLG_J;
+  count   
+----------
+ 80778928
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_FLG_K;
+   count   
+-----------
+ 101038160
+(1 row)
+
+select count(1) from TPCDS.customer;
+  count  
+---------
+ 1600000
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_FLG_A;
+   count   
+-----------
+ 644622803
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_CHILD_ASSET_HIST_A ;
+   count   
+-----------
+ 991172829
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_MAIN_ASSET_HIST_A;
+   count   
+-----------
+ 225738715
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_MAIN_ASSET_HIST_A;
+   count   
+-----------
+ 225738715
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_INST_STAT_HIST_A;
+  count  
+---------
+ 4897462
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_INST_STAT_HIST_B;
+  count  
+---------
+ 1403285
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_INST_STAT_HIST_C;
+  count  
+---------
+ 1947229
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_INST_STAT_HIST_D;
+  count  
+---------
+ 4022921
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_INST_STAT_HIST_E;
+  count  
+---------
+ 1498802
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_INST_STAT_HIST_F;
+  count  
+---------
+ 1611088
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_INST_STAT_HIST_G;
+  count  
+---------
+ 3242798
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_INST_STAT_HIST_H;
+ count  
+--------
+ 768220
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_INST_STAT_HIST_I;
+  count  
+---------
+ 2759922
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_INST_STAT_HIST_J;
+ count  
+--------
+ 611146
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_INST_STAT_HIST_K;
+ count  
+--------
+ 929616
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_INST_STAT_HIST_B;
+  count  
+---------
+ 1403285
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_INST_STAT_HIST_C;
+  count  
+---------
+ 1947229
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_INST_STAT_HIST_D;
+  count  
+---------
+ 4022921
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_INST_STAT_HIST_E;
+  count  
+---------
+ 1498802
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_INST_STAT_HIST_F;
+  count  
+---------
+ 1611088
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_INST_STAT_HIST_G;
+  count  
+---------
+ 3242798
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_INST_STAT_HIST_H;
+ count  
+--------
+ 768220
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_INST_STAT_HIST_I;
+  count  
+---------
+ 2759922
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_INST_STAT_HIST_J;
+ count  
+--------
+ 611146
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_INST_STAT_HIST_K;
+ count  
+--------
+ 929616
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_INST_STAT_HIST_A;
+  count  
+---------
+ 4897462
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_INST_STAT_HIST_B;
+  count  
+---------
+ 1403285
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_INST_STAT_HIST_C;
+  count  
+---------
+ 1947229
+(1 row)
+
+select count(1) from BSSDATA.OFR_CPRD;
+ count 
+-------
+  7783
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDI_HIST_A;
+   count    
+------------
+ 1689765950
+(1 row)
+
+select count(1) from ZJBIC.NEW_MARKET_AREA_NAME_A;
+  count   
+----------
+ 45419809
+(1 row)
+
+select count(1) from BSSDATA.MKT_AGENT_POINT_Z;
+  count  
+---------
+ 2346068
+(1 row)
+
+select count(1) from BSSDATA.MKT_ASSET_CLAIM_A;
+   count   
+-----------
+ 440450205
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDER_HIST_A;
+   count   
+-----------
+ 118335369
+(1 row)
+
+select count(1) from BSSDATA.PAR_CEMPLOYEE_HIST;
+ count  
+--------
+ 741147
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_INST_STAT_HIST_D;
+  count  
+---------
+ 4022921
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_INST_STAT_HIST_E;
+  count  
+---------
+ 1498802
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_INST_STAT_HIST_F;
+  count  
+---------
+ 1611088
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_INST_STAT_HIST_G;
+  count  
+---------
+ 3242798
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_INST_STAT_HIST_H;
+ count  
+--------
+ 768220
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_INST_STAT_HIST_I;
+  count  
+---------
+ 2759922
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_INST_STAT_HIST_J;
+ count  
+--------
+ 611146
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_INST_STAT_HIST_K;
+ count  
+--------
+ 929616
+(1 row)
+
+select count(1) from ZJBIC.ORDER_SALE_NAME_ALL_A;
+   count   
+-----------
+ 180778112
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_PROM_INTEG_HIST_B;
+  count   
+----------
+ 40474988
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_PROM_INTEG_HIST_C;
+  count   
+----------
+ 61685756
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_PROM_INTEG_HIST_D;
+   count   
+-----------
+ 161863549
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_PROM_INTEG_HIST_E;
+  count   
+----------
+ 97749222
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_PROM_INTEG_HIST_F;
+  count   
+----------
+ 75996699
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_PROM_INTEG_HIST_G;
+   count   
+-----------
+ 127207242
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_PROM_INTEG_HIST_H;
+  count   
+----------
+ 27498094
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_PROM_INTEG_HIST_I;
+  count   
+----------
+ 93985277
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_PROM_INTEG_HIST_K;
+  count   
+----------
+ 26808302
+(1 row)
+
+select count(1) from ZJBIC.OFR_TERM_USE_CUR_Z;
+  count   
+----------
+ 12312190
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_PROM_INTEG_HIST_A;
+   count   
+-----------
+ 218821224
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_TER_A_1;
+   count   
+-----------
+ 167571905
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_TER_A_2;
+   count   
+-----------
+ 167571905
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_TER_A_3;
+   count   
+-----------
+ 167443633
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_TER_A_4;
+   count   
+-----------
+ 167443633
+(1 row)
+
+select count(1) from BSSDATA_1.EVT_ORDER_HIST_B;
+  count   
+----------
+ 24486447
+(1 row)
+
+select count(1) from BSSDATA_1.EVT_ORDER_HIST_C;
+  count   
+----------
+ 40086889
+(1 row)
+
+select count(1) from BSSDATA_1.EVT_ORDER_HIST_D;
+  count   
+----------
+ 87408943
+(1 row)
+
+select count(1) from BSSDATA_1.EVT_ORDER_HIST_E;
+  count   
+----------
+ 46209698
+(1 row)
+
+select count(1) from BSSDATA_1.EVT_ORDER_HIST_F;
+  count   
+----------
+ 52224615
+(1 row)
+
+select count(1) from BSSDATA_1.EVT_ORDER_HIST_G;
+  count   
+----------
+ 78176865
+(1 row)
+
+select count(1) from BSSDATA_1.EVT_ORDER_HIST_H;
+  count   
+----------
+ 15824081
+(1 row)
+
+select count(1) from BSSDATA_1.EVT_ORDER_HIST_I;
+  count   
+----------
+ 50657070
+(1 row)
+
+select count(1) from BSSDATA_1.EVT_ORDER_HIST_K;
+  count   
+----------
+ 18247764
+(1 row)
+
+select count(1) from BSSDATA_2.EVT_ORDER_HIST_B;
+  count   
+----------
+ 24486447
+(1 row)
+
+select count(1) from BSSDATA_2.EVT_ORDER_HIST_C;
+  count   
+----------
+ 40086889
+(1 row)
+
+select count(1) from BSSDATA_2.EVT_ORDER_HIST_D;
+  count   
+----------
+ 87408943
+(1 row)
+
+select count(1) from BSSDATA_2.EVT_ORDER_HIST_E;
+  count   
+----------
+ 46209698
+(1 row)
+
+select count(1) from BSSDATA_2.EVT_ORDER_HIST_F;
+  count   
+----------
+ 52224615
+(1 row)
+
+select count(1) from BSSDATA_2.EVT_ORDER_HIST_G;
+  count   
+----------
+ 78176865
+(1 row)
+
+select count(1) from BSSDATA_2.EVT_ORDER_HIST_H;
+  count   
+----------
+ 15824081
+(1 row)
+
+select count(1) from BSSDATA_2.EVT_ORDER_HIST_I;
+  count   
+----------
+ 50657070
+(1 row)
+
+select count(1) from BSSDATA_2.EVT_ORDER_HIST_K;
+  count   
+----------
+ 18247764
+(1 row)
+
+select count(1) from BSSDATA_2.EVT_ORDER_HIST_J;
+  count   
+----------
+ 13576827
+(1 row)
+
+select count(1) from BSSDATA_1.EVT_ORDER_HIST_J;
+  count   
+----------
+ 13576827
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_PROM_INTEG_HIST_J;
+  count   
+----------
+ 25065815
+(1 row)
+
+select count(1) from BSSDATA_1.MKT_ASSET_CLAIM_J;
+  count   
+----------
+ 61866364
+(1 row)
+
+select count(1) from BSSDATA_1.EVT_ORDI_HIST_J;
+   count   
+-----------
+ 189909967
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_EXI_HIST_J;
+   count   
+-----------
+ 101827522
+(1 row)
+
+select count(1) from BSSDATA_1.FIN_PG_OWE_STMT_ITEM_D_J;
+  count   
+----------
+ 11767764
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_CALL_LIMIT_LOG_J;
+  count  
+---------
+ 1579805
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_CDSC_HIST_J;
+  count   
+----------
+ 36839409
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_MAIN_ASSET_HIST_J;
+  count   
+----------
+ 27207254
+(1 row)
+
+select count(1) from BSSDATA_1.MKT_AGENT_POINT_Z;
+  count  
+---------
+ 2346068
+(1 row)
+
+select count(1) from BSSDATA_2.MKT_AGENT_POINT_Z;
+  count  
+---------
+ 2346068
+(1 row)
+
+select count(1) from BSSDATA.OFR_MKT_CHANNEL_B;
+ count 
+-------
+  3324
+(1 row)
+
+select count(1) from BSSDATA.OFR_MKT_CHANNEL_C;
+ count 
+-------
+  8157
+(1 row)
+
+select count(1) from BSSDATA.OFR_MKT_CHANNEL_D;
+ count 
+-------
+  4484
+(1 row)
+
+select count(1) from BSSDATA.OFR_MKT_CHANNEL_E;
+ count 
+-------
+  3033
+(1 row)
+
+select count(1) from BSSDATA.OFR_MKT_CHANNEL_F;
+ count 
+-------
+  2117
+(1 row)
+
+select count(1) from BSSDATA.OFR_MKT_CHANNEL_G;
+ count 
+-------
+  6251
+(1 row)
+
+select count(1) from BSSDATA.OFR_MKT_CHANNEL_H;
+ count 
+-------
+  6143
+(1 row)
+
+select count(1) from BSSDATA.OFR_MKT_CHANNEL_I;
+ count 
+-------
+  2840
+(1 row)
+
+select count(1) from BSSDATA.OFR_MKT_CHANNEL_J;
+ count 
+-------
+  2147
+(1 row)
+
+select count(1) from BSSDATA.OFR_MKT_CHANNEL_K;
+ count 
+-------
+  3374
+(1 row)
+
+select count(1) from BSSDATA.PAR_CCUST_HIST_A;
+  count   
+----------
+ 31366351
+(1 row)
+
+select count(1) from BSSDATA.PAR_CCUST_HIST_B;
+  count   
+----------
+ 11078743
+(1 row)
+
+select count(1) from BSSDATA.PAR_CCUST_HIST_C;
+  count   
+----------
+ 19900169
+(1 row)
+
+select count(1) from BSSDATA.PAR_CCUST_HIST_D;
+  count   
+----------
+ 38417751
+(1 row)
+
+select count(1) from BSSDATA.PAR_CCUST_HIST_E;
+  count   
+----------
+ 20182989
+(1 row)
+
+select count(1) from BSSDATA.PAR_CCUST_HIST_F;
+  count   
+----------
+ 20831773
+(1 row)
+
+select count(1) from BSSDATA.PAR_CCUST_HIST_G;
+  count   
+----------
+ 39927797
+(1 row)
+
+select count(1) from BSSDATA.PAR_CCUST_HIST_H;
+  count  
+---------
+ 7786478
+(1 row)
+
+select count(1) from BSSDATA.PAR_CCUST_HIST_I;
+  count   
+----------
+ 25098773
+(1 row)
+
+select count(1) from BSSDATA.PAR_CCUST_HIST_J;
+  count  
+---------
+ 6260991
+(1 row)
+
+select count(1) from BSSDATA.PAR_CCUST_HIST_K;
+  count  
+---------
+ 8843895
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDER_HIST_B;
+  count   
+----------
+ 24486447
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_B;
+  count  
+---------
+ 5805866
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_C;
+  count  
+---------
+ 9698151
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_D;
+  count   
+----------
+ 18493218
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_E;
+  count  
+---------
+ 9976060
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_F;
+  count   
+----------
+ 11030605
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_G;
+  count   
+----------
+ 19399561
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_H;
+  count  
+---------
+ 3881094
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_I;
+  count   
+----------
+ 12259467
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_J;
+  count  
+---------
+ 3051987
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_K;
+  count  
+---------
+ 4000282
+(1 row)
+
+select count(1) from BSSDATA_2.EVT_ORDI_HIST_B;
+   count   
+-----------
+ 329821694
+(1 row)
+
+select count(1) from BSSDATA_2.EVT_ORDI_HIST_C;
+   count   
+-----------
+ 590053094
+(1 row)
+
+select count(1) from BSSDATA_2.EVT_ORDI_HIST_D;
+   count    
+------------
+ 1307482580
+(1 row)
+
+select count(1) from BSSDATA_2.EVT_ORDI_HIST_E;
+   count   
+-----------
+ 626331670
+(1 row)
+
+select count(1) from BSSDATA_2.EVT_ORDI_HIST_F;
+   count   
+-----------
+ 740831447
+(1 row)
+
+select count(1) from BSSDATA_2.EVT_ORDI_HIST_G;
+   count    
+------------
+ 2407680902
+(1 row)
+
+select count(1) from BSSDATA_2.EVT_ORDI_HIST_H;
+   count   
+-----------
+ 221928883
+(1 row)
+
+select count(1) from BSSDATA_2.EVT_ORDI_HIST_I;
+   count   
+-----------
+ 739553165
+(1 row)
+
+select count(1) from BSSDATA_2.EVT_ORDI_HIST_K;
+   count   
+-----------
+ 245923367
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_CALL_LIMIT_LOG_B;
+  count  
+---------
+ 2504764
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_CALL_LIMIT_LOG_C;
+  count  
+---------
+ 3715953
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_CALL_LIMIT_LOG_D;
+  count  
+---------
+ 5948303
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_CALL_LIMIT_LOG_E;
+  count  
+---------
+ 3937067
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_CALL_LIMIT_LOG_F;
+  count  
+---------
+ 5834131
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_CALL_LIMIT_LOG_G;
+  count   
+----------
+ 19256634
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_CALL_LIMIT_LOG_H;
+  count  
+---------
+ 1610130
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_CALL_LIMIT_LOG_I;
+  count  
+---------
+ 7278081
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_CALL_LIMIT_LOG_K;
+  count  
+---------
+ 1696529
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_CHILD_ASSET_HIST_A;
+   count   
+-----------
+ 991172829
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_CHILD_ASSET_HIST_B;
+   count   
+-----------
+ 199202224
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_CHILD_ASSET_HIST_C;
+   count   
+-----------
+ 337745889
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_CHILD_ASSET_HIST_D;
+   count   
+-----------
+ 638309697
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_CHILD_ASSET_HIST_E;
+   count   
+-----------
+ 371619333
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_CHILD_ASSET_HIST_F;
+   count   
+-----------
+ 432799598
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_CHILD_ASSET_HIST_G;
+   count    
+------------
+ 1432817492
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_CHILD_ASSET_HIST_H;
+   count   
+-----------
+ 121876848
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_CHILD_ASSET_HIST_I;
+   count   
+-----------
+ 463626820
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_CHILD_ASSET_HIST_K;
+   count   
+-----------
+ 140322802
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_CHILD_ASSET_HIST_B;
+   count   
+-----------
+ 199202224
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_CHILD_ASSET_HIST_C;
+   count   
+-----------
+ 337745889
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_CHILD_ASSET_HIST_D;
+   count   
+-----------
+ 638309697
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_CHILD_ASSET_HIST_E;
+   count   
+-----------
+ 371619333
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_CHILD_ASSET_HIST_F;
+   count   
+-----------
+ 432799598
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_CHILD_ASSET_HIST_G;
+   count    
+------------
+ 1432817492
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_CHILD_ASSET_HIST_H;
+   count   
+-----------
+ 121876848
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_CHILD_ASSET_HIST_I;
+   count   
+-----------
+ 463626820
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_CHILD_ASSET_HIST_K;
+   count   
+-----------
+ 140322802
+(1 row)
+
+select count(1) from BSSDATA_2.EVT_ORDI_HIST_A;
+   count    
+------------
+ 1689765950
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_CALL_LIMIT_LOG_A;
+  count   
+----------
+ 12938449
+(1 row)
+
+select count(1) from BSSDATA_1.PAR_CCUST_HIST_B;
+  count   
+----------
+ 11078743
+(1 row)
+
+select count(1) from BSSDATA_1.PAR_CCUST_HIST_C;
+  count   
+----------
+ 19900169
+(1 row)
+
+select count(1) from BSSDATA_1.PAR_CCUST_HIST_D;
+  count   
+----------
+ 38417751
+(1 row)
+
+select count(1) from BSSDATA_1.PAR_CCUST_HIST_E;
+  count   
+----------
+ 20182989
+(1 row)
+
+select count(1) from BSSDATA_1.PAR_CCUST_HIST_F;
+  count   
+----------
+ 20831773
+(1 row)
+
+select count(1) from BSSDATA_1.PAR_CCUST_HIST_G;
+  count   
+----------
+ 79855594
+(1 row)
+
+select count(1) from BSSDATA_1.PAR_CCUST_HIST_H;
+  count  
+---------
+ 7786478
+(1 row)
+
+select count(1) from BSSDATA_1.PAR_CCUST_HIST_I;
+  count   
+----------
+ 25098773
+(1 row)
+
+select count(1) from BSSDATA_1.PAR_CCUST_HIST_K;
+  count  
+---------
+ 8843895
+(1 row)
+
+select count(1) from BSSDATA_1.PAR_CCUST_HIST_A;
+  count   
+----------
+ 31366351
+(1 row)
+
+select count(1) from BSSDATA_2.PAR_CCUST_HIST_A;
+  count   
+----------
+ 31366351
+(1 row)
+
+select count(1) from BSSDATA_2.PAR_CCUST_HIST_B;
+  count   
+----------
+ 11078743
+(1 row)
+
+select count(1) from BSSDATA_2.PAR_CCUST_HIST_C;
+  count   
+----------
+ 19900169
+(1 row)
+
+select count(1) from BSSDATA_2.PAR_CCUST_HIST_D;
+  count   
+----------
+ 38417751
+(1 row)
+
+select count(1) from BSSDATA_2.PAR_CCUST_HIST_E;
+  count   
+----------
+ 20182989
+(1 row)
+
+select count(1) from BSSDATA_2.PAR_CCUST_HIST_F;
+  count   
+----------
+ 20831773
+(1 row)
+
+select count(1) from BSSDATA_2.PAR_CCUST_HIST_G;
+  count   
+----------
+ 79855594
+(1 row)
+
+select count(1) from BSSDATA_2.PAR_CCUST_HIST_H;
+  count  
+---------
+ 7786478
+(1 row)
+
+select count(1) from BSSDATA_2.PAR_CCUST_HIST_I;
+  count   
+----------
+ 25098773
+(1 row)
+
+select count(1) from BSSDATA_2.PAR_CCUST_HIST_K;
+  count  
+---------
+ 8843895
+(1 row)
+
+select count(1) from public.TABLE_ROW_CNT;
+ count 
+-------
+   136
+(1 row)
+
+select count(1) from BSSDATA_2.FIN_PG_OWE_STMT_ITEM_D_B;
+  count   
+----------
+ 38236996
+(1 row)
+
+select count(1) from BSSDATA_2.FIN_PG_OWE_STMT_ITEM_D_C;
+  count   
+----------
+ 42112883
+(1 row)
+
+select count(1) from BSSDATA_2.FIN_PG_OWE_STMT_ITEM_D_D;
+  count   
+----------
+ 91569863
+(1 row)
+
+select count(1) from BSSDATA_2.FIN_PG_OWE_STMT_ITEM_D_E;
+  count   
+----------
+ 25448070
+(1 row)
+
+select count(1) from BSSDATA_2.FIN_PG_OWE_STMT_ITEM_D_F;
+  count   
+----------
+ 40215900
+(1 row)
+
+select count(1) from BSSDATA_2.FIN_PG_OWE_STMT_ITEM_D_G;
+   count   
+-----------
+ 104835033
+(1 row)
+
+select count(1) from BSSDATA_2.FIN_PG_OWE_STMT_ITEM_D_H;
+  count   
+----------
+ 17037457
+(1 row)
+
+select count(1) from BSSDATA_2.FIN_PG_OWE_STMT_ITEM_D_I;
+  count   
+----------
+ 48498272
+(1 row)
+
+select count(1) from BSSDATA_2.FIN_PG_OWE_STMT_ITEM_D_K;
+  count   
+----------
+ 16015256
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_CDSC_HIST_B;
+  count   
+----------
+ 70278423
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_CDSC_HIST_C;
+   count   
+-----------
+ 122731317
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_CDSC_HIST_D;
+   count   
+-----------
+ 233161089
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_CDSC_HIST_E;
+   count   
+-----------
+ 112355802
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_CDSC_HIST_F;
+   count   
+-----------
+ 141987238
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_CDSC_HIST_G;
+   count   
+-----------
+ 246003107
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_CDSC_HIST_H;
+  count   
+----------
+ 44979620
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_CDSC_HIST_I;
+   count   
+-----------
+ 159991139
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_CDSC_HIST_K;
+  count   
+----------
+ 46520313
+(1 row)
+
+select count(1) from BSSDATA_2.FIN_PG_OWE_STMT_ITEM_D_J;
+  count   
+----------
+ 11767764
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_CDSC_HIST_J;
+  count   
+----------
+ 36839409
+(1 row)
+
+select count(1) from STAGE_1.EVT_ORDER_PROM_ITEM_HIST_Z;
+   count    
+------------
+ 3061291990
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_PROM_INTEG_HIST_B;
+  count   
+----------
+ 40474988
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_PROM_INTEG_HIST_C;
+  count   
+----------
+ 61685756
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_PROM_INTEG_HIST_D;
+   count   
+-----------
+ 161863549
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_PROM_INTEG_HIST_E;
+  count   
+----------
+ 97749222
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_PROM_INTEG_HIST_F;
+  count   
+----------
+ 75996699
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_PROM_INTEG_HIST_G;
+   count   
+-----------
+ 127207242
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_PROM_INTEG_HIST_H;
+  count   
+----------
+ 27498094
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_PROM_INTEG_HIST_I;
+  count   
+----------
+ 93985277
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_PROM_INTEG_HIST_J;
+  count   
+----------
+ 25065815
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_PROM_INTEG_HIST_K;
+  count   
+----------
+ 26808302
+(1 row)
+
+select count(1) from STAGE_1.EVT_ORDI_HIST_A;
+   count   
+-----------
+ 619465941
+(1 row)
+
+select count(1) from STAGE_1.EVT_ORDI_HIST_G;
+   count   
+-----------
+ 410819194
+(1 row)
+
+select count(1) from STAGE_2.EVT_ORDI_HIST_G;
+   count   
+-----------
+ 410819194
+(1 row)
+
+select count(1) from STAGE_2.EVT_ORDER_PROM_HIST_Z;
+   count    
+------------
+ 1382856841
+(1 row)
+
+select count(1) from STAGE_2.EVT_ORDI_HIST_A;
+   count   
+-----------
+ 619465941
+(1 row)
+
+select count(1) from STAGE_2.OFR_PROM_BSI_HIST_Z;
+   count   
+-----------
+ 659920329
+(1 row)
+
+select count(1) from ZJBIC_2.OFR_MAIN_ASSET_FLG_F;
+   count   
+-----------
+ 289014194
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDI_HIST_B;
+   count   
+-----------
+ 329821694
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDI_HIST_C;
+   count   
+-----------
+ 590053094
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDI_HIST_D;
+   count    
+------------
+ 1307482580
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDI_HIST_E;
+   count   
+-----------
+ 626331670
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDI_HIST_F;
+   count   
+-----------
+ 740831447
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDI_HIST_G;
+   count    
+------------
+ 1203840451
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDI_HIST_H;
+   count   
+-----------
+ 221928883
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDI_HIST_I;
+   count   
+-----------
+ 739553165
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDI_HIST_J;
+   count   
+-----------
+ 189909967
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDI_HIST_K;
+   count   
+-----------
+ 245923367
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_TER_F_1;
+  count   
+----------
+ 60927281
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_FLG_F_1;
+   count   
+-----------
+ 563995609
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_IO_F_1;
+  count  
+---------
+ 4986364
+(1 row)
+
+select count(1) from ITFJYFX_1.DAPD_PRD_PO_INST_F_1_bak;
+  count   
+----------
+ 67462506
+(1 row)
+
+select count(1) from haoyf.TMP_OFR_MAIN_ASSET_F_1_TMP;
+  count  
+---------
+ 1157154
+(1 row)
+
+select count(1) from haoyf.TMP_3G_TER_F_2;
+  count  
+---------
+ 1111580
+(1 row)
+
+select count(1) from haoyf.TMP_OFR_MAIN_ASSET_F_1;
+  count  
+---------
+ 1157154
+(1 row)
+
+select count(1) from haoyf.TMP_3G_TER_F;
+ count  
+--------
+ 900338
+(1 row)
+
+select count(1) from ITFJYFX_1.DAPD_PRD_PO_INST_F_1;
+  count   
+----------
+ 67485194
+(1 row)
+
+select count(1) from haoyf1.OFR_MAIN_ASSET_F;
+  count  
+---------
+ 9295749
+(1 row)
+
+select count(1) from haoyf1.MAIN_FREE_CORP_PAY_F;
+  count  
+---------
+ 4139063
+(1 row)
+
+select count(1) from haoyf1.STOP_ASSET_F;
+  count  
+---------
+ 1048261
+(1 row)
+
+select count(1) from haoyf1.STOP_ASSET_1_F;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from haoyf1.OWE_92_F;
+ count  
+--------
+ 558182
+(1 row)
+
+select count(1) from haoyf1.MAIN_PRE_1_F;
+  count  
+---------
+ 9295749
+(1 row)
+
+select count(1) from haoyf1.MAIN_PRE_2_F;
+  count  
+---------
+ 9295749
+(1 row)
+
+select count(1) from haoyf1.TMP_SPEED_F;
+  count  
+---------
+ 3643646
+(1 row)
+
+select count(1) from haoyf1.OWE_STMT_1_F;
+  count  
+---------
+ 4633868
+(1 row)
+
+select count(1) from haoyf1.OWE_STMT_2_F;
+  count  
+---------
+ 1025073
+(1 row)
+
+select count(1) from haoyf1.NEW_BIL_FLG_F_1;
+  count  
+---------
+ 9295749
+(1 row)
+
+select count(1) from haoyf1.NEW_BIL_FLG_F;
+  count  
+---------
+ 9295749
+(1 row)
+
+select count(1) from haoyf1.MAIN_PRE_F;
+  count  
+---------
+ 9295749
+(1 row)
+
+select count(1) from ITFJYFX.DAPD_PRD_PO_INST_A;
+   count   
+-----------
+ 160004262
+(1 row)
+
+select count(1) from ITFJYFX.DAPD_PRD_PO_INST_B;
+  count   
+----------
+ 34994508
+(1 row)
+
+select count(1) from ITFJYFX.DAPD_PRD_PO_INST_C;
+  count   
+----------
+ 57741289
+(1 row)
+
+select count(1) from ITFJYFX.DAPD_PRD_PO_INST_D;
+   count   
+-----------
+ 111319460
+(1 row)
+
+select count(1) from ITFJYFX.DAPD_PRD_PO_INST_E;
+  count   
+----------
+ 56161587
+(1 row)
+
+select count(1) from ITFJYFX.DAPD_PRD_PO_INST_F;
+  count   
+----------
+ 67485194
+(1 row)
+
+select count(1) from ITFJYFX.DAPD_PRD_PO_INST_G;
+   count   
+-----------
+ 116552123
+(1 row)
+
+select count(1) from ITFJYFX.DAPD_PRD_PO_INST_H;
+  count   
+----------
+ 21630861
+(1 row)
+
+select count(1) from ITFJYFX.DAPD_PRD_PO_INST_I;
+  count   
+----------
+ 73301756
+(1 row)
+
+select count(1) from ITFJYFX.DAPD_PRD_PO_INST_J;
+  count   
+----------
+ 17338392
+(1 row)
+
+select count(1) from ITFJYFX.DAPD_PRD_PO_INST_K;
+  count   
+----------
+ 23517656
+(1 row)
+
+select count(1) from TPCDS.customer_ext;
+  count  
+---------
+ 1600000
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDER_HIST_A_bak;
+   count   
+-----------
+ 118335369
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDER_HIST_B_BAK;
+  count   
+----------
+ 24486447
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDER_HIST_C;
+  count   
+----------
+ 40086889
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDER_HIST_D;
+  count   
+----------
+ 87408943
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDER_HIST_E;
+  count   
+----------
+ 46209698
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDER_HIST_F;
+  count   
+----------
+ 52224615
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDER_HIST_G;
+  count   
+----------
+ 78176865
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDER_HIST_H;
+  count   
+----------
+ 15824081
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDER_HIST_I;
+  count   
+----------
+ 50657070
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDER_HIST_J;
+  count   
+----------
+ 13576827
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDER_HIST_K;
+  count   
+----------
+ 18247764
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDI_HIST_A_bak;
+   count    
+------------
+ 1689765950
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDI_HIST_B_BAK;
+   count   
+-----------
+ 329821694
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDI_HIST_C_BAK;
+   count   
+-----------
+ 590053094
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDI_HIST_D_BAK;
+   count    
+------------
+ 1307482580
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDI_HIST_E_BAK;
+   count   
+-----------
+ 626331670
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDI_HIST_F_BAK;
+   count   
+-----------
+ 740831447
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDI_HIST_G_BAK;
+   count    
+------------
+ 1203840451
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDI_HIST_H_BAK;
+   count   
+-----------
+ 221928883
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDI_HIST_I_BAK;
+   count   
+-----------
+ 739553165
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDI_HIST_J_BAK;
+   count   
+-----------
+ 189909967
+(1 row)
+
+select count(1) from BSSDATA.EVT_ORDI_HIST_K_BAK;
+   count   
+-----------
+ 245923367
+(1 row)
+
+select count(1) from ZJBIC.ORDER_SALE_NAME_ALL_A_BAK;
+   count   
+-----------
+ 180778112
+(1 row)
+
+select count(1) from ZJBIC.ORDER_SALE_NAME_ALL_B;
+  count   
+----------
+ 41677412
+(1 row)
+
+select count(1) from ZJBIC.ORDER_SALE_NAME_ALL_C;
+  count   
+----------
+ 64756405
+(1 row)
+
+select count(1) from ZJBIC.ORDER_SALE_NAME_ALL_D;
+   count   
+-----------
+ 155996233
+(1 row)
+
+select count(1) from ZJBIC.ORDER_SALE_NAME_ALL_E;
+  count   
+----------
+ 83561281
+(1 row)
+
+select count(1) from ZJBIC.ORDER_SALE_NAME_ALL_F;
+  count   
+----------
+ 80756664
+(1 row)
+
+select count(1) from ZJBIC.ORDER_SALE_NAME_ALL_G;
+   count   
+-----------
+ 130691931
+(1 row)
+
+select count(1) from ZJBIC.ORDER_SALE_NAME_ALL_H;
+  count   
+----------
+ 25384548
+(1 row)
+
+select count(1) from ZJBIC.ORDER_SALE_NAME_ALL_I;
+  count   
+----------
+ 85781280
+(1 row)
+
+select count(1) from ZJBIC.ORDER_SALE_NAME_ALL_J;
+  count  
+---------
+ 9972539
+(1 row)
+
+select count(1) from ZJBIC.ORDER_SALE_NAME_ALL_K;
+  count   
+----------
+ 25003535
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_IO_A_bak;
+  count   
+----------
+ 13180324
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_IO_B;
+  count  
+---------
+ 3002169
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_IO_C;
+  count  
+---------
+ 5147902
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_IO_D;
+  count  
+---------
+ 9267221
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_IO_E;
+  count  
+---------
+ 4448046
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_IO_F;
+  count  
+---------
+ 4986345
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_IO_G;
+  count  
+---------
+ 8867842
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_IO_H;
+  count  
+---------
+ 1693454
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_IO_I;
+  count  
+---------
+ 5540907
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_IO_J;
+  count  
+---------
+ 1341255
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_IO_K;
+  count  
+---------
+ 2181077
+(1 row)
+
+select count(1) from STAGE.EVT_ORDER_HIST_Z;
+   count   
+-----------
+ 186317748
+(1 row)
+
+select count(1) from STAGE.EVT_ORDER_PROM_HIST_Z;
+   count    
+------------
+ 1382856841
+(1 row)
+
+select count(1) from STAGE.EVT_ORDI_HIST_A;
+   count   
+-----------
+ 619465941
+(1 row)
+
+select count(1) from STAGE.EVT_ORDI_HIST_B;
+   count   
+-----------
+ 123014721
+(1 row)
+
+select count(1) from STAGE.EVT_ORDI_HIST_C;
+   count   
+-----------
+ 224554156
+(1 row)
+
+select count(1) from STAGE.EVT_ORDI_HIST_D;
+   count   
+-----------
+ 466876078
+(1 row)
+
+select count(1) from STAGE.EVT_ORDI_HIST_E;
+   count   
+-----------
+ 244974745
+(1 row)
+
+select count(1) from STAGE.EVT_ORDI_HIST_F;
+   count   
+-----------
+ 234566061
+(1 row)
+
+select count(1) from STAGE.EVT_ORDI_HIST_G;
+   count   
+-----------
+ 410819194
+(1 row)
+
+select count(1) from STAGE.EVT_ORDI_HIST_H;
+  count   
+----------
+ 81036076
+(1 row)
+
+select count(1) from STAGE.EVT_ORDI_HIST_I;
+   count   
+-----------
+ 271508132
+(1 row)
+
+select count(1) from STAGE.EVT_ORDI_HIST_J;
+  count   
+----------
+ 59098174
+(1 row)
+
+select count(1) from STAGE.EVT_ORDI_HIST_K;
+  count   
+----------
+ 96338359
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_IO_A_1;
+  count   
+----------
+ 13180324
+(1 row)
+
+select count(1) from BSSDATA_1.EVT_ORDI_HIST_A;
+   count    
+------------
+ 1689765950
+(1 row)
+
+select count(1) from BSSDATA_1.EVT_ORDER_HIST_A;
+   count   
+-----------
+ 118335369
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_IO_A_2;
+  count   
+----------
+ 13167347
+(1 row)
+
+select count(1) from BSSDATA_2.EVT_ORDER_HIST_A;
+   count   
+-----------
+ 118335369
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_IO_A_3;
+  count   
+----------
+ 13167347
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_IO_A_4;
+  count   
+----------
+ 13167347
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_IO_C_1;
+  count  
+---------
+ 5147893
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_IO_C_2;
+  count  
+---------
+ 5147893
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_IO_D_1;
+  count  
+---------
+ 9266786
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_IO_D_2;
+  count  
+---------
+ 9266786
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_IO_F_2;
+  count  
+---------
+ 4986364
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_IO_G_1;
+  count  
+---------
+ 8867784
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_IO_G_2;
+  count  
+---------
+ 8867784
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_IO_C_3;
+  count  
+---------
+ 5147893
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_IO_C_4;
+  count  
+---------
+ 5147893
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_IO_D_3;
+  count  
+---------
+ 9266786
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_IO_D_4;
+  count  
+---------
+ 9266786
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_IO_F_3;
+  count  
+---------
+ 4986364
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_IO_F_4;
+  count  
+---------
+ 4986364
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_IO_G_3;
+  count  
+---------
+ 8867784
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_IO_G_4;
+  count  
+---------
+ 8867784
+(1 row)
+
+select count(1) from public.OFR_MAIN_ASSET_A;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.MAIN_FREE_CORP_PAY_A;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.STOP_ASSET_A;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.STOP_ASSET_1_A;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.OWE_92_A;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.MAIN_PRE_1_A;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.MAIN_PRE_2_A;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.TMP_SPEED_A;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.OWE_STMT_1_A;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.OWE_STMT_2_A;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.NEW_BIL_FLG_A_1;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.NEW_BIL_FLG_A;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.MAIN_PRE_A;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.TMP_3G_TER_A_2;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.TMP_OFR_MAIN_ASSET_A_1_TMP;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.TMP_OFR_MAIN_ASSET_A_1;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.TMP_3G_TER_A;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from BSSDATA.FIN_PG_OWE_STMT_ITEM_D_A_bak;
+   count   
+-----------
+ 105281565
+(1 row)
+
+select count(1) from BSSDATA.FIN_PG_OWE_STMT_ITEM_D_B;
+  count   
+----------
+ 38236996
+(1 row)
+
+select count(1) from BSSDATA.FIN_PG_OWE_STMT_ITEM_D_C;
+  count   
+----------
+ 42112883
+(1 row)
+
+select count(1) from BSSDATA.FIN_PG_OWE_STMT_ITEM_D_D;
+  count   
+----------
+ 91569863
+(1 row)
+
+select count(1) from BSSDATA.FIN_PG_OWE_STMT_ITEM_D_E;
+  count   
+----------
+ 25448070
+(1 row)
+
+select count(1) from BSSDATA.FIN_PG_OWE_STMT_ITEM_D_F;
+  count   
+----------
+ 40215900
+(1 row)
+
+select count(1) from BSSDATA.FIN_PG_OWE_STMT_ITEM_D_G;
+   count   
+-----------
+ 104835033
+(1 row)
+
+select count(1) from BSSDATA.FIN_PG_OWE_STMT_ITEM_D_H;
+  count   
+----------
+ 17037457
+(1 row)
+
+select count(1) from BSSDATA.FIN_PG_OWE_STMT_ITEM_D_I;
+  count   
+----------
+ 48498272
+(1 row)
+
+select count(1) from BSSDATA.FIN_PG_OWE_STMT_ITEM_D_J;
+  count   
+----------
+ 11767764
+(1 row)
+
+select count(1) from BSSDATA.FIN_PG_OWE_STMT_ITEM_D_K;
+  count   
+----------
+ 16015256
+(1 row)
+
+select count(1) from BSSDATA.MKT_ASSET_CLAIM_A_bak;
+  count   
+----------
+ 55374175
+(1 row)
+
+select count(1) from BSSDATA.MKT_ASSET_CLAIM_B;
+   count   
+-----------
+ 188149604
+(1 row)
+
+select count(1) from BSSDATA.MKT_ASSET_CLAIM_C;
+   count   
+-----------
+ 157773467
+(1 row)
+
+select count(1) from BSSDATA.MKT_ASSET_CLAIM_D;
+   count   
+-----------
+ 461916956
+(1 row)
+
+select count(1) from BSSDATA.MKT_ASSET_CLAIM_E;
+   count   
+-----------
+ 452878726
+(1 row)
+
+select count(1) from BSSDATA.MKT_ASSET_CLAIM_F;
+   count   
+-----------
+ 300458575
+(1 row)
+
+select count(1) from BSSDATA.MKT_ASSET_CLAIM_G;
+   count   
+-----------
+ 501875703
+(1 row)
+
+select count(1) from BSSDATA.MKT_ASSET_CLAIM_H;
+  count   
+----------
+ 90645434
+(1 row)
+
+select count(1) from BSSDATA.MKT_ASSET_CLAIM_I;
+   count   
+-----------
+ 260204440
+(1 row)
+
+select count(1) from BSSDATA.MKT_ASSET_CLAIM_J;
+  count   
+----------
+ 61866364
+(1 row)
+
+select count(1) from BSSDATA.MKT_ASSET_CLAIM_K;
+   count   
+-----------
+ 208686568
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_CALL_LIMIT_LOG_A_bak;
+  count   
+----------
+ 12938449
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_CALL_LIMIT_LOG_B;
+  count  
+---------
+ 2504764
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_CALL_LIMIT_LOG_C;
+  count  
+---------
+ 3715953
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_CALL_LIMIT_LOG_D;
+  count  
+---------
+ 5948303
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_CALL_LIMIT_LOG_E;
+  count  
+---------
+ 3937067
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_CALL_LIMIT_LOG_F;
+  count  
+---------
+ 5834131
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_CALL_LIMIT_LOG_G;
+  count  
+---------
+ 9628317
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_CALL_LIMIT_LOG_H;
+  count  
+---------
+ 1610130
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_CALL_LIMIT_LOG_I;
+  count  
+---------
+ 7278081
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_CALL_LIMIT_LOG_J;
+  count  
+---------
+ 1579805
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_CALL_LIMIT_LOG_K;
+  count  
+---------
+ 1696529
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_CDSC_HIST_A_bak;
+   count   
+-----------
+ 346637398
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_CDSC_HIST_B;
+  count   
+----------
+ 70278423
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_CDSC_HIST_C;
+   count   
+-----------
+ 122731317
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_CDSC_HIST_D;
+   count   
+-----------
+ 233161089
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_CDSC_HIST_E;
+   count   
+-----------
+ 112355802
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_CDSC_HIST_F;
+   count   
+-----------
+ 141987238
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_CDSC_HIST_G;
+   count   
+-----------
+ 246003107
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_CDSC_HIST_H;
+  count   
+----------
+ 44979620
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_CDSC_HIST_I;
+   count   
+-----------
+ 159991139
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_CDSC_HIST_J;
+  count   
+----------
+ 36839409
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_CDSC_HIST_K;
+  count   
+----------
+ 46520313
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_EXI_HIST_A_bak;
+   count    
+------------
+ 1807113962
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_EXI_HIST_B;
+   count   
+-----------
+ 196834849
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_EXI_HIST_C;
+   count   
+-----------
+ 331836271
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_EXI_HIST_D;
+   count   
+-----------
+ 657104557
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_EXI_HIST_E;
+   count   
+-----------
+ 341710780
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_EXI_HIST_F;
+   count   
+-----------
+ 389731820
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_EXI_HIST_G;
+   count   
+-----------
+ 652208816
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_EXI_HIST_H;
+   count   
+-----------
+ 124617385
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_EXI_HIST_I;
+   count   
+-----------
+ 414948344
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_EXI_HIST_J;
+   count   
+-----------
+ 101827522
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_EXI_HIST_K;
+   count   
+-----------
+ 136822636
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_PROM_INTEG_HIST_A_BAK;
+   count   
+-----------
+ 218821224
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_PROM_INTEG_HIST_B;
+  count   
+----------
+ 40474988
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_PROM_INTEG_HIST_C;
+  count   
+----------
+ 61685756
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_PROM_INTEG_HIST_D;
+   count   
+-----------
+ 161863549
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_PROM_INTEG_HIST_E;
+  count   
+----------
+ 97749222
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_PROM_INTEG_HIST_F;
+  count   
+----------
+ 75996699
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_PROM_INTEG_HIST_G;
+   count   
+-----------
+ 127207242
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_PROM_INTEG_HIST_H;
+  count   
+----------
+ 27498094
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_PROM_INTEG_HIST_I;
+  count   
+----------
+ 93985277
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_PROM_INTEG_HIST_J;
+  count   
+----------
+ 25065815
+(1 row)
+
+select count(1) from BSSDATA.OFR_ASSET_PROM_INTEG_HIST_K;
+  count   
+----------
+ 26808302
+(1 row)
+
+select count(1) from BSSDATA.OFR_CHILD_ASSET_HIST_A;
+   count   
+-----------
+ 991172829
+(1 row)
+
+select count(1) from BSSDATA.OFR_CHILD_ASSET_HIST_B;
+   count   
+-----------
+ 199202224
+(1 row)
+
+select count(1) from BSSDATA.OFR_CHILD_ASSET_HIST_C;
+   count   
+-----------
+ 337745889
+(1 row)
+
+select count(1) from BSSDATA.OFR_CHILD_ASSET_HIST_D;
+   count   
+-----------
+ 638309697
+(1 row)
+
+select count(1) from BSSDATA.OFR_CHILD_ASSET_HIST_E;
+   count   
+-----------
+ 371619333
+(1 row)
+
+select count(1) from BSSDATA.OFR_CHILD_ASSET_HIST_F;
+   count   
+-----------
+ 432799598
+(1 row)
+
+select count(1) from BSSDATA.OFR_CHILD_ASSET_HIST_G;
+   count   
+-----------
+ 716408746
+(1 row)
+
+select count(1) from BSSDATA.OFR_CHILD_ASSET_HIST_H;
+   count   
+-----------
+ 121876848
+(1 row)
+
+select count(1) from BSSDATA.OFR_CHILD_ASSET_HIST_I;
+   count   
+-----------
+ 463626820
+(1 row)
+
+select count(1) from BSSDATA.OFR_CHILD_ASSET_HIST_J;
+   count   
+-----------
+ 120500475
+(1 row)
+
+select count(1) from BSSDATA.OFR_CHILD_ASSET_HIST_K;
+   count   
+-----------
+ 140322802
+(1 row)
+
+select count(1) from BSSDATA.OFR_MAIN_ASSET_HIST_A_bak;
+   count   
+-----------
+ 458525954
+(1 row)
+
+select count(1) from BSSDATA.OFR_MAIN_ASSET_HIST_B;
+  count   
+----------
+ 51707806
+(1 row)
+
+select count(1) from BSSDATA.OFR_MAIN_ASSET_HIST_C;
+  count   
+----------
+ 83540704
+(1 row)
+
+select count(1) from BSSDATA.OFR_MAIN_ASSET_HIST_D;
+   count   
+-----------
+ 161077895
+(1 row)
+
+select count(1) from BSSDATA.OFR_MAIN_ASSET_HIST_E;
+  count   
+----------
+ 85124958
+(1 row)
+
+select count(1) from BSSDATA.OFR_MAIN_ASSET_HIST_F;
+   count   
+-----------
+ 105223239
+(1 row)
+
+select count(1) from BSSDATA.OFR_MAIN_ASSET_HIST_G;
+   count   
+-----------
+ 168228870
+(1 row)
+
+select count(1) from BSSDATA.OFR_MAIN_ASSET_HIST_H;
+  count   
+----------
+ 32192068
+(1 row)
+
+select count(1) from BSSDATA.OFR_MAIN_ASSET_HIST_I;
+   count   
+-----------
+ 107893368
+(1 row)
+
+select count(1) from BSSDATA.OFR_MAIN_ASSET_HIST_J;
+  count   
+----------
+ 27207254
+(1 row)
+
+select count(1) from BSSDATA.OFR_MAIN_ASSET_HIST_K;
+  count   
+----------
+ 35502526
+(1 row)
+
+select count(1) from ZJBIC.NEW_MARKET_AREA_NAME_A_bak;
+  count   
+----------
+ 45419809
+(1 row)
+
+select count(1) from ZJBIC.NEW_MARKET_AREA_NAME_B;
+  count  
+---------
+ 9848717
+(1 row)
+
+select count(1) from ZJBIC.NEW_MARKET_AREA_NAME_C;
+  count   
+----------
+ 16591369
+(1 row)
+
+select count(1) from ZJBIC.NEW_MARKET_AREA_NAME_D;
+  count   
+----------
+ 31830323
+(1 row)
+
+select count(1) from ZJBIC.NEW_MARKET_AREA_NAME_E;
+  count   
+----------
+ 17673763
+(1 row)
+
+select count(1) from ZJBIC.NEW_MARKET_AREA_NAME_F;
+  count   
+----------
+ 19778903
+(1 row)
+
+select count(1) from ZJBIC.NEW_MARKET_AREA_NAME_G;
+  count   
+----------
+ 33396790
+(1 row)
+
+select count(1) from ZJBIC.NEW_MARKET_AREA_NAME_H;
+  count  
+---------
+ 6577493
+(1 row)
+
+select count(1) from ZJBIC.NEW_MARKET_AREA_NAME_I;
+  count   
+----------
+ 20610297
+(1 row)
+
+select count(1) from ZJBIC.NEW_MARKET_AREA_NAME_J;
+  count  
+---------
+ 5089362
+(1 row)
+
+select count(1) from ZJBIC.NEW_MARKET_AREA_NAME_K;
+  count  
+---------
+ 6727314
+(1 row)
+
+select count(1) from ZJBIC.OFR_TERM_USE_CUR_Z_BAK;
+  count   
+----------
+ 12312190
+(1 row)
+
+select count(1) from ITFJYFX.DAPD_FIN_ALWANC_Z;
+  count  
+---------
+ 5484317
+(1 row)
+
+select count(1) from ITFJYFX.DAPD_PRD_PO_INST_A_BAK;
+   count   
+-----------
+ 160004262
+(1 row)
+
+select count(1) from ITFJYFX.DAPD_PRD_PO_INST_B_BAK;
+  count   
+----------
+ 34994508
+(1 row)
+
+select count(1) from ITFJYFX.DAPD_PRD_PO_INST_C_BAK;
+  count   
+----------
+ 57741289
+(1 row)
+
+select count(1) from ITFJYFX.DAPD_PRD_PO_INST_D_BAK;
+   count   
+-----------
+ 111319460
+(1 row)
+
+select count(1) from ITFJYFX.DAPD_PRD_PO_INST_E_BAK;
+  count   
+----------
+ 56161587
+(1 row)
+
+select count(1) from ITFJYFX.DAPD_PRD_PO_INST_F_BAK;
+  count   
+----------
+ 67485194
+(1 row)
+
+select count(1) from ITFJYFX.DAPD_PRD_PO_INST_G_BAK;
+   count   
+-----------
+ 116552123
+(1 row)
+
+select count(1) from ITFJYFX.DAPD_PRD_PO_INST_H_BAK;
+  count   
+----------
+ 21630861
+(1 row)
+
+select count(1) from ITFJYFX.DAPD_PRD_PO_INST_I_BAK;
+  count   
+----------
+ 73301756
+(1 row)
+
+select count(1) from ITFJYFX.DAPD_PRD_PO_INST_J_BAK;
+  count   
+----------
+ 17338392
+(1 row)
+
+select count(1) from ITFJYFX.DAPD_PRD_PO_INST_K_BAK;
+  count   
+----------
+ 23517656
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_FLG_A_bak;
+   count    
+------------
+ 1272117594
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_FLG_B;
+   count   
+-----------
+ 140415228
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_FLG_C;
+   count   
+-----------
+ 225632168
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_FLG_D;
+   count   
+-----------
+ 452470442
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_FLG_E;
+   count   
+-----------
+ 224774218
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_FLG_F;
+   count   
+-----------
+ 261017560
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_FLG_G;
+   count   
+-----------
+ 423245120
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_FLG_H;
+  count   
+----------
+ 82772119
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_FLG_I;
+   count   
+-----------
+ 271611888
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_FLG_J;
+  count   
+----------
+ 66277476
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_FLG_K;
+  count   
+----------
+ 91294796
+(1 row)
+
+select count(1) from STAGE.OFR_PROM_BSI_HIST_Z;
+   count   
+-----------
+ 659920329
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_TER_B;
+  count   
+----------
+ 13272453
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_TER_C;
+  count   
+----------
+ 22846136
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_TER_D;
+  count   
+----------
+ 47992618
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_TER_E;
+  count   
+----------
+ 27814729
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_TER_F;
+  count   
+----------
+ 27571526
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_TER_G;
+  count   
+----------
+ 44453103
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_TER_H;
+  count  
+---------
+ 9092795
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_TER_I;
+  count   
+----------
+ 28829885
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_TER_J;
+  count  
+---------
+ 7818280
+(1 row)
+
+select count(1) from KPI.KPI_ASSET_TER_K;
+  count  
+---------
+ 8872585
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_FLG_A_1;
+   count    
+------------
+ 1293490274
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_CDSC_HIST_A;
+   count   
+-----------
+ 346637398
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_CALL_LIMIT_LOG_A;
+  count   
+----------
+ 12938449
+(1 row)
+
+select count(1) from BSSDATA_1.FIN_PG_OWE_STMT_ITEM_D_A;
+   count   
+-----------
+ 105281565
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_CHILD_ASSET_HIST_A;
+   count   
+-----------
+ 991172829
+(1 row)
+
+select count(1) from ZJBIC_1.OFR_TERM_USE_CUR_Z;
+  count   
+----------
+ 12312190
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_CPRD;
+ count 
+-------
+  7783
+(1 row)
+
+select count(1) from BSSDATA_1.PAR_DEPT;
+ count  
+--------
+ 104848
+(1 row)
+
+select count(1) from BSSDATA_1.Par_Cemployee_Hist;
+ count  
+--------
+ 741147
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_PROM_INTEG_HIST_A;
+   count   
+-----------
+ 218821224
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_FLG_A_2;
+   count    
+------------
+ 1272117594
+(1 row)
+
+select count(1) from BSSDATA_2.FIN_PG_OWE_STMT_ITEM_D_A;
+   count   
+-----------
+ 105281565
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_CDSC_HIST_A;
+   count   
+-----------
+ 346637398
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_EXI_HIST_A;
+   count   
+-----------
+ 903556981
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_INST_STAT_HIST_A;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_PROM_INTEG_HIST_A;
+   count   
+-----------
+ 218821224
+(1 row)
+
+select count(1) from DMN_2.CAG_COM_STD_PRD_LVL4;
+ count 
+-------
+   561
+(1 row)
+
+select count(1) from ZJBIC_2.OFR_TERM_USE_CUR_Z;
+  count   
+----------
+ 12312190
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_FLG_A_3;
+   count    
+------------
+ 1293490274
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_FLG_A_4;
+   count    
+------------
+ 1293490274
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_FLG_C_1;
+   count   
+-----------
+ 486358284
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_FLG_C_2;
+   count   
+-----------
+ 486358284
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_FLG_D_1;
+   count   
+-----------
+ 976446097
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_FLG_D_2;
+   count   
+-----------
+ 976446097
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_FLG_F_2;
+   count   
+-----------
+ 563995609
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_FLG_G_1;
+   count   
+-----------
+ 913913230
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_FLG_G_2;
+   count   
+-----------
+ 913913230
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_TER_C_1;
+  count   
+----------
+ 50550992
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_TER_C_2;
+  count   
+----------
+ 50550992
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_TER_D_1;
+   count   
+-----------
+ 106246683
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_TER_D_2;
+   count   
+-----------
+ 106246683
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_TER_F_2;
+  count   
+----------
+ 60927281
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_TER_G_1;
+  count   
+----------
+ 97878963
+(1 row)
+
+select count(1) from KPI_1.KPI_ASSET_TER_G_2;
+  count   
+----------
+ 97878963
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_FLG_C_3;
+   count   
+-----------
+ 486358284
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_FLG_C_4;
+   count   
+-----------
+ 486358284
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_FLG_D_3;
+   count   
+-----------
+ 976446097
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_FLG_D_4;
+   count   
+-----------
+ 976446097
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_FLG_F_3;
+   count   
+-----------
+ 563995609
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_FLG_F_4;
+   count   
+-----------
+ 563995609
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_FLG_G_3;
+   count   
+-----------
+ 913913230
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_FLG_G_4;
+   count   
+-----------
+ 913913230
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_TER_C_3;
+  count   
+----------
+ 50550992
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_TER_C_4;
+  count   
+----------
+ 50550992
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_TER_D_3;
+   count   
+-----------
+ 106246683
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_TER_D_4;
+   count   
+-----------
+ 106246683
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_TER_F_3;
+  count   
+----------
+ 60927281
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_TER_F_4;
+  count   
+----------
+ 60927281
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_TER_G_3;
+  count   
+----------
+ 97878963
+(1 row)
+
+select count(1) from KPI_2.KPI_ASSET_TER_G_4;
+  count   
+----------
+ 97878963
+(1 row)
+
+select count(1) from ITFJYFX_1.DAPD_PRD_PO_INST_A_1;
+   count   
+-----------
+ 160004262
+(1 row)
+
+select count(1) from ITFJYFX_1.DAPD_PRD_PO_INST_A_2;
+   count   
+-----------
+ 160004262
+(1 row)
+
+select count(1) from ITFJYFX_2.DAPD_PRD_PO_INST_A_3;
+   count   
+-----------
+ 159943250
+(1 row)
+
+select count(1) from ITFJYFX_2.DAPD_PRD_PO_INST_A_4;
+   count   
+-----------
+ 159943250
+(1 row)
+
+select count(1) from public.ORDI_A_SPRD_MC;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.ORDI_A_ALL_PRO;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.ASSET_INFO_DAILY_TMP;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.ORDI_A_VALID_CARD_TMP;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.ASSET_AGENT_A;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.ASSET_MARKET_A;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.ORDI_A_PRE1;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.ORDI_A_PRE3_ORDER;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.ORDI_A_1_PRE3;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.ORDI_A_PRE3;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.ORDI_A_PRE_ALL;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.NEW_EVT_A;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.ORDI_A_PRE_ALL_CORP;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from public.ORDI_A_PRE_ALL_CORP_SPEED;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from STAGE_1.OFR_PROM_BSI_HIST_Z;
+   count   
+-----------
+ 659920329
+(1 row)
+
+select count(1) from STAGE_1.EVT_ORDER_PROM_HIST_Z;
+   count    
+------------
+ 1382856841
+(1 row)
+
+select count(1) from STAGE_1.EVT_ORDER_HIST_Z;
+   count   
+-----------
+ 186317748
+(1 row)
+
+select count(1) from ITFJYFX_1.DAPD_FIN_ALWANC_Z;
+  count  
+---------
+ 5484317
+(1 row)
+
+select count(1) from STAGE_2.EVT_ORDER_PROM_ITEM_HIST_Z;
+   count    
+------------
+ 3061291990
+(1 row)
+
+select count(1) from STAGE_2.EVT_ORDER_HIST_Z;
+   count   
+-----------
+ 186317748
+(1 row)
+
+select count(1) from ITFJYFX_2.DAPD_FIN_ALWANC_Z;
+  count  
+---------
+ 5484317
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_1;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_2;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_3;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_4;
+  count   
+----------
+ 25286546
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_5;
+  count   
+----------
+ 25286546
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_6;
+  count   
+----------
+ 25286546
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_7;
+  count   
+----------
+ 25286546
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_8;
+  count   
+----------
+ 25286546
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_9;
+  count   
+----------
+ 25286546
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_10;
+  count   
+----------
+ 25286546
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_11;
+  count   
+----------
+ 25286546
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_12;
+  count   
+----------
+ 25286546
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_13;
+  count   
+----------
+ 25286546
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_14;
+  count   
+----------
+ 25286546
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_15;
+  count   
+----------
+ 25286546
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_16;
+  count   
+----------
+ 25286546
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_17;
+  count   
+----------
+ 25286546
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_18;
+  count   
+----------
+ 25286546
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_19;
+  count   
+----------
+ 25286546
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_20;
+  count   
+----------
+ 25286546
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_21;
+  count   
+----------
+ 25286546
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_22;
+  count   
+----------
+ 25286546
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_23;
+  count   
+----------
+ 25286546
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_24;
+  count   
+----------
+ 25286546
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_25;
+  count   
+----------
+ 25286546
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_26;
+  count   
+----------
+ 25286546
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_27;
+  count   
+----------
+ 25286546
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_28;
+  count   
+----------
+ 25286546
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_29;
+  count   
+----------
+ 25286546
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A_30;
+  count   
+----------
+ 25286546
+(1 row)
+
+select count(1) from public.point_geo;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from TPCDS.dbgen_version;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from TPCDS.customer_address;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from TPCDS.customer_demographics;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from TPCDS.date_dim;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from TPCDS.warehouse;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from TPCDS.ship_mode;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from TPCDS.time_dim;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from TPCDS.reason;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from TPCDS.income_band;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from TPCDS.item;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from TPCDS.store;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from TPCDS.call_center;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from TPCDS.web_site;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from TPCDS.store_returns;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from TPCDS.household_demographics;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from TPCDS.web_page;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from TPCDS.promotion;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from TPCDS.catalog_page;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from TPCDS.inventory;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from TPCDS.catalog_returns;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from TPCDS.web_returns;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from TPCDS.web_sales;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from TPCDS.catalog_sales;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from TPCDS.store_sales;
+ count 
+-------
+     0
+(1 row)
+
+select count(1) from BSSDATA.OFR_CPRD_bak;
+ count 
+-------
+  7783
+(1 row)
+
+select count(1) from BSSDATA.OFR_MKT_CHANNEL_A;
+ count 
+-------
+ 68360
+(1 row)
+
+select count(1) from BSSDATA.PAR_CCUST_HIST_A_BAK;
+  count   
+----------
+ 31366351
+(1 row)
+
+select count(1) from BSSDATA.PAR_CEMPLOYEE_HIST_BAK;
+ count  
+--------
+ 741147
+(1 row)
+
+select count(1) from BSSDATA.PAR_DEPT;
+ count  
+--------
+ 104848
+(1 row)
+
+select count(1) from ZJBIC.OFR_MAIN_ASSET_CUR_A;
+  count   
+----------
+ 25286546
+(1 row)
+
+select count(1) from TPCDS_200G.call_center;
+ count 
+-------
+     8
+(1 row)
+
+select count(1) from TPCDS_200G.catalog_page;
+ count 
+-------
+ 11718
+(1 row)
+
+select count(1) from TPCDS_200G.catalog_returns;
+  count   
+----------
+ 28798881
+(1 row)
+
+select count(1) from TPCDS_200G.catalog_sales;
+   count   
+-----------
+ 287989836
+(1 row)
+
+select count(1) from TPCDS_200G.customer;
+  count  
+---------
+ 1600000
+(1 row)
+
+select count(1) from TPCDS_200G.customer_address;
+ count  
+--------
+ 800000
+(1 row)
+
+select count(1) from TPCDS_200G.customer_demographics;
+  count  
+---------
+ 1920800
+(1 row)
+
+select count(1) from TPCDS_200G.date_dim;
+ count 
+-------
+ 73049
+(1 row)
+
+select count(1) from TPCDS_200G.dbgen_version;
+ count 
+-------
+     1
+(1 row)
+
+select count(1) from TPCDS_200G.household_demographics;
+ count 
+-------
+  7200
+(1 row)
+
+select count(1) from TPCDS_200G.income_band;
+ count 
+-------
+    20
+(1 row)
+
+select count(1) from TPCDS_200G.inventory;
+  count   
+----------
+ 37584000
+(1 row)
+
+select count(1) from TPCDS_200G.item;
+ count 
+-------
+ 48000
+(1 row)
+
+select count(1) from TPCDS_200G.promotion;
+ count 
+-------
+   450
+(1 row)
+
+select count(1) from TPCDS_200G.reason;
+ count 
+-------
+    37
+(1 row)
+
+select count(1) from TPCDS_200G.ship_mode;
+ count 
+-------
+    20
+(1 row)
+
+select count(1) from TPCDS_200G.store;
+ count 
+-------
+   212
+(1 row)
+
+select count(1) from TPCDS_200G.store_returns;
+  count   
+----------
+ 57591150
+(1 row)
+
+select count(1) from TPCDS_200G.store_sales;
+   count   
+-----------
+ 575995635
+(1 row)
+
+select count(1) from TPCDS_200G.time_dim;
+ count 
+-------
+ 86400
+(1 row)
+
+select count(1) from TPCDS_200G.warehouse;
+ count 
+-------
+     6
+(1 row)
+
+select count(1) from TPCDS_200G.web_page;
+ count 
+-------
+   342
+(1 row)
+
+select count(1) from TPCDS_200G.web_returns;
+  count   
+----------
+ 14398467
+(1 row)
+
+select count(1) from TPCDS_200G.web_sales;
+   count   
+-----------
+ 144002668
+(1 row)
+
+select count(1) from TPCDS_200G.web_site;
+ count 
+-------
+    38
+(1 row)
+
+select count(1) from STAGE.EVT_ORDER_PROM_ITEM_HIST_Z;
+   count    
+------------
+ 3061291990
+(1 row)
+
+select count(1) from STAGE_1.EVT_ORDI_HIST_B;
+   count   
+-----------
+ 123014721
+(1 row)
+
+select count(1) from STAGE_1.EVT_ORDI_HIST_C;
+   count   
+-----------
+ 224554156
+(1 row)
+
+select count(1) from STAGE_1.EVT_ORDI_HIST_D;
+   count   
+-----------
+ 466876078
+(1 row)
+
+select count(1) from STAGE_1.EVT_ORDI_HIST_E;
+   count   
+-----------
+ 244974745
+(1 row)
+
+select count(1) from STAGE_1.EVT_ORDI_HIST_F;
+   count   
+-----------
+ 234566061
+(1 row)
+
+select count(1) from STAGE_1.EVT_ORDI_HIST_H;
+  count   
+----------
+ 81036076
+(1 row)
+
+select count(1) from STAGE_1.EVT_ORDI_HIST_I;
+   count   
+-----------
+ 271508132
+(1 row)
+
+select count(1) from STAGE_1.EVT_ORDI_HIST_J;
+  count   
+----------
+ 59098174
+(1 row)
+
+select count(1) from STAGE_1.EVT_ORDI_HIST_K;
+  count   
+----------
+ 96338359
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_MKT_CHANNEL_A;
+ count 
+-------
+ 68360
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_CPRD;
+ count 
+-------
+  7783
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_MKT_CHANNEL_A;
+ count 
+-------
+ 68360
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_MKT_CHANNEL_B;
+ count 
+-------
+  3324
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_MKT_CHANNEL_C;
+ count 
+-------
+  8157
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_MKT_CHANNEL_D;
+ count 
+-------
+  4484
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_MKT_CHANNEL_E;
+ count 
+-------
+  3033
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_MKT_CHANNEL_F;
+ count 
+-------
+  2117
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_MKT_CHANNEL_G;
+ count 
+-------
+  6251
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_MKT_CHANNEL_H;
+ count 
+-------
+  6143
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_MKT_CHANNEL_I;
+ count 
+-------
+  2840
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_MKT_CHANNEL_J;
+ count 
+-------
+  2147
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_MKT_CHANNEL_K;
+ count 
+-------
+  3374
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_MKT_CHANNEL_B;
+ count 
+-------
+  3324
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_MKT_CHANNEL_C;
+ count 
+-------
+  8157
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_MKT_CHANNEL_D;
+ count 
+-------
+  4484
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_MKT_CHANNEL_E;
+ count 
+-------
+  3033
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_MKT_CHANNEL_F;
+ count 
+-------
+  2117
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_MKT_CHANNEL_G;
+ count 
+-------
+  6251
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_MKT_CHANNEL_H;
+ count 
+-------
+  6143
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_MKT_CHANNEL_I;
+ count 
+-------
+  2840
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_MKT_CHANNEL_J;
+ count 
+-------
+  2147
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_MKT_CHANNEL_K;
+ count 
+-------
+  3374
+(1 row)
+
+select count(1) from BSSDATA_2.Par_Cemployee_Hist;
+ count  
+--------
+ 741147
+(1 row)
+
+select count(1) from BSSDATA_2.PAR_DEPT;
+ count  
+--------
+ 104848
+(1 row)
+
+select count(1) from ITFJYFX_1.DAPD_PRD_PO_INST_C_1;
+  count   
+----------
+ 57757305
+(1 row)
+
+select count(1) from ITFJYFX_1.DAPD_PRD_PO_INST_D_1;
+   count   
+-----------
+ 111356127
+(1 row)
+
+select count(1) from ITFJYFX_1.DAPD_PRD_PO_INST_G_1;
+   count   
+-----------
+ 116552123
+(1 row)
+
+select count(1) from ITFJYFX_1.DAPD_PRD_PO_INST_C_2;
+  count   
+----------
+ 57757305
+(1 row)
+
+select count(1) from ITFJYFX_1.DAPD_PRD_PO_INST_D_2;
+   count   
+-----------
+ 111319460
+(1 row)
+
+select count(1) from ITFJYFX_1.DAPD_PRD_PO_INST_F_2;
+  count   
+----------
+ 67485194
+(1 row)
+
+select count(1) from ITFJYFX_1.DAPD_PRD_PO_INST_G_2;
+   count   
+-----------
+ 116552123
+(1 row)
+
+select count(1) from ITFJYFX_2.DAPD_PRD_PO_INST_C_3;
+  count   
+----------
+ 57757305
+(1 row)
+
+select count(1) from ITFJYFX_2.DAPD_PRD_PO_INST_D_3;
+   count   
+-----------
+ 111319460
+(1 row)
+
+select count(1) from ITFJYFX_2.DAPD_PRD_PO_INST_F_3;
+  count   
+----------
+ 67485194
+(1 row)
+
+select count(1) from ITFJYFX_2.DAPD_PRD_PO_INST_G_3;
+   count   
+-----------
+ 116552123
+(1 row)
+
+select count(1) from ITFJYFX_2.DAPD_PRD_PO_INST_C_4;
+  count   
+----------
+ 57757305
+(1 row)
+
+select count(1) from ITFJYFX_2.DAPD_PRD_PO_INST_D_4;
+   count   
+-----------
+ 111356127
+(1 row)
+
+select count(1) from ITFJYFX_2.DAPD_PRD_PO_INST_F_4;
+  count   
+----------
+ 67485194
+(1 row)
+
+select count(1) from ITFJYFX_2.DAPD_PRD_PO_INST_G_4;
+   count   
+-----------
+ 116552123
+(1 row)
+
+select count(1) from BSSDATA_1.MKT_ASSET_CLAIM_A;
+   count   
+-----------
+ 440450205
+(1 row)
+
+select count(1) from BSSDATA_2.MKT_ASSET_CLAIM_A;
+   count   
+-----------
+ 440450205
+(1 row)
+
+select count(1) from BSSDATA_2.MKT_ASSET_CLAIM_B;
+   count   
+-----------
+ 188149604
+(1 row)
+
+select count(1) from BSSDATA_2.MKT_ASSET_CLAIM_C;
+   count   
+-----------
+ 157773467
+(1 row)
+
+select count(1) from BSSDATA_2.MKT_ASSET_CLAIM_D;
+   count   
+-----------
+ 461916956
+(1 row)
+
+select count(1) from BSSDATA_2.MKT_ASSET_CLAIM_E;
+   count   
+-----------
+ 452878726
+(1 row)
+
+select count(1) from BSSDATA_2.MKT_ASSET_CLAIM_F;
+   count   
+-----------
+ 300458575
+(1 row)
+
+select count(1) from BSSDATA_2.MKT_ASSET_CLAIM_G;
+   count   
+-----------
+ 501875703
+(1 row)
+
+select count(1) from BSSDATA_2.MKT_ASSET_CLAIM_H;
+  count   
+----------
+ 90645434
+(1 row)
+
+select count(1) from BSSDATA_2.MKT_ASSET_CLAIM_I;
+   count   
+-----------
+ 260204440
+(1 row)
+
+select count(1) from BSSDATA_2.MKT_ASSET_CLAIM_J;
+  count   
+----------
+ 61866364
+(1 row)
+
+select count(1) from BSSDATA_2.MKT_ASSET_CLAIM_K;
+   count   
+-----------
+ 208686568
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_MAIN_ASSET_HIST_B;
+  count   
+----------
+ 51707806
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_MAIN_ASSET_HIST_C;
+  count   
+----------
+ 83540704
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_MAIN_ASSET_HIST_D;
+   count   
+-----------
+ 161077895
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_MAIN_ASSET_HIST_E;
+  count   
+----------
+ 85124958
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_MAIN_ASSET_HIST_F;
+   count   
+-----------
+ 105223239
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_MAIN_ASSET_HIST_G;
+   count   
+-----------
+ 168228870
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_MAIN_ASSET_HIST_H;
+  count   
+----------
+ 32192068
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_MAIN_ASSET_HIST_I;
+   count   
+-----------
+ 107893368
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_MAIN_ASSET_HIST_J;
+  count   
+----------
+ 27207254
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_MAIN_ASSET_HIST_K;
+  count   
+----------
+ 35502526
+(1 row)
+
+select count(1) from BSSDATA_1.OFR_ASSET_EXI_HIST_A;
+   count   
+-----------
+ 903556981
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_EXI_HIST_B;
+   count   
+-----------
+ 196834849
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_EXI_HIST_C;
+   count   
+-----------
+ 331836271
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_EXI_HIST_D;
+   count   
+-----------
+ 657104557
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_EXI_HIST_E;
+   count   
+-----------
+ 341710780
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_EXI_HIST_F;
+   count   
+-----------
+ 389731820
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_EXI_HIST_G;
+   count   
+-----------
+ 652208816
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_EXI_HIST_H;
+   count   
+-----------
+ 124617385
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_EXI_HIST_I;
+   count   
+-----------
+ 414948344
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_EXI_HIST_J;
+   count   
+-----------
+ 101827522
+(1 row)
+
+select count(1) from BSSDATA_2.OFR_ASSET_EXI_HIST_K;
+   count   
+-----------
+ 136822636
+(1 row)
+
+select count(1) from ZJBIC_2.OFR_MAIN_ASSET_FLG_B;
+   count   
+-----------
+ 148562921
+(1 row)
+
+select count(1) from ZJBIC_2.OFR_MAIN_ASSET_FLG_C;
+   count   
+-----------
+ 246864468
+(1 row)
+
+select count(1) from ZJBIC_2.OFR_MAIN_ASSET_FLG_D;
+   count   
+-----------
+ 481776398
+(1 row)
+
+select count(1) from ZJBIC_2.OFR_MAIN_ASSET_FLG_E;
+   count   
+-----------
+ 257485463
+(1 row)
+
+select count(1) from ZJBIC_2.OFR_MAIN_ASSET_FLG_G;
+   count   
+-----------
+ 514584318
+(1 row)
+
+select count(1) from ZJBIC_2.OFR_MAIN_ASSET_FLG_H;
+  count   
+----------
+ 99568951
+(1 row)
+
+select count(1) from ZJBIC_2.OFR_MAIN_ASSET_FLG_I;
+   count   
+-----------
+ 313256179
+(1 row)
+
+select count(1) from ZJBIC_2.OFR_MAIN_ASSET_FLG_J;
+  count   
+----------
+ 80778928
+(1 row)
+
+select count(1) from ZJBIC_2.OFR_MAIN_ASSET_FLG_K;
+   count   
+-----------
+ 101038160
+(1 row)
+
+select count(1) from ZJBIC_1.OFR_MAIN_ASSET_FLG_B;
+   count   
+-----------
+ 148562921
+(1 row)
+
+select count(1) from ZJBIC_1.OFR_MAIN_ASSET_FLG_C;
+   count   
+-----------
+ 246864468
+(1 row)
+
+select count(1) from ZJBIC_1.OFR_MAIN_ASSET_FLG_D;
+   count   
+-----------
+ 481776398
+(1 row)
+
+select count(1) from ZJBIC_1.OFR_MAIN_ASSET_FLG_E;
+   count   
+-----------
+ 257485463
+(1 row)
+
+select count(1) from ZJBIC_1.OFR_MAIN_ASSET_FLG_G;
+   count   
+-----------
+ 514584318
+(1 row)
+
+select count(1) from ZJBIC_1.OFR_MAIN_ASSET_FLG_H;
+  count   
+----------
+ 99568951
+(1 row)
+
+select count(1) from ZJBIC_1.OFR_MAIN_ASSET_FLG_I;
+   count   
+-----------
+ 313256179
+(1 row)
+
+select count(1) from ZJBIC_1.OFR_MAIN_ASSET_FLG_J;
+  count   
+----------
+ 80778928
+(1 row)
+
+select count(1) from ZJBIC_1.OFR_MAIN_ASSET_FLG_K;
+   count   
+-----------
+ 101038160
+(1 row)
+
+select count(1) from ZJBIC_1.OFR_MAIN_ASSET_FLG_A;
+   count   
+-----------
+ 644622803
+(1 row)
+
+select count(1) from ZJBIC_1.OFR_MAIN_ASSET_FLG_F;
+   count   
+-----------
+ 289014194
+(1 row)
+
+select count(1) from ZJBIC_1.NEW_MARKET_AREA_NAME_A;
+  count   
+----------
+ 45419809
+(1 row)
+
+select count(1) from ZJBIC_1.NEW_MARKET_AREA_NAME_B;
+  count  
+---------
+ 9848717
+(1 row)
+
+select count(1) from ZJBIC_1.NEW_MARKET_AREA_NAME_C;
+  count   
+----------
+ 16591369
+(1 row)
+
+select count(1) from ZJBIC_1.NEW_MARKET_AREA_NAME_D;
+  count   
+----------
+ 31830323
+(1 row)
+
+select count(1) from ZJBIC_1.NEW_MARKET_AREA_NAME_E;
+  count   
+----------
+ 17673763
+(1 row)
+
+select count(1) from ZJBIC_1.NEW_MARKET_AREA_NAME_F;
+  count   
+----------
+ 19778903
+(1 row)
+
+select count(1) from ZJBIC_1.NEW_MARKET_AREA_NAME_G;
+  count   
+----------
+ 33396790
+(1 row)
+
+select count(1) from ZJBIC_1.NEW_MARKET_AREA_NAME_H;
+  count  
+---------
+ 6577493
+(1 row)
+
+select count(1) from ZJBIC_1.NEW_MARKET_AREA_NAME_I;
+  count   
+----------
+ 20610297
+(1 row)
+
+select count(1) from ZJBIC_1.NEW_MARKET_AREA_NAME_J;
+  count  
+---------
+ 5089362
+(1 row)
+
+select count(1) from ZJBIC_1.NEW_MARKET_AREA_NAME_K;
+  count  
+---------
+ 6727314
+(1 row)
+
+select count(1) from ZJBIC_2.NEW_MARKET_AREA_NAME_A;
+  count   
+----------
+ 45419809
+(1 row)
+
+select count(1) from ZJBIC_2.NEW_MARKET_AREA_NAME_B;
+  count  
+---------
+ 9848717
+(1 row)
+
+select count(1) from ZJBIC_2.NEW_MARKET_AREA_NAME_C;
+  count   
+----------
+ 16591369
+(1 row)
+
+select count(1) from ZJBIC_2.NEW_MARKET_AREA_NAME_D;
+  count   
+----------
+ 31830323
+(1 row)
+
+select count(1) from ZJBIC_2.NEW_MARKET_AREA_NAME_E;
+  count   
+----------
+ 17673763
+(1 row)
+
+select count(1) from ZJBIC_2.NEW_MARKET_AREA_NAME_F;
+  count   
+----------
+ 19778903
+(1 row)
+
+select count(1) from ZJBIC_2.NEW_MARKET_AREA_NAME_G;
+  count   
+----------
+ 33396790
+(1 row)
+
+select count(1) from ZJBIC_2.NEW_MARKET_AREA_NAME_H;
+  count  
+---------
+ 6577493
+(1 row)
+
+select count(1) from ZJBIC_2.NEW_MARKET_AREA_NAME_I;
+  count   
+----------
+ 20610297
+(1 row)
+
+select count(1) from ZJBIC_2.NEW_MARKET_AREA_NAME_J;
+  count  
+---------
+ 5089362
+(1 row)
+
+select count(1) from ZJBIC_2.NEW_MARKET_AREA_NAME_K;
+  count  
+---------
+ 6727314
+(1 row)
+
+select count(1) from ZJBIC_2.ORDER_SALE_NAME_ALL_B;
+  count   
+----------
+ 41677412
+(1 row)
+
+select count(1) from ZJBIC_2.ORDER_SALE_NAME_ALL_C;
+  count   
+----------
+ 64756405
+(1 row)
+
+select count(1) from ZJBIC_2.ORDER_SALE_NAME_ALL_D;
+   count   
+-----------
+ 155996233
+(1 row)
+
+select count(1) from ZJBIC_2.ORDER_SALE_NAME_ALL_E;
+  count   
+----------
+ 83561281
+(1 row)
+
+select count(1) from ZJBIC_2.ORDER_SALE_NAME_ALL_F;
+  count   
+----------
+ 80756664
+(1 row)
+
+select count(1) from ZJBIC_2.ORDER_SALE_NAME_ALL_G;
+   count   
+-----------
+ 130691931
+(1 row)
+
+select count(1) from ZJBIC_2.ORDER_SALE_NAME_ALL_H;
+  count   
+----------
+ 25384548
+(1 row)
+
+select count(1) from ZJBIC_2.ORDER_SALE_NAME_ALL_I;
+  count   
+----------
+ 85781280
+(1 row)
+
+select count(1) from ZJBIC_2.ORDER_SALE_NAME_ALL_J;
+  count  
+---------
+ 9972539
+(1 row)
+
+select count(1) from ZJBIC_2.ORDER_SALE_NAME_ALL_K;
+  count   
+----------
+ 25003535
+(1 row)
+
+select count(1) from ZJBIC_1.ORDER_SALE_NAME_ALL_B;
+  count   
+----------
+ 41677412
+(1 row)
+
+select count(1) from ZJBIC_1.ORDER_SALE_NAME_ALL_C;
+  count   
+----------
+ 64756405
+(1 row)
+
+select count(1) from ZJBIC_1.ORDER_SALE_NAME_ALL_D;
+   count   
+-----------
+ 155996233
+(1 row)
+
+select count(1) from ZJBIC_1.ORDER_SALE_NAME_ALL_E;
+  count   
+----------
+ 83561281
+(1 row)
+
+select count(1) from ZJBIC_1.ORDER_SALE_NAME_ALL_F;
+  count   
+----------
+ 80756664
+(1 row)
+
+select count(1) from ZJBIC_1.ORDER_SALE_NAME_ALL_G;
+   count   
+-----------
+ 130691931
+(1 row)
+
+select count(1) from ZJBIC_1.ORDER_SALE_NAME_ALL_H;
+  count   
+----------
+ 25384548
+(1 row)
+
+select count(1) from ZJBIC_1.ORDER_SALE_NAME_ALL_I;
+  count   
+----------
+ 85781280
+(1 row)
+
+select count(1) from ZJBIC_1.ORDER_SALE_NAME_ALL_J;
+  count  
+---------
+ 9972539
+(1 row)
+
+select count(1) from ZJBIC_1.ORDER_SALE_NAME_ALL_K;
+  count   
+----------
+ 25003535
+(1 row)
+
+select count(1) from ZJBIC_2.ORDER_SALE_NAME_ALL_A;
+   count   
+-----------
+ 180778112
+(1 row)
+
+select count(1) from ZJBIC_1.ORDER_SALE_NAME_ALL_A;
+   count   
+-----------
+ 180778112
+(1 row)
+
+select count(1) from ZJBIC_2.OFR_MAIN_ASSET_FLG_A;
+   count   
+-----------
+ 644622803
+(1 row)
+
+select count(1) from STAGE_2.EVT_ORDI_HIST_B;
+   count   
+-----------
+ 123014721
+(1 row)
+
+select count(1) from STAGE_2.EVT_ORDI_HIST_C;
+   count   
+-----------
+ 224554156
+(1 row)
+
+select count(1) from STAGE_2.EVT_ORDI_HIST_D;
+   count   
+-----------
+ 466876078
+(1 row)
+
+select count(1) from STAGE_2.EVT_ORDI_HIST_E;
+   count   
+-----------
+ 244974745
+(1 row)
+
+select count(1) from STAGE_2.EVT_ORDI_HIST_F;
+   count   
+-----------
+ 234566061
+(1 row)
+
+select count(1) from STAGE_2.EVT_ORDI_HIST_H;
+  count   
+----------
+ 81036076
+(1 row)
+
+select count(1) from STAGE_2.EVT_ORDI_HIST_I;
+   count   
+-----------
+ 271508132
+(1 row)
+
+select count(1) from STAGE_2.EVT_ORDI_HIST_J;
+  count   
+----------
+ 59098174
+(1 row)
+
+select count(1) from STAGE_2.EVT_ORDI_HIST_K;
+  count   
+----------
+ 96338359
+(1 row)
+

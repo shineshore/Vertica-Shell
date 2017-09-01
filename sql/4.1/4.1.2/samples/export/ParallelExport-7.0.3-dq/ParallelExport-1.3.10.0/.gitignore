@@ -1,0 +1,8 @@
+^%tmpfile
+lib/ParallelExport.so
+test/export-gbk.txt.v_v71_node0001
+testresult.txt
+test/test2.sql
+test/output
+test/output.verify
+test/export-utf8.txt.v_v71_node0001

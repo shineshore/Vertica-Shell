@@ -1,0 +1,130 @@
+ Rows Loaded 
+-------------
+           6
+(1 row)
+
+ Rows Loaded 
+-------------
+       11718
+(1 row)
+
+ Rows Loaded 
+-------------
+   737299670
+(1 row)
+
+ Rows Loaded 
+-------------
+    10700000
+(1 row)
+
+ Rows Loaded 
+-------------
+     5350000
+(1 row)
+
+ Rows Loaded 
+-------------
+     1920800
+(1 row)
+
+vsql:4.1.6_copy_5t.sql:8: ERROR 2886:  Could not open file [/data/SOURCE/tpcds_5t/date_dim.dat.dat] for reading; No such file or directory
+HINT:  Make sure the file is available on the specified node.  If using ON ANY NODE, it must be available at this path on all nodes in the cluster since any node could load the file
+ Rows Loaded 
+-------------
+           1
+(1 row)
+
+ Rows Loaded 
+-------------
+        7200
+(1 row)
+
+ Rows Loaded 
+-------------
+          20
+(1 row)
+
+ Rows Loaded 
+-------------
+    19575000
+(1 row)
+
+ Rows Loaded 
+-------------
+       30000
+(1 row)
+
+ Rows Loaded 
+-------------
+         360
+(1 row)
+
+ Rows Loaded 
+-------------
+          35
+(1 row)
+
+ Rows Loaded 
+-------------
+          20
+(1 row)
+
+ Rows Loaded 
+-------------
+          56
+(1 row)
+
+ Rows Loaded 
+-------------
+  1474557063
+(1 row)
+
+ Rows Loaded 
+-------------
+ 14745444557
+(1 row)
+
+ Rows Loaded 
+-------------
+       86400
+(1 row)
+
+ Rows Loaded 
+-------------
+           5
+(1 row)
+
+ Rows Loaded 
+-------------
+         180
+(1 row)
+
+ Rows Loaded 
+-------------
+   368651916
+(1 row)
+
+ Rows Loaded 
+-------------
+  3686363941
+(1 row)
+
+ Rows Loaded 
+-------------
+          32
+(1 row)
+
+ Rows Loaded 
+-------------
+  7372872161
+(1 row)
+
+4.1.6 TPCDS_200G查询测试
+begin .-execute_4.1.6_tpcds_200g_query.sh at Mon Aug 14 15:55:56 CST 2017 ...
+vsql:/home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.6/4.1.6_tpcds_200g.sql:372: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+vsql:/home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.6/4.1.6_tpcds_200g.sql:372: connection to server was lost
+end .-execute_4.1.6_tpcds_200g_query.sh at Mon Aug 14 16:18:40 CST 2017
+.-execute_4.1.6_tpcds_200g_query.sh total time=1363.575 s

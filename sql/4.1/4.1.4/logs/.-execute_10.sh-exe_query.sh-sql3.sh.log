@@ -1,0 +1,127 @@
+begin .-execute_10.sh-exe_query.sh-sql3.sh at Wed Aug  9 09:47:47 CST 2017 ...
+SET
+Timing is on.
+SET
+Timing is on.
+SET
+Timing is on.
+ COUNT |   CPL_DT   | LAN_SPEED  
+-------+------------+------------
+   639 | 2017-04-15 | 102400Kbps
+   695 | 2017-04-17 | 102400Kbps
+   667 | 2017-04-19 | 102400Kbps
+   627 | 2017-04-18 | 102400Kbps
+   681 | 2017-04-16 | 102400Kbps
+(5 rows)
+
+Time: First fetch (5 rows): 573.898 ms. All rows formatted: 573.953 ms
+end .-execute_10.sh-exe_query.sh-sql3.sh at Wed Aug  9 09:47:47 CST 2017
+ COUNT |   CPL_DT   | LAN_SPEED  
+-------+------------+------------
+   627 | 2017-04-18 | 102400Kbps
+   681 | 2017-04-16 | 102400Kbps
+   639 | 2017-04-15 | 102400Kbps
+   695 | 2017-04-17 | 102400Kbps
+   667 | 2017-04-19 | 102400Kbps
+(5 rows)
+
+Time: First fetch (5 rows): 665.563 ms. All rows formatted: 665.610 ms
+.-execute_10.sh-exe_query.sh-sql3.sh total time=.646 s
+end .-execute_10.sh-exe_query.sh-sql3.sh at Wed Aug  9 09:47:47 CST 2017
+.-execute_10.sh-exe_query.sh-sql3.sh total time=.758 s
+ COUNT |   CPL_DT   | LAN_SPEED  
+-------+------------+------------
+   639 | 2017-04-15 | 102400Kbps
+   695 | 2017-04-17 | 102400Kbps
+   667 | 2017-04-19 | 102400Kbps
+   627 | 2017-04-18 | 102400Kbps
+   681 | 2017-04-16 | 102400Kbps
+(5 rows)
+
+Time: First fetch (5 rows): 728.042 ms. All rows formatted: 728.095 ms
+end .-execute_10.sh-exe_query.sh-sql3.sh at Wed Aug  9 09:47:47 CST 2017
+.-execute_10.sh-exe_query.sh-sql3.sh total time=.797 s
+ COUNT |   CPL_DT   | LAN_SPEED  
+-------+------------+------------
+   627 | 2017-04-18 | 102400Kbps
+   681 | 2017-04-16 | 102400Kbps
+   639 | 2017-04-15 | 102400Kbps
+   695 | 2017-04-17 | 102400Kbps
+   667 | 2017-04-19 | 102400Kbps
+(5 rows)
+
+Time: First fetch (5 rows): 503.802 ms. All rows formatted: 503.870 ms
+end .-execute_10.sh-exe_query.sh-sql3.sh at Wed Aug  9 09:47:47 CST 2017
+.-execute_10.sh-exe_query.sh-sql3.sh total time=.547 s
+ COUNT |   CPL_DT   | LAN_SPEED  
+-------+------------+------------
+   681 | 2017-04-16 | 102400Kbps
+   639 | 2017-04-15 | 102400Kbps
+   695 | 2017-04-17 | 102400Kbps
+   667 | 2017-04-19 | 102400Kbps
+   627 | 2017-04-18 | 102400Kbps
+(5 rows)
+
+Time: First fetch (5 rows): 648.928 ms. All rows formatted: 648.988 ms
+ COUNT |   CPL_DT   | LAN_SPEED  
+-------+------------+------------
+   681 | 2017-04-16 | 102400Kbps
+   627 | 2017-04-18 | 102400Kbps
+   639 | 2017-04-15 | 102400Kbps
+   695 | 2017-04-17 | 102400Kbps
+   667 | 2017-04-19 | 102400Kbps
+(5 rows)
+
+Time: First fetch (5 rows): 696.991 ms. All rows formatted: 697.069 ms
+end .-execute_10.sh-exe_query.sh-sql3.sh at Wed Aug  9 09:47:47 CST 2017
+.-execute_10.sh-exe_query.sh-sql3.sh total time=.680 s
+end .-execute_10.sh-exe_query.sh-sql3.sh at Wed Aug  9 09:47:47 CST 2017
+.-execute_10.sh-exe_query.sh-sql3.sh total time=.735 s
+ COUNT |   CPL_DT   | LAN_SPEED  
+-------+------------+------------
+   639 | 2017-04-15 | 102400Kbps
+   695 | 2017-04-17 | 102400Kbps
+   667 | 2017-04-19 | 102400Kbps
+   627 | 2017-04-18 | 102400Kbps
+   681 | 2017-04-16 | 102400Kbps
+(5 rows)
+
+Time: First fetch (5 rows): 988.779 ms. All rows formatted: 988.882 ms
+ COUNT |   CPL_DT   | LAN_SPEED  
+-------+------------+------------
+   681 | 2017-04-16 | 102400Kbps
+   639 | 2017-04-15 | 102400Kbps
+   695 | 2017-04-17 | 102400Kbps
+   667 | 2017-04-19 | 102400Kbps
+   627 | 2017-04-18 | 102400Kbps
+(5 rows)
+
+Time: First fetch (5 rows): 1004.970 ms. All rows formatted: 1005.031 ms
+ COUNT |   CPL_DT   | LAN_SPEED  
+-------+------------+------------
+   627 | 2017-04-18 | 102400Kbps
+   639 | 2017-04-15 | 102400Kbps
+   695 | 2017-04-17 | 102400Kbps
+   667 | 2017-04-19 | 102400Kbps
+   681 | 2017-04-16 | 102400Kbps
+(5 rows)
+
+Time: First fetch (5 rows): 960.028 ms. All rows formatted: 960.070 ms
+ COUNT |   CPL_DT   | LAN_SPEED  
+-------+------------+------------
+   627 | 2017-04-18 | 102400Kbps
+   639 | 2017-04-15 | 102400Kbps
+   695 | 2017-04-17 | 102400Kbps
+   667 | 2017-04-19 | 102400Kbps
+   681 | 2017-04-16 | 102400Kbps
+(5 rows)
+
+Time: First fetch (5 rows): 1024.119 ms. All rows formatted: 1024.165 ms
+end .-execute_10.sh-exe_query.sh-sql3.sh at Wed Aug  9 09:47:48 CST 2017
+end .-execute_10.sh-exe_query.sh-sql3.sh at Wed Aug  9 09:47:48 CST 2017
+.-execute_10.sh-exe_query.sh-sql3.sh total time=1.028 s
+.-execute_10.sh-exe_query.sh-sql3.sh total time=1.098 s
+end .-execute_10.sh-exe_query.sh-sql3.sh at Wed Aug  9 09:47:48 CST 2017
+.-execute_10.sh-exe_query.sh-sql3.sh total time=1.030 s
+end .-execute_10.sh-exe_query.sh-sql3.sh at Wed Aug  9 09:47:48 CST 2017
+.-execute_10.sh-exe_query.sh-sql3.sh total time=1.010 s

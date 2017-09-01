@@ -1,0 +1,24 @@
+ERROR 4650:  Schema "TPC" does not exist
+   node_name    | node_state | export_address 
+----------------+------------+----------------
+ v_poc_node0001 | UP         | 134.96.238.231
+ v_poc_node0002 | UP         | 134.96.238.232
+ v_poc_node0003 | UP         | 134.96.238.233
+ v_poc_node0004 | UP         | 134.96.238.234
+ v_poc_node0005 | UP         | 134.96.238.235
+(5 rows)
+
+begin at Tue Aug 15 12:06:10 CST 2017 ...
+/opt/vertica/bin/admintools -t kill_host --hosts=edatest05 
+ERROR 4650:  Schema "TPC" does not exist
+   node_name    | node_state | export_address 
+----------------+------------+----------------
+ v_poc_node0001 | UP         | 134.96.238.231
+ v_poc_node0002 | UP         | 134.96.238.232
+ v_poc_node0003 | UP         | 134.96.238.233
+ v_poc_node0004 | UP         | 134.96.238.234
+ v_poc_node0005 | UP         | 134.96.238.235
+(5 rows)
+
+end at Tue Aug 15 12:06:11 CST 2017
+total time=1.066 s

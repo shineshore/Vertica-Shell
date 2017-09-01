@@ -1,0 +1,11 @@
+select 
+transaction_id,'Running' as Status
+from resource_acquisitions
+where transaction_id in 
+(select transaction_id from query_requests where is_executing is true)
+group by 1
+union all
+select 
+transaction_id,'Pending' as Status
+from resource_queues
+group by 1

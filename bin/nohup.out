@@ -1,0 +1,530 @@
+4.1.3 并发10查询测试
+begin  at Mon Aug 14 15:30:01 CST 2017 ...
+[15:30:01] Config file /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.3/4.1.3_con_10.cfg exist. 
+[15:30:01] [0] perl /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.3/app_test_1.pl APP_TEST_1_A_20170608.dir 
+[15:30:01] [0] perl /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.3/app_test_1.pl APP_TEST_1_C_20170608.dir 
+[15:30:01] [0] perl /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.3/app_test_1.pl APP_TEST_1_D_20170608.dir 
+[15:30:01] [0] perl /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.3/app_test_1.pl APP_TEST_1_F_20170608.dir 
+[15:30:01] [0] perl /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.3/app_test_1.pl APP_TEST_1_G_20170608.dir 
+[15:30:01] [0] perl /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.3/group_upload_1.pl GROUP_UPLOAD_1_A_20170608.dir 
+[15:30:01] [0] perl /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.3/group_upload_1.pl GROUP_UPLOAD_1_C_20170608.dir 
+[15:30:01] [0] perl /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.3/group_upload_1.pl GROUP_UPLOAD_1_D_20170608.dir 
+[15:30:01] [0] perl /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.3/group_upload_1.pl GROUP_UPLOAD_1_F_20170608.dir 
+[15:30:01] [0] perl /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.3/group_upload_1.pl GROUP_UPLOAD_1_G_20170608.dir 
+[15:30:01] main() = 0 
+end  at Mon Aug 14 15:30:01 CST 2017
+ total time=.028 s
+4.1.6 TPCDS_200G查询测试
+begin .-execute_4.1.6_tpcds_200g_query.sh at Mon Aug 14 16:27:19 CST 2017 ...
+end .-execute_4.1.6_tpcds_200g_query.sh at Mon Aug 14 16:31:13 CST 2017
+.-execute_4.1.6_tpcds_200g_query.sh total time=233.339 s
+4.1.6 TPCDS_1T查询测试
+begin .-execute_4.1.6_tpcds_1t_query.sh at Tue Aug 15 12:58:04 CST 2017 ...
+end .-execute_4.1.6_tpcds_1t_query.sh at Tue Aug 15 13:23:27 CST 2017
+.-execute_4.1.6_tpcds_1t_query.sh total time=1523.125 s
+4.1.6 TPCDS_200G查询测试
+begin .-execute_4.1.6_tpcds_200g_query.sh at Tue Aug 15 13:39:04 CST 2017 ...
+execute_4.1.6_tpcds_200g_query.sh: line 31: 347232 Killed                  vsql -e -U dbadmin -w dbadmin -f ${scriptDir}/4.1.6_tpcds_200g.sql > ${logFile}
+end .-execute_4.1.6_tpcds_200g_query.sh at Tue Aug 15 13:53:43 CST 2017
+.-execute_4.1.6_tpcds_200g_query.sh total time=878.665 s
+4.1.2 数据导出性能测试
+Tue Aug 15 14:50:42 CST 2017
+start exporting OFR_MAIN_ASSET_CUR
+start exporting OFR_MAIN_ASSET_CUR_1
+invoke OFR_MAIN_ASSET_CUR_1
+start exporting OFR_MAIN_ASSET_CUR_2
+invoke OFR_MAIN_ASSET_CUR_2
+start exporting OFR_MAIN_ASSET_CUR_3
+invoke OFR_MAIN_ASSET_CUR_3
+start exporting OFR_MAIN_ASSET_CUR_4
+invoke OFR_MAIN_ASSET_CUR_4
+start exporting OFR_MAIN_ASSET_CUR_5
+invoke OFR_MAIN_ASSET_CUR_5
+start exporting OFR_MAIN_ASSET_CUR_6
+invoke OFR_MAIN_ASSET_CUR_6
+4.1.4 并发60查询测试
+begin  at Tue Aug 15 14:52:24 CST 2017 ...
+[14:52:24] Config file /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/4.1.4_con_60.cfg exist. 
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query01.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query01.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query01.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query01.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query01.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query01.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query01.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query01.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query01.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query01.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query01.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query01.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query02.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query02.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query02.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query02.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query02.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query02.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query02.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query02.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query02.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query02.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query02.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query02.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query03.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query03.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query03.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query03.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query03.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query03.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query03.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query03.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query03.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query03.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query03.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query03.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query04.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query04.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query04.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query04.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query04.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query04.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query04.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query04.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query04.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query04.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query04.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query04.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query05.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query05.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query05.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query05.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query05.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query05.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query05.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query05.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query05.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query05.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query05.sql  
+[14:52:24] [0] vsql -h edatest01 -d POC -U dbadmin -w dbadmin -e -f /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.4/query05.sql  
+[14:52:24] main() = 0 
+end  at Tue Aug 15 14:52:24 CST 2017
+ total time=.196 s
+start exporting OFR_MAIN_ASSET_CUR_7
+invoke OFR_MAIN_ASSET_CUR_7
+start exporting OFR_MAIN_ASSET_CUR_8
+invoke OFR_MAIN_ASSET_CUR_8
+start exporting OFR_MAIN_ASSET_CUR_9
+invoke OFR_MAIN_ASSET_CUR_9
+start exporting OFR_MAIN_ASSET_CUR_10
+invoke OFR_MAIN_ASSET_CUR_10
+start exporting OFR_MAIN_ASSET_CUR_11
+invoke OFR_MAIN_ASSET_CUR_11
+start exporting OFR_MAIN_ASSET_CUR_12
+invoke OFR_MAIN_ASSET_CUR_12
+start exporting OFR_MAIN_ASSET_CUR_13
+invoke OFR_MAIN_ASSET_CUR_13
+start exporting OFR_MAIN_ASSET_CUR_14
+invoke OFR_MAIN_ASSET_CUR_14
+start exporting OFR_MAIN_ASSET_CUR_15
+invoke OFR_MAIN_ASSET_CUR_15
+start exporting OFR_MAIN_ASSET_CUR_16
+invoke OFR_MAIN_ASSET_CUR_16
+start exporting OFR_MAIN_ASSET_CUR_17
+invoke OFR_MAIN_ASSET_CUR_17
+start exporting OFR_MAIN_ASSET_CUR_18
+invoke OFR_MAIN_ASSET_CUR_18
+start exporting OFR_MAIN_ASSET_CUR_19
+invoke OFR_MAIN_ASSET_CUR_19
+start exporting OFR_MAIN_ASSET_CUR_20
+invoke OFR_MAIN_ASSET_CUR_20
+start exporting OFR_MAIN_ASSET_CUR_21
+invoke OFR_MAIN_ASSET_CUR_21
+start exporting OFR_MAIN_ASSET_CUR_22
+invoke OFR_MAIN_ASSET_CUR_22
+start exporting OFR_MAIN_ASSET_CUR_23
+invoke OFR_MAIN_ASSET_CUR_23
+start exporting OFR_MAIN_ASSET_CUR_24
+invoke OFR_MAIN_ASSET_CUR_24
+start exporting OFR_MAIN_ASSET_CUR_25
+invoke OFR_MAIN_ASSET_CUR_25
+start exporting OFR_MAIN_ASSET_CUR_26
+invoke OFR_MAIN_ASSET_CUR_26
+start exporting OFR_MAIN_ASSET_CUR_27
+invoke OFR_MAIN_ASSET_CUR_27
+start exporting OFR_MAIN_ASSET_CUR_28
+invoke OFR_MAIN_ASSET_CUR_28
+start exporting OFR_MAIN_ASSET_CUR_29
+invoke OFR_MAIN_ASSET_CUR_29
+start exporting OFR_MAIN_ASSET_CUR_30
+invoke OFR_MAIN_ASSET_CUR_30
+Tue Aug 15 15:09:12 CST 2017
+export OFR_MAIN_ASSET_CUR completed
+Tue Aug 15 15:09:12 CST 2017
+start exporting CATALOG_SALES
+start exporting CATALOG_SALES_1
+invoke CATALOG_SALES_1
+start exporting CATALOG_SALES_2
+invoke CATALOG_SALES_2
+start exporting CATALOG_SALES_3
+invoke CATALOG_SALES_3
+start exporting CATALOG_SALES_4
+invoke CATALOG_SALES_4
+start exporting CATALOG_SALES_5
+invoke CATALOG_SALES_5
+start exporting CATALOG_SALES_6
+invoke CATALOG_SALES_6
+4.1.2 数据导出性能测试
+Tue Aug 15 15:24:36 CST 2017
+start exporting OFR_MAIN_ASSET_CUR
+start exporting OFR_MAIN_ASSET_CUR_1
+invoke OFR_MAIN_ASSET_CUR_1
+start exporting OFR_MAIN_ASSET_CUR_2
+invoke OFR_MAIN_ASSET_CUR_2
+start exporting OFR_MAIN_ASSET_CUR_3
+invoke OFR_MAIN_ASSET_CUR_3
+start exporting OFR_MAIN_ASSET_CUR_4
+invoke OFR_MAIN_ASSET_CUR_4
+start exporting OFR_MAIN_ASSET_CUR_5
+invoke OFR_MAIN_ASSET_CUR_5
+start exporting OFR_MAIN_ASSET_CUR_6
+invoke OFR_MAIN_ASSET_CUR_6
+start exporting OFR_MAIN_ASSET_CUR_7
+invoke OFR_MAIN_ASSET_CUR_7
+start exporting OFR_MAIN_ASSET_CUR_8
+invoke OFR_MAIN_ASSET_CUR_8
+start exporting OFR_MAIN_ASSET_CUR_9
+invoke OFR_MAIN_ASSET_CUR_9
+start exporting OFR_MAIN_ASSET_CUR_10
+invoke OFR_MAIN_ASSET_CUR_10
+start exporting OFR_MAIN_ASSET_CUR_11
+invoke OFR_MAIN_ASSET_CUR_11
+start exporting OFR_MAIN_ASSET_CUR_12
+invoke OFR_MAIN_ASSET_CUR_12
+start exporting OFR_MAIN_ASSET_CUR_13
+invoke OFR_MAIN_ASSET_CUR_13
+start exporting OFR_MAIN_ASSET_CUR_14
+invoke OFR_MAIN_ASSET_CUR_14
+start exporting OFR_MAIN_ASSET_CUR_15
+invoke OFR_MAIN_ASSET_CUR_15
+start exporting OFR_MAIN_ASSET_CUR_16
+invoke OFR_MAIN_ASSET_CUR_16
+start exporting OFR_MAIN_ASSET_CUR_17
+invoke OFR_MAIN_ASSET_CUR_17
+start exporting OFR_MAIN_ASSET_CUR_18
+invoke OFR_MAIN_ASSET_CUR_18
+start exporting OFR_MAIN_ASSET_CUR_19
+invoke OFR_MAIN_ASSET_CUR_19
+start exporting OFR_MAIN_ASSET_CUR_20
+invoke OFR_MAIN_ASSET_CUR_20
+start exporting OFR_MAIN_ASSET_CUR_21
+invoke OFR_MAIN_ASSET_CUR_21
+start exporting OFR_MAIN_ASSET_CUR_22
+invoke OFR_MAIN_ASSET_CUR_22
+start exporting OFR_MAIN_ASSET_CUR_23
+invoke OFR_MAIN_ASSET_CUR_23
+start exporting OFR_MAIN_ASSET_CUR_24
+invoke OFR_MAIN_ASSET_CUR_24
+start exporting OFR_MAIN_ASSET_CUR_25
+invoke OFR_MAIN_ASSET_CUR_25
+start exporting OFR_MAIN_ASSET_CUR_26
+invoke OFR_MAIN_ASSET_CUR_26
+start exporting OFR_MAIN_ASSET_CUR_27
+invoke OFR_MAIN_ASSET_CUR_27
+start exporting OFR_MAIN_ASSET_CUR_28
+invoke OFR_MAIN_ASSET_CUR_28
+start exporting OFR_MAIN_ASSET_CUR_29
+invoke OFR_MAIN_ASSET_CUR_29
+start exporting OFR_MAIN_ASSET_CUR_30
+invoke OFR_MAIN_ASSET_CUR_30
+Tue Aug 15 15:43:24 CST 2017
+export OFR_MAIN_ASSET_CUR completed
+Tue Aug 15 15:43:24 CST 2017
+start exporting CATALOG_SALES
+start exporting CATALOG_SALES_1
+invoke CATALOG_SALES_1
+start exporting CATALOG_SALES_2
+invoke CATALOG_SALES_2
+start exporting CATALOG_SALES_3
+invoke CATALOG_SALES_3
+start exporting CATALOG_SALES_4
+invoke CATALOG_SALES_4
+start exporting CATALOG_SALES_5
+invoke CATALOG_SALES_5
+start exporting CATALOG_SALES_6
+invoke CATALOG_SALES_6
+start exporting CATALOG_SALES_7
+invoke CATALOG_SALES_7
+start exporting CATALOG_SALES_8
+invoke CATALOG_SALES_8
+start exporting CATALOG_SALES_9
+invoke CATALOG_SALES_9
+start exporting CATALOG_SALES_10
+invoke CATALOG_SALES_10
+start exporting CATALOG_SALES_11
+invoke CATALOG_SALES_11
+start exporting CATALOG_SALES_12
+invoke CATALOG_SALES_12
+start exporting CATALOG_SALES_13
+invoke CATALOG_SALES_13
+start exporting CATALOG_SALES_14
+invoke CATALOG_SALES_14
+start exporting CATALOG_SALES_15
+invoke CATALOG_SALES_15
+start exporting CATALOG_SALES_16
+invoke CATALOG_SALES_16
+start exporting CATALOG_SALES_17
+invoke CATALOG_SALES_17
+start exporting CATALOG_SALES_18
+invoke CATALOG_SALES_18
+start exporting CATALOG_SALES_19
+invoke CATALOG_SALES_19
+start exporting CATALOG_SALES_20
+invoke CATALOG_SALES_20
+start exporting CATALOG_SALES_21
+invoke CATALOG_SALES_21
+start exporting CATALOG_SALES_22
+invoke CATALOG_SALES_22
+start exporting CATALOG_SALES_23
+invoke CATALOG_SALES_23
+start exporting CATALOG_SALES_24
+invoke CATALOG_SALES_24
+start exporting CATALOG_SALES_25
+invoke CATALOG_SALES_25
+start exporting CATALOG_SALES_26
+invoke CATALOG_SALES_26
+start exporting CATALOG_SALES_27
+invoke CATALOG_SALES_27
+start exporting CATALOG_SALES_28
+invoke CATALOG_SALES_28
+start exporting CATALOG_SALES_29
+invoke CATALOG_SALES_29
+start exporting CATALOG_SALES_30
+invoke CATALOG_SALES_30
+Tue Aug 15 16:22:30 CST 2017
+export CATALOG_SALES completed
+4.1.6 TPCDS_200G查询测试
+begin .-execute_4.1.6_tpcds_200g_query.sh at Tue Aug 15 16:23:10 CST 2017 ...
+end .-execute_4.1.6_tpcds_200g_query.sh at Tue Aug 15 16:24:50 CST 2017
+.-execute_4.1.6_tpcds_200g_query.sh total time=100.233 s
+4.1.6 TPCDS_1T查询测试
+begin .-execute_4.1.6_tpcds_1t_query.sh at Tue Aug 15 16:27:05 CST 2017 ...
+end .-execute_4.1.6_tpcds_1t_query.sh at Tue Aug 15 16:43:47 CST 2017
+.-execute_4.1.6_tpcds_1t_query.sh total time=1001.568 s
+4.1.3 并发10查询测试
+begin  at Tue Aug 15 16:47:13 CST 2017 ...
+[16:47:13] Config file /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.3/4.1.3_con_10.cfg exist. 
+[16:47:13] [0] perl /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.3/app_test_1.pl APP_TEST_1_A_20170608.dir 
+[16:47:13] [0] perl /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.3/app_test_1.pl APP_TEST_1_C_20170608.dir 
+[16:47:13] [0] perl /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.3/app_test_1.pl APP_TEST_1_D_20170608.dir 
+[16:47:13] [0] perl /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.3/app_test_1.pl APP_TEST_1_F_20170608.dir 
+[16:47:13] [0] perl /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.3/app_test_1.pl APP_TEST_1_G_20170608.dir 
+[16:47:13] [0] perl /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.3/group_upload_1.pl GROUP_UPLOAD_1_A_20170608.dir 
+[16:47:13] [0] perl /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.3/group_upload_1.pl GROUP_UPLOAD_1_C_20170608.dir 
+[16:47:13] [0] perl /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.3/group_upload_1.pl GROUP_UPLOAD_1_D_20170608.dir 
+[16:47:13] [0] perl /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.3/group_upload_1.pl GROUP_UPLOAD_1_F_20170608.dir 
+[16:47:13] [0] perl /home/dbadmin/ZJTELCOM_POC/sql/4.1/4.1.3/group_upload_1.pl GROUP_UPLOAD_1_G_20170608.dir 
+[16:47:13] main() = 0 
+end  at Tue Aug 15 16:47:13 CST 2017
+ total time=.041 s
+4.1.1 数据加载性能测试
+Tue Aug 15 17:07:57 CST 2017
+start loading OFR_MAIN_ASSET_CUR
+start loading OFR_MAIN_ASSET_CUR_1
+set session resource_pool=loading_pool;
+SET
+Time: First fetch (0 rows): 0.253 ms. All rows formatted: 0.271 ms
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_1;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 2378.656 ms. All rows formatted: 2378.677 ms
+invoke OFR_MAIN_ASSET_CUR_1
+start loading OFR_MAIN_ASSET_CUR_2
+set session resource_pool=loading_pool;
+SET
+Time: First fetch (0 rows): 0.298 ms. All rows formatted: 0.319 ms
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_2;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 677.798 ms. All rows formatted: 677.821 ms
+invoke OFR_MAIN_ASSET_CUR_2
+start loading OFR_MAIN_ASSET_CUR_3
+set session resource_pool=loading_pool;
+SET
+Time: First fetch (0 rows): 0.345 ms. All rows formatted: 0.359 ms
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_3;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 405.577 ms. All rows formatted: 405.600 ms
+invoke OFR_MAIN_ASSET_CUR_3
+start loading OFR_MAIN_ASSET_CUR_4
+set session resource_pool=loading_pool;
+SET
+Time: First fetch (0 rows): 0.341 ms. All rows formatted: 0.358 ms
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_4;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 292.716 ms. All rows formatted: 292.746 ms
+invoke OFR_MAIN_ASSET_CUR_4
+start loading OFR_MAIN_ASSET_CUR_5
+set session resource_pool=loading_pool;
+SET
+Time: First fetch (0 rows): 0.222 ms. All rows formatted: 0.235 ms
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_5;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 1294.410 ms. All rows formatted: 1294.440 ms
+invoke OFR_MAIN_ASSET_CUR_5
+start loading OFR_MAIN_ASSET_CUR_6
+set session resource_pool=loading_pool;
+SET
+Time: First fetch (0 rows): 0.608 ms. All rows formatted: 0.626 ms
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_6;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 1046.435 ms. All rows formatted: 1046.458 ms
+invoke OFR_MAIN_ASSET_CUR_6
+start loading OFR_MAIN_ASSET_CUR_7
+set session resource_pool=loading_pool;
+SET
+Time: First fetch (0 rows): 0.652 ms. All rows formatted: 0.673 ms
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_7;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 583.311 ms. All rows formatted: 583.338 ms
+invoke OFR_MAIN_ASSET_CUR_7
+start loading OFR_MAIN_ASSET_CUR_8
+set session resource_pool=loading_pool;
+SET
+Time: First fetch (0 rows): 0.336 ms. All rows formatted: 0.348 ms
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_8;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 466.650 ms. All rows formatted: 466.687 ms
+invoke OFR_MAIN_ASSET_CUR_8
+start loading OFR_MAIN_ASSET_CUR_9
+set session resource_pool=loading_pool;
+SET
+Time: First fetch (0 rows): 0.201 ms. All rows formatted: 0.211 ms
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_9;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 241.117 ms. All rows formatted: 241.148 ms
+invoke OFR_MAIN_ASSET_CUR_9
+start loading OFR_MAIN_ASSET_CUR_10
+set session resource_pool=loading_pool;
+SET
+Time: First fetch (0 rows): 0.224 ms. All rows formatted: 0.238 ms
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_10;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 341.707 ms. All rows formatted: 341.738 ms
+invoke OFR_MAIN_ASSET_CUR_10
+start loading OFR_MAIN_ASSET_CUR_11
+set session resource_pool=loading_pool;
+SET
+Time: First fetch (0 rows): 0.254 ms. All rows formatted: 0.268 ms
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_11;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 5045.896 ms. All rows formatted: 5045.930 ms
+invoke OFR_MAIN_ASSET_CUR_11
+start loading OFR_MAIN_ASSET_CUR_12
+set session resource_pool=loading_pool;
+SET
+Time: First fetch (0 rows): 0.339 ms. All rows formatted: 0.356 ms
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_12;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 753.255 ms. All rows formatted: 753.280 ms
+invoke OFR_MAIN_ASSET_CUR_12
+start loading OFR_MAIN_ASSET_CUR_13
+set session resource_pool=loading_pool;
+SET
+Time: First fetch (0 rows): 0.284 ms. All rows formatted: 0.295 ms
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_13;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 657.657 ms. All rows formatted: 657.677 ms
+invoke OFR_MAIN_ASSET_CUR_13
+start loading OFR_MAIN_ASSET_CUR_14
+set session resource_pool=loading_pool;
+SET
+Time: First fetch (0 rows): 0.263 ms. All rows formatted: 0.277 ms
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_14;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 350.225 ms. All rows formatted: 350.243 ms
+invoke OFR_MAIN_ASSET_CUR_14
+start loading OFR_MAIN_ASSET_CUR_15
+set session resource_pool=loading_pool;
+SET
+Time: First fetch (0 rows): 0.257 ms. All rows formatted: 0.271 ms
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_15;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 2334.186 ms. All rows formatted: 2334.209 ms
+invoke OFR_MAIN_ASSET_CUR_15
+start loading OFR_MAIN_ASSET_CUR_16
+set session resource_pool=loading_pool;
+SET
+Time: First fetch (0 rows): 0.282 ms. All rows formatted: 0.296 ms
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_16;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 891.696 ms. All rows formatted: 891.718 ms
+invoke OFR_MAIN_ASSET_CUR_16
+start loading OFR_MAIN_ASSET_CUR_17
+set session resource_pool=loading_pool;
+SET
+Time: First fetch (0 rows): 0.450 ms. All rows formatted: 0.467 ms
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_17;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 3470.442 ms. All rows formatted: 3470.465 ms
+invoke OFR_MAIN_ASSET_CUR_17
+start loading OFR_MAIN_ASSET_CUR_18
+set session resource_pool=loading_pool;
+SET
+Time: First fetch (0 rows): 0.244 ms. All rows formatted: 0.258 ms
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_18;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 560.821 ms. All rows formatted: 560.852 ms
+invoke OFR_MAIN_ASSET_CUR_18
+start loading OFR_MAIN_ASSET_CUR_19
+set session resource_pool=loading_pool;
+SET
+Time: First fetch (0 rows): 0.302 ms. All rows formatted: 0.319 ms
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_19;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 1797.066 ms. All rows formatted: 1797.091 ms
+invoke OFR_MAIN_ASSET_CUR_19
+start loading OFR_MAIN_ASSET_CUR_20
+set session resource_pool=loading_pool;
+SET
+Time: First fetch (0 rows): 0.244 ms. All rows formatted: 0.261 ms
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_20;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 383.863 ms. All rows formatted: 383.892 ms
+invoke OFR_MAIN_ASSET_CUR_20
+start loading OFR_MAIN_ASSET_CUR_21
+set session resource_pool=loading_pool;
+SET
+Time: First fetch (0 rows): 0.331 ms. All rows formatted: 0.349 ms
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_21;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 1905.932 ms. All rows formatted: 1905.955 ms
+invoke OFR_MAIN_ASSET_CUR_21
+start loading OFR_MAIN_ASSET_CUR_22
+set session resource_pool=loading_pool;
+SET
+Time: First fetch (0 rows): 0.268 ms. All rows formatted: 0.284 ms
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_22;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 1549.614 ms. All rows formatted: 1549.637 ms
+invoke OFR_MAIN_ASSET_CUR_22
+start loading OFR_MAIN_ASSET_CUR_23
+set session resource_pool=loading_pool;
+SET
+Time: First fetch (0 rows): 0.242 ms. All rows formatted: 0.255 ms
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_23;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 556.742 ms. All rows formatted: 556.763 ms
+invoke OFR_MAIN_ASSET_CUR_23
+start loading OFR_MAIN_ASSET_CUR_24
+set session resource_pool=loading_pool;
+SET
+Time: First fetch (0 rows): 0.249 ms. All rows formatted: 0.263 ms
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_24;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 1110.132 ms. All rows formatted: 1110.167 ms
+invoke OFR_MAIN_ASSET_CUR_24
+start loading OFR_MAIN_ASSET_CUR_25
+set session resource_pool=loading_pool;
+SET
+Time: First fetch (0 rows): 0.253 ms. All rows formatted: 0.268 ms
+truncate table ZJBIC.OFR_MAIN_ASSET_CUR_A_25;
+TRUNCATE TABLE
+Time: First fetch (0 rows): 651.054 ms. All rows formatted: 651.083 ms
+invoke OFR_MAIN_ASSET_CUR_25

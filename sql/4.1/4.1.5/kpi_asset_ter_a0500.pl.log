@@ -1,0 +1,202 @@
+000 A 000
+A
+BILL_MONTH  = 201705  
+CUR_MONTH   = 201706   
+NEXT_MONTH1 = 201707 
+NEXT_MONTH2 = 201708 
+Timing is on.
+CREATE LOCAL TEMP TABLE TMP_3G_TER_A_2 ON COMMIT PRESERVE ROWS
+AS
+(
+SELECT    P1.Asset_Row_Id
+          ,P1.Esn_Id
+          ,P1.Register_Dt
+          ,P1.Accs_Nbr
+          ,P1.Equip_Id
+          ,P1.Company    
+          ,P1.Term_Model_Id
+          ,P1.Ter_Model  
+          ,P1.SHAOHAO_FLG
+          ,p1.TERM_ROW_ID
+          ,p1.Intelligent_Flg
+          ,p1.TERM_TYPE
+          ,P1.NEW_ESN_FLG
+FROM      ZJBIC.OFR_TERM_USE_CUR_Z  P1
+WHERE     LATN_ID = 10
+)
+ORDER BY Asset_Row_Id, Esn_Id, Equip_Id 
+SEGMENTED BY HASH (Asset_Row_Id) ALL NODES
+;
+CREATE TABLE
+Time: First fetch (0 rows): 2622.152 ms. All rows formatted: 2622.179 ms
+CREATE LOCAL TEMP TABLE TMP_OFR_MAIN_ASSET_A_1_TMP ON COMMIT PRESERVE ROWS
+AS
+(
+select
+P1.ASSET_ROW_ID
+,P1.Telecom_Area_Id
+FROM BSSDATA.OFR_MAIN_ASSET_HIST_A    P1
+INNER JOIN DMN.CAG_COM_STD_PRD_LVL4  P12
+ON P1.STD_PRD_LVL4_ID = P12.STD_PRD_LVL4_ID
+AND P12.PRD_NAME='CDMA'
+INNER join KPI.KPI_ASSET_FLG_A   P3
+ON P1.ASSET_ROW_ID = P3.ASSET_ROW_ID
+and P3.ON_SERV_FLG = 1
+and P3.DATE_CD = TO_DATE('20170608' ,'YYYYMMDD')  
+WHERE P1.Start_Dt <= TO_DATE('20170608'  ,'YYYYMMDD')  
+  and P1.End_Dt   >  TO_DATE('20170608' ,'YYYYMMDD')  
+  and P1.STAT_NAME <> '不活动' 
+                
+)
+ORDER BY Asset_Row_Id,Telecom_Area_Id
+SEGMENTED BY HASH (Asset_Row_Id) ALL NODES
+;
+CREATE TABLE
+Time: First fetch (0 rows): 4253.175 ms. All rows formatted: 4253.194 ms
+CREATE LOCAL TEMP TABLE TMP_OFR_MAIN_ASSET_A_1 ON COMMIT PRESERVE ROWS
+AS
+(
+select 
+P1.ASSET_ROW_ID
+,P1.Telecom_Area_Id
+,MAX(CASE WHEN p2.Cdsc_Row_Id IN
+            ( '1-18TGP-1'
+             ,'1-18TGP-2'
+             ,'1-18TGP-3'
+             ,'1-18TGP-4'
+             ,'1-1AAKH-1'
+             ,'1-1AAKH-2'
+             ,'1-1AAKH-3'
+             ,'1-1ANI7-1'
+             ,'1-1CD5L-1'
+             ,'1-1CD5L-2'
+             ,'1-1CD5L-3'
+             ,'1-1CD5L-4'
+             ,'1-1CD6D-1'
+             ,'1-WCLGAV2'
+             ,'1-WCLT15K'
+             ,'1-WCMBDHI'
+             ,'1-WCMBDHY'
+             ,'1-WCN2528'
+             ,'1-WCN584K'
+             ,'1-WCN5850'
+             ,'1-17F80-1'
+            )
+                 THEN 1 ELSE 0 END) AS Free_Flg              
+            ,MAX(CASE WHEN P2.Cdsc_Row_Id='1-17F80-2' THEN 1 ELSE 0 END) AS Corp_Pay_Flg          
+            ,MAX(CASE WHEN P2.Cdsc_Row_Id='1-19849-1' THEN 1 ELSE 0 END) AS Test_Flg
+FROM TMP_OFR_MAIN_ASSET_A_1_TMP   P1
+LEFT join BSSDATA.OFR_ASSET_CDSC_HIST_A   P2
+ON P1.ASSET_ROW_ID = P2.ASSET_ROW_ID
+and P2.Start_Dt <= TO_DATE('20170608'  ,'YYYYMMDD') 
+and P2.End_Dt   >  TO_DATE('20170608'  ,'YYYYMMDD')
+and P2.STAT_NAME = '使用中'
+AND P2.Cdsc_Row_Id IN
+            ( '1-18TGP-1'
+             ,'1-18TGP-2'
+             ,'1-18TGP-3'
+             ,'1-18TGP-4'
+             ,'1-1AAKH-1'
+             ,'1-1AAKH-2'
+             ,'1-1AAKH-3'
+             ,'1-1ANI7-1'
+             ,'1-1CD5L-1'
+             ,'1-1CD5L-2'
+             ,'1-1CD5L-3'
+             ,'1-1CD5L-4'
+             ,'1-1CD6D-1'
+             ,'1-WCLGAV2'
+             ,'1-WCLT15K'
+             ,'1-WCMBDHI'
+             ,'1-WCMBDHY'
+             ,'1-WCN2528'
+             ,'1-WCN584K'
+             ,'1-WCN5850'
+             ,'1-17F80-1'
+             ,'1-17F80-2'
+             ,'1-19849-1'
+            )
+GROUP BY P1.ASSET_ROW_ID 
+,P1.Telecom_Area_Id 
+)
+ORDER BY Asset_Row_Id,Telecom_Area_Id
+SEGMENTED BY HASH (Asset_Row_Id) ALL NODES
+;
+CREATE TABLE
+Time: First fetch (0 rows): 2851.818 ms. All rows formatted: 2851.834 ms
+CREATE LOCAL TEMP TABLE TMP_3G_TER_A ON COMMIT PRESERVE ROWS
+AS
+(
+select 
+P1.*
+,P2.Telecom_Area_Id
+FROM TMP_3G_TER_A_2   P1
+INNER join TMP_OFR_MAIN_ASSET_A_1  P2
+ON P1.ASSET_ROW_ID = P2.ASSET_ROW_ID
+and P2.Free_Flg = 0
+and P2.Corp_Pay_Flg = 0
+and P2.Test_Flg = 0
+)
+ORDER BY Asset_Row_Id, Telecom_Area_Id
+SEGMENTED BY HASH (Asset_Row_Id) ALL NODES
+;
+CREATE TABLE
+Time: First fetch (0 rows): 3708.175 ms. All rows formatted: 3708.195 ms
+DELETE FROM KPI.KPI_ASSET_TER_A
+WHERE (DATE_CD = TO_DATE('20170608'  ,'YYYYMMDD') or DATE_CD < TO_DATE('20170608'  ,'YYYYMMDD') - 62 )
+;
+ OUTPUT  
+---------
+ 2500781
+(1 row)
+
+Time: First fetch (1 row): 373.842 ms. All rows formatted: 373.893 ms
+INSERT INTO KPI.KPI_ASSET_TER_A
+(
+Date_Cd
+,Esn_Id
+,Esn_New_Dt
+,Asset_Row_Id
+,Accs_Nbr
+,Register_Dt
+,Telecom_Area_Id
+,Equip_Id
+,Shaohao_Flg
+,Term_Row_Id
+,Intelligent_Flg
+,Company
+,Ter_Model
+,Term_Type
+,Latn_Id
+)
+select 
+TO_DATE('20170608'  ,'YYYYMMDD')
+,P1.Esn_Id
+,CASE WHEN NEW_ESN_FLG = 1 THEN TO_DATE('20170608' ,'YYYYMMDD') else P3.Esn_New_Dt END 
+,P1.Asset_Row_Id
+,P1.Accs_Nbr
+,P1.Register_Dt
+,TO_NUMBER(P1.Telecom_Area_Id)
+,P1.Equip_Id
+,P1.Shaohao_Flg
+,P1.Term_Row_Id
+,P1.Intelligent_Flg
+,P1.Company
+,P1.Ter_Model
+,P1.Term_Type
+,10
+FROM TMP_3G_TER_A   P1
+LEFT join KPI.KPI_ASSET_TER_A  p3
+ON P1.ESN_ID = P3.ESN_ID
+and p3.DATE_CD = TO_DATE('20170608' ,'YYYYMMDD') - 1 
+and LATN_ID = 10
+;
+ OUTPUT  
+---------
+ 2500781
+(1 row)
+
+Time: First fetch (1 row): 3846.663 ms. All rows formatted: 3846.689 ms
+run_vsql_command() = 0
+0.00user 0.00system 0:17.67elapsed 0%CPU (0avgtext+0avgdata 10256maxresident)k
+32inputs+16outputs (0major+1370minor)pagefaults 0swaps

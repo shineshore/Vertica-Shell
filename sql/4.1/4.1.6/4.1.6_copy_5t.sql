@@ -1,0 +1,26 @@
+
+copy tpcds_5t.call_center                   from   '/data/SOURCE/tpcds_5t/call_center.dat'    ON ANY NODE DELIMITER '|' DIRECT REJECTMAX 10;
+copy tpcds_5t.catalog_page                  from   '/data/SOURCE/tpcds_5t/catalog_page.dat'          ON ANY NODE DELIMITER '|' DIRECT REJECTMAX 10;
+copy tpcds_5t.catalog_returns               from   '/data/SOURCE/tpcds_5t/catalog_returns.dat'       ON ANY NODE DELIMITER '|' DIRECT REJECTMAX 10;
+copy tpcds_5t.customer                      from   '/data/SOURCE/tpcds_5t/customer.dat'              ON ANY NODE DELIMITER '|' DIRECT REJECTMAX 10;
+copy tpcds_5t.customer_address              from   '/data/SOURCE/tpcds_5t/customer_address.dat'      ON ANY NODE DELIMITER '|' DIRECT REJECTMAX 10;
+copy tpcds_5t.customer_demographics         from   '/data/SOURCE/tpcds_5t/customer_demographics.dat' ON ANY NODE DELIMITER '|' DIRECT REJECTMAX 10;
+copy tpcds_5t.date_dim                      from   '/data/SOURCE/tpcds_5t/date_dim.dat.dat'              ON ANY NODE DELIMITER '|' DIRECT REJECTMAX 10;
+copy tpcds_5t.dbgen_version                 from   '/data/SOURCE/tpcds_5t/dbgen_version.dat'         ON ANY NODE DELIMITER '|' DIRECT REJECTMAX 10;
+copy tpcds_5t.household_demographics        from   '/data/SOURCE/tpcds_5t/household_demographics.dat' ON ANY NODE DELIMITER '|' DIRECT REJECTMAX 10;
+copy tpcds_5t.income_band                   from   '/data/SOURCE/tpcds_5t/income_band.dat'           ON ANY NODE DELIMITER '|' DIRECT REJECTMAX 10;
+copy tpcds_5t.inventory                     from   '/data/SOURCE/tpcds_5t/inventory.dat'             ON ANY NODE DELIMITER '|' DIRECT REJECTMAX 10;
+copy tpcds_5t.item                          from   '/data/SOURCE/tpcds_5t/item.dat'                  ON ANY NODE DELIMITER '|' DIRECT REJECTMAX 10;
+copy tpcds_5t.promotion                     from   '/data/SOURCE/tpcds_5t/promotion.dat'             ON ANY NODE DELIMITER '|' DIRECT REJECTMAX 10;
+copy tpcds_5t.reason                        from   '/data/SOURCE/tpcds_5t/reason.dat'                ON ANY NODE DELIMITER '|' DIRECT REJECTMAX 10;
+copy tpcds_5t.ship_mode                     from   '/data/SOURCE/tpcds_5t/ship_mode.dat'             ON ANY NODE DELIMITER '|' DIRECT REJECTMAX 10;
+copy tpcds_5t.store                         from   '/data/SOURCE/tpcds_5t/store.dat'                 ON ANY NODE DELIMITER '|' DIRECT REJECTMAX 10;
+copy tpcds_5t.store_returns                 from   '/data/SOURCE/tpcds_5t/store_returns.dat'         ON ANY NODE DELIMITER '|' DIRECT REJECTMAX 10;
+copy tpcds_5t.store_sales                   from   '/data/SOURCE/tpcds_5t/store_sales.dat'           ON ANY NODE DELIMITER '|' DIRECT REJECTMAX 10;
+copy tpcds_5t.time_dim                      from   '/data/SOURCE/tpcds_5t/time_dim.dat'              ON ANY NODE DELIMITER '|' DIRECT REJECTMAX 10;
+copy tpcds_5t.warehouse                     from   '/data/SOURCE/tpcds_5t/warehouse.dat'             ON ANY NODE DELIMITER '|' DIRECT REJECTMAX 10;
+copy tpcds_5t.web_page                      from   '/data/SOURCE/tpcds_5t/web_page.dat'              ON ANY NODE DELIMITER '|' DIRECT REJECTMAX 10;
+copy tpcds_5t.web_returns                   from   '/data/SOURCE/tpcds_5t/web_returns.dat'           ON ANY NODE DELIMITER '|' DIRECT REJECTMAX 10;
+copy tpcds_5t.web_sales                     from   '/data/SOURCE/tpcds_5t/web_sales.dat'             ON ANY NODE DELIMITER '|' DIRECT REJECTMAX 10;
+copy tpcds_5t.web_site                      from   '/data/SOURCE/tpcds_5t/web_site.dat'             ON ANY NODE DELIMITER '|' DIRECT REJECTMAX 10;
+copy tpcds_5t.catalog_sales                 from   '/data/SOURCE/tpcds_5t/catalog_sales.dat'         ON ANY NODE DELIMITER '|' DIRECT REJECTMAX 10;

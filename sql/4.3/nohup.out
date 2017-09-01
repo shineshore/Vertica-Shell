@@ -1,0 +1,5 @@
+copy tpc.store_sales from '/data/SOURCE/tpcds_200g/store_sales.dat' on any node delimiter '|' direct;
+vsql:copy.sql:1: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+vsql:copy.sql:1: connection to server was lost

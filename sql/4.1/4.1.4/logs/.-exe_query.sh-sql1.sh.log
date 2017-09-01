@@ -1,0 +1,14 @@
+begin .-exe_query.sh-sql1.sh at Wed Aug  9 09:41:11 CST 2017 ...
+Timing is on.
+  COUNT  |  DATE_CD   
+---------+------------
+ 4016857 | 2017-04-15
+ 3987890 | 2017-04-16
+ 3989224 | 2017-04-17
+ 3990987 | 2017-04-19
+ 3989864 | 2017-04-18
+(5 rows)
+
+Time: First fetch (5 rows): 477.214 ms. All rows formatted: 477.293 ms
+end .-exe_query.sh-sql1.sh at Wed Aug  9 09:41:12 CST 2017
+.-exe_query.sh-sql1.sh total time=.552 s

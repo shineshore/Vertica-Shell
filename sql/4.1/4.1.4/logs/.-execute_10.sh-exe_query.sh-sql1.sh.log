@@ -1,0 +1,141 @@
+begin .-execute_10.sh-exe_query.sh-sql1.sh at Wed Aug  9 09:47:40 CST 2017 ...
+SET
+Timing is on.
+SET
+Timing is on.
+SET
+Timing is on.
+SET
+Timing is on.
+SET
+Timing is on.
+SET
+Timing is on.
+SET
+Timing is on.
+SET
+Timing is on.
+SET
+Timing is on.
+SET
+Timing is on.
+  COUNT  |  DATE_CD   
+---------+------------
+ 3989224 | 2017-04-17
+ 3990987 | 2017-04-19
+ 4016857 | 2017-04-15
+ 3987890 | 2017-04-16
+ 3989864 | 2017-04-18
+(5 rows)
+
+Time: First fetch (5 rows): 2133.368 ms. All rows formatted: 2133.432 ms
+  COUNT  |  DATE_CD   
+---------+------------
+ 3990987 | 2017-04-19
+ 3989224 | 2017-04-17
+ 3989864 | 2017-04-18
+ 4016857 | 2017-04-15
+ 3987890 | 2017-04-16
+(5 rows)
+
+Time: First fetch (5 rows): 2000.696 ms. All rows formatted: 2000.765 ms
+  COUNT  |  DATE_CD   
+---------+------------
+ 3989224 | 2017-04-17
+ 3990987 | 2017-04-19
+ 4016857 | 2017-04-15
+ 3987890 | 2017-04-16
+ 3989864 | 2017-04-18
+(5 rows)
+
+Time: First fetch (5 rows): 2041.420 ms. All rows formatted: 2041.483 ms
+  COUNT  |  DATE_CD   
+---------+------------
+ 3989864 | 2017-04-18
+ 3989224 | 2017-04-17
+ 3990987 | 2017-04-19
+ 4016857 | 2017-04-15
+ 3987890 | 2017-04-16
+(5 rows)
+
+Time: First fetch (5 rows): 2030.091 ms. All rows formatted: 2030.145 ms
+end .-execute_10.sh-exe_query.sh-sql1.sh at Wed Aug  9 09:47:42 CST 2017
+  COUNT  |  DATE_CD   
+---------+------------
+ 3989864 | 2017-04-18
+ 3989224 | 2017-04-17
+ 3990987 | 2017-04-19
+ 4016857 | 2017-04-15
+ 3987890 | 2017-04-16
+(5 rows)
+
+Time: First fetch (5 rows): 2028.311 ms. All rows formatted: 2028.350 ms
+.-execute_10.sh-exe_query.sh-sql1.sh total time=2.229 s
+end .-execute_10.sh-exe_query.sh-sql1.sh at Wed Aug  9 09:47:42 CST 2017
+.-execute_10.sh-exe_query.sh-sql1.sh total time=2.241 s
+end .-execute_10.sh-exe_query.sh-sql1.sh at Wed Aug  9 09:47:42 CST 2017
+.-execute_10.sh-exe_query.sh-sql1.sh total time=2.259 s
+end .-execute_10.sh-exe_query.sh-sql1.sh at Wed Aug  9 09:47:42 CST 2017
+end .-execute_10.sh-exe_query.sh-sql1.sh at Wed Aug  9 09:47:42 CST 2017
+.-execute_10.sh-exe_query.sh-sql1.sh total time=2.247 s
+.-execute_10.sh-exe_query.sh-sql1.sh total time=2.243 s
+  COUNT  |  DATE_CD   
+---------+------------
+ 3989224 | 2017-04-17
+ 3990987 | 2017-04-19
+ 4016857 | 2017-04-15
+ 3987890 | 2017-04-16
+ 3989864 | 2017-04-18
+(5 rows)
+
+Time: First fetch (5 rows): 2359.483 ms. All rows formatted: 2359.536 ms
+end .-execute_10.sh-exe_query.sh-sql1.sh at Wed Aug  9 09:47:43 CST 2017
+.-execute_10.sh-exe_query.sh-sql1.sh total time=2.584 s
+  COUNT  |  DATE_CD   
+---------+------------
+ 4016857 | 2017-04-15
+ 3987890 | 2017-04-16
+ 3989224 | 2017-04-17
+ 3990987 | 2017-04-19
+ 3989864 | 2017-04-18
+(5 rows)
+
+Time: First fetch (5 rows): 2634.799 ms. All rows formatted: 2634.854 ms
+  COUNT  |  DATE_CD   
+---------+------------
+ 4016857 | 2017-04-15
+ 3987890 | 2017-04-16
+ 3989224 | 2017-04-17
+ 3990987 | 2017-04-19
+ 3989864 | 2017-04-18
+(5 rows)
+
+Time: First fetch (5 rows): 2668.213 ms. All rows formatted: 2668.266 ms
+  COUNT  |  DATE_CD   
+---------+------------
+ 3987890 | 2017-04-16
+ 4016857 | 2017-04-15
+ 3989224 | 2017-04-17
+ 3990987 | 2017-04-19
+ 3989864 | 2017-04-18
+(5 rows)
+
+Time: First fetch (5 rows): 2654.466 ms. All rows formatted: 2654.509 ms
+  COUNT  |  DATE_CD   
+---------+------------
+ 3989864 | 2017-04-18
+ 4016857 | 2017-04-15
+ 3987890 | 2017-04-16
+ 3990987 | 2017-04-19
+ 3989224 | 2017-04-17
+(5 rows)
+
+Time: First fetch (5 rows): 2656.648 ms. All rows formatted: 2656.689 ms
+end .-execute_10.sh-exe_query.sh-sql1.sh at Wed Aug  9 09:47:43 CST 2017
+end .-execute_10.sh-exe_query.sh-sql1.sh at Wed Aug  9 09:47:43 CST 2017
+end .-execute_10.sh-exe_query.sh-sql1.sh at Wed Aug  9 09:47:43 CST 2017
+.-execute_10.sh-exe_query.sh-sql1.sh total time=2.859 s
+end .-execute_10.sh-exe_query.sh-sql1.sh at Wed Aug  9 09:47:43 CST 2017
+.-execute_10.sh-exe_query.sh-sql1.sh total time=2.874 s
+.-execute_10.sh-exe_query.sh-sql1.sh total time=2.877 s
+.-execute_10.sh-exe_query.sh-sql1.sh total time=2.869 s
